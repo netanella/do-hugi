@@ -1,0 +1,161 @@
+/*GENERAL CSS settings to be used in multiple site pages*/
+
+:root {
+    --main-backgroundColor: #0d3042;
+    --main-logoSquareColor: #fde428;
+    --main-logoTextColor: #81cd93;
+}
+
+body {
+    font-family: Calibri;
+    font-size: 17px;
+}
+
+button , .like-btn {
+    outline: none;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.sectionHeading {
+    display: block;
+    position: relative;
+    left: 80px;
+    background-color: var(--main-logoTextColor);
+    padding:10px 40px 10px 10px;
+    margin: 30px 0;
+    border-radius: 40px 0 0 0;
+    box-shadow: 2px 4px 5px gray;
+    min-width: 800px;
+}
+
+.profilePhotoIcon {
+    border-radius: 50%;
+}
+
+/*NAVIGATION BAR*/
+
+.navbar {
+    position: fixed;
+    width:100%;
+    display:table;
+    background-color: var(--main-backgroundColor);
+    z-index: 10;
+    min-width: 920px;
+}
+
+#logo, #navLinks, #navLinks li, #userProfile li{
+    float: right;
+}
+
+#userProfile {
+    float: left;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+#logo img {
+    height: 60px;
+}
+
+#navLinks li a {
+    color:white;
+    font-size:18px;
+    padding: 23px 20px;
+    display:inline-block;
+    transition: all 1s 0s;
+}
+
+#navLinks li a:hover, #userProfile:hover{
+    background-color: #0f4861;
+    color: var(--main-logoSquareColor);
+    transition: all 1s 0s;
+}
+
+#userProfile span {
+    position: relative;
+    bottom: 22px;
+    padding-right: 20px;
+    color: white;
+}
+
+#userProfile img {
+    height: 55px;
+    margin: 2px 10px;
+}
+
+/*hidden content*/
+.dropdown {
+    position: relative;
+    display: block;
+    margin:1px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(250,250,250,0.7);
+    box-shadow: 0px 2px 2px gray;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 25px;
+    width: 90px;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: lightgray;
+}
+
+/*upload file button*/
+.uploadFile input {
+    position: relative;
+    left: 80px;
+    bottom: 5px;
+    opacity: 1;
+    outline: none;
+}
+
+.uploadFile label {
+    position: relative;
+    font-weight: bold;
+    color: white;
+    background-color: var(--main-backgroundColor);
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 9;
+    box-shadow: 1px 1px 1px gray;
+}
+
+.uploadFile label span {
+    vertical-align: middle;
+    padding-right: 5px;
+    position: relative;
+    bottom: 6px;
+}
+
+
+/* button with input changing text - before to after*/
+
+.switch-txt-btn input + label .after {
+    display: none;
+}
+
+.switch-txt-btn input:checked + label .before {
+    display: none;
+}
+
+.switch-txt-btn input:checked + label .after {
+    display: inline-block;
+}
