@@ -1,3 +1,5 @@
+@import "generic.css";
+/*
 div{
     display: inline;
     font-size: medium;
@@ -5,6 +7,7 @@ div{
     padding: 10px;
 
 }
+*/
 p{
     color: black;
     font-size: 20px;
@@ -29,6 +32,9 @@ body{
 }
 .all div {
     display: inline-block;
+    font-size: medium;
+    margin: auto;
+    padding: 10px;
 }
 #chosedate{
     display: inline-block;
@@ -47,6 +53,7 @@ body{
     padding:16px 31px;
     text-decoration:none;
     text-shadow:0px 0px 0px #53d991;
+    float: left;
 }
 .myButton:hover {
     background-color:#5ee08b;
@@ -57,15 +64,20 @@ body{
 }
 
 /* Place the navbar at the bottom of the page, and make it stick */
-.navbar {
+.navbarAllHobbies {
     overflow: hidden;
     background-color: darkslategray;
-    display: inline-block;
+    display: block;
     text-align:center;
+    width: 120px;
+    float: right;
+    height: 750px;
+
+
 }
 
 /* Style the links inside the navigation bar */
-.navbar a {
+.navbarAllHobbies a {
     float: right;
     display: block;
     color: lightblue;
@@ -74,20 +86,23 @@ body{
     text-decoration: none;
     font-size: 17px;
     background-color: darkslategray;
+    height: 25px;
+    width: 100px;
+
 }
 
 /* Change the color of links on hover */
-.navbar a:hover {
+.navbarAllHobbies a:hover {
     background-color: cadetblue;
     color: black;
 }
 
 /* Add a color to the active/current link */
-.navbar a.active {
+.navbarAllHobbies a.active {
     background-color: #4CAF50;
     color: white;
 }
-.navbar input[type=text] {
+.navbarAllHobbies input[type=text] {
     float: right;
     padding: 6px;
     border: none;
