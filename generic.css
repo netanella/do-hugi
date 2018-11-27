@@ -1,5 +1,6 @@
-/*GENERAL CSS settings to be used in multiple site pages*/
+@import "reset.css";
 
+/*GENERAL CSS settings to be used in multiple site pages*/
 :root {
     --main-backgroundColor: #0d3042;
     --main-logoSquareColor: #fde428;
