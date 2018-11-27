@@ -1,35 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
     <title>הרשמה</title>
-    <link rel="stylesheet" href="style.css\">
+    <link rel="stylesheet" href="stylelee.css">
     <link href='https://fonts.googleapis.com/css?family=Heebo' rel='stylesheet'>
     <meta charset="UTF-8">
-
 </head>
-<body dir="rtl" style="text-align: center" >
-<div id="navbar">
-    <a class="logo" href=""><img src="img/LOGO.JPG" alt="logo"></a>
-    <ul>
-        <a href="">
-            <li>חיפוש חוג</li>
-        </a>
-        <a href="">
-            <li>יצירת חוג</li>
-        </a>
-        <a href="">
-            <li>אודות</li>
-        </a>
-        <a href="">
-            <li>צור קשר</li>
-        </a>
-    </ul>
-</div>
-<div class="allPageContent">
+<body>
+<header>
+    <nav class="navbar">
+        <a href="" id="logo"><img src="img\logo.jpg"></a>
+        <ul id="navLinks">
+            <li><a href="#home">דף הבית</a></li>
+            <li><a href="#about">קצת עלינו</a></li>
+            <li><a href="#search">חיפוש חוג</a></li>
+            <li><a href="classSubmit.html">יצירת חוג</a></li>
+            <li><a href="#gallery">גלריה</a></li>
+            <li><a href="#contact">צור קשר</a></li>
+        </ul>
+        <div id="userProfile" class="dropdown">
+            <a href=""><span>ברקוש</span><img src="img/barak.jpg" class="profilePhotoIcon"></a>
+            <div class="dropdown-content">
+                <a href="">הפרופיל שלי</a>
+                <a href="">החוגים שלי</a>
+                <a href="">העדפות</a>
+            </div>
+        </div>
+    </nav>
+</header>>
     <br><br><br><br>
     <h1 >הרשמה לאתר DO- חוגי</h1>
     <br>
-    <table align="center">
+    <table id="registration">
         <tr>
             <td > <lable for="name">שם פרטי: </lable></td> <br>
             <td><input  id="name" type="text" name="firstname"><br></td>
@@ -45,7 +47,7 @@
    </tr>
     <tr>
         <td> <lable for="password">  ססמא:   </lable></td>
-        <td>   <input id="username" type="password" id="pwd" name="pwd" /></td>
+        <td>   <input id="password" type="password" id="pwd" name="pwd" /></td>
     </tr>
 
 <tr>
@@ -227,10 +229,14 @@
                 </select></td>
         </tr>
         <tr>
-            <td><lable for="bday">   מין: </lable></td>
-            <td height="30""> <input type="radio" name="gender" value="male" > זכר
+            <td>
+                <lable for="bday">   מין: </lable>
+            </td>
+            <td>
+                <input type="radio" name="gender" value="male" > זכר
                 <input type="radio" name="gender" value="female"> נקבה
-                <input type="radio" name="gender" value="other"> אחר</td>
+                <input type="radio" name="gender" value="other"> אחר
+            </td>
         </tr>
         <tr>
             <td>  <lable for="phone"> מספר טלפון:  </lable>
@@ -250,7 +256,6 @@
 
     </form>
 
-</div>
 
 </body>
 </html>
