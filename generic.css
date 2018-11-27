@@ -49,7 +49,7 @@ header {
     display:table;
     background-color: var(--main-backgroundColor);
     z-index: 10;
-    min-width: 920px;
+    min-width: 1000px;
 }
 
 #logo, #navLinks, #navLinks li, #userProfile li{

@@ -1,22 +1,18 @@
 @import "generic.css";
 
-body {
-
-    font-family: 'Heebo';
-    font-size: 22px;
-}
-
-h1{
-    text-align: center;
-    color: #0d3042;
-    font-family: 'Heebo';
-    font-size: 60px;
-}
-
 input{
-    float: end;
     width:100px;
     margin-bottom:15px;
+}
+
+main {
+    display: block;
+    text-align: center;
+    padding: 30px;
+    margin: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 500px;
 }
 #registration{
 margin: auto;
