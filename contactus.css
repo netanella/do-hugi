@@ -1,13 +1,12 @@
 h1{
     text-align: center;
-    color: aquamarine;
+    color: #0d3042;
     font-family: 'Heebo';
     font-size: 75px;
 }
 
 body {
     margin: 25px;
-    background-color: darkgray;
     font-family: 'Heebo';
     font-size: 22px;
 
@@ -18,6 +17,9 @@ input{
     float: end;
     width:100px;
     margin-bottom:15px;
+}
+#registration{
+    margin: auto;
 }
 
 .myButton {
@@ -41,6 +43,7 @@ input{
     padding:16px 31px;
     text-decoration:none;
     text-shadow:0px 1px 0px #2f6627;
+    margin: auto;
 }
 .myButton:hover {
     background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #b6e3cd), color-stop(1, #43e0ae));
@@ -55,4 +58,5 @@ input{
 .myButton:active {
     position:relative;
     top:1px;
+
 }

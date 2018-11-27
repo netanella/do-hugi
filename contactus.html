@@ -1,45 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <title>contact-us</title>
-    <link rel="stylesheet" href="style.css\">
-    <link rel="stylesheet" href="contactus.css\">
+    <link rel="stylesheet" href="stylelee.css">
+
     <link href='https://fonts.googleapis.com/css?family=Heebo' rel='stylesheet'>
 
 </head>
-<body dir="rtl" style="text-align: center" >
-<div id="navbar">
-    <a class="logo" href=""><img src="img/LOGO.JPG" alt="logo"></a>
-    <ul>
-        <a href="">
-            <li>חיפוש חוג</li>
-        </a>
-        <a href="">
-            <li>יצירת חוג</li>
-        </a>
-        <a href="">
-            <li>אודות</li>
-        </a>
-        <a href="">
-            <li>צור קשר</li>
-        </a>
-    </ul>
-</div>
-<br>
-<br>
-
-
+<header>
+    <nav class="navbar">
+        <a href="" id="logo"><img src="img\logo.jpg"></a>
+        <ul id="navLinks">
+            <li><a href="#home">דף הבית</a></li>
+            <li><a href="#about">קצת עלינו</a></li>
+            <li><a href="#search">חיפוש חוג</a></li>
+            <li><a href="classSubmit.html">יצירת חוג</a></li>
+            <li><a href="#gallery">גלריה</a></li>
+            <li><a href="#contact">צור קשר</a></li>
+        </ul>
+        <div id="userProfile" class="dropdown">
+            <a href=""><span>ברקוש</span><img src="img/barak.jpg" class="profilePhotoIcon"></a>
+            <div class="dropdown-content">
+                <a href="">הפרופיל שלי</a>
+                <a href="">החוגים שלי</a>
+                <a href="">העדפות</a>
+            </div>
+        </div>
+    </nav>
+</header>>
+<br><br><br>
+<body>
 <h1 >צרו איתנו קשר</h1>
 <br>
-<table align="center">
+<table id="registration">
     <tr>
         <td>  <lable for="username">  שם משתמש: </lable></td>
         <td><input id="username" type="text" name="username"></td>
     </tr>
     <tr>
         <td> <lable for="password">  ססמא:   </lable></td>
-        <td>   <input id="username" type="password" id="pwd" name="pwd" /></td>
+        <td>   <input id="password" type="password" id="pwd" name="pwd" /></td>
     </tr>
     <tr>
         <td>  <lable for="texty"> פרטי ההודעה </lable></td>

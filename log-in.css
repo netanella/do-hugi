@@ -1,19 +1,19 @@
 h1{
     text-align: center;
-    color: aquamarine;
+    color: #0d3042;
     font-family: 'Heebo';
     font-size: 75px;
 }
 h3{
     text-align: center;
-    color: aquamarine;
+    color: #0d3042;
     font-family: 'Heebo';
     font-size: 12px;
 }
 
 body {
-    margin: 25px;
-    background-color: darkgray;
+
+
     font-family: 'Heebo';
     font-size: 22px;
 
@@ -21,9 +21,10 @@ body {
 }
 
 input{
+    margin: auto;
     float: end;
     width:100px;
-    margin-bottom:15px;
+
 }
 
 .myButton {
