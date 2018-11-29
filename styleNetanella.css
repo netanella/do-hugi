@@ -122,7 +122,7 @@
 #topStrip .mainPhoto {
     display: block;
     margin: 0 auto;
-    height:350px;
+    height:250px;
     min-width:70%;
 }
 
@@ -187,7 +187,7 @@
     width: 300px;
 }
 
-#hugDetails .map:hover {
+#hugDetails .map:active {
     transform: scale(1.3);
 }
 
