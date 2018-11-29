@@ -164,3 +164,18 @@ header {
 .switch-txt-btn input:checked + label .after {
     display: inline-block;
 }
+
+
+/*CENTERING*/
+
+.centerBlock {
+    display: block;
+    position: relative;
+}
+
+.hoz-center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
