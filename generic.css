@@ -50,6 +50,7 @@ header {
 
 /*position page content under the navigation bar*/
 main {
+    display: block;
     padding-top: 64px;
 }
 
@@ -112,7 +113,6 @@ main {
 .dropdown {
     position: relative;
     display: block;
-    margin:1px;
 }
 
 .dropdown-content {
@@ -120,6 +120,7 @@ main {
     position: absolute;
     background-color: rgba(250,250,250,0.7);
     box-shadow: 0 2px 2px gray;
+    top: 67px;
 }
 
 .dropdown-content a {
