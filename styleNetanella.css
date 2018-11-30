@@ -185,30 +185,12 @@
     margin: 20px 0;
 }
 
-
 #attending .scroll-items a {
-    display: inline-block;
-    text-align: center;
-    height: 170px;
+    height: 150px;
     width: 120px;
     border: 1px solid lightgray;
     border-radius: 10px;
     margin: 10px;
-}
-
-.scroll-items {
-    display: inline-block;
-    overflow: hidden;
-}
-
-.scroll-list i {
-    display: inline-block;
-    position: relative;
-    bottom: 50px;
-}
-
-.scroll-list {
-    min-width: 1300px;
 }
 
 #attending .scroll-items img {
@@ -218,14 +200,12 @@
     margin:  10px auto;
 }
 
-
-
-.scroll-items a:hover {
-    box-shadow: 5px 5px 5px gray;
+#attending .scroll-list i {
+    bottom: 50px;
 }
 
-.scroll-items p {
-    margin: 5px auto;
+#attending .scroll-items p {
+    margin: auto;
 }
 
 #right-nav-arrow, #left-nav-arrow {
@@ -233,15 +213,6 @@
     cursor: pointer;
 }
 
-.scroll-items:hover a{
-    animation: scrollBar-left 5s linear infinite;
-}
-
-@keyframes scrollBar-left {
-    100%{
-        transform: translateX(-66.6666%);
-    }
-}
 /* sign up and cancel buttons*/
 
 #description .switch-txt-btn  {
