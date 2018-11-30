@@ -1,0 +1,91 @@
+@import "generic.css";
+
+/*
+div{
+    display: inline;
+    font-size: medium;
+    margin: auto;
+    padding: 10px;
+
+}
+*/
+p{
+    font-size: 20px;
+    text-align: center;
+}
+h1{
+    color: black;
+    font-size: 30px;
+    text-align: center;
+
+}
+h2{
+    text-align: center;
+}
+
+body{
+    background-color: white;
+    color: black;
+}
+.allChugim div {
+    display: inline-block;
+    font-size: medium;
+    margin: auto;
+    padding: 30px;
+    background-color: antiquewhite;
+}
+#chosedate{
+    display: inline-block;
+}
+.myButton {
+    background-color: var(--main-logoTextColor);
+    border-radius:19px;
+    border:1px solid #21b886;
+    display:inline-block;
+    color: white;
+    padding:16px 31px;
+    float: left;
+}
+.myButton:hover {
+    background-color: lightgreen;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+/* Place the navbar at the bottom of the page, and make it stick */
+.navbarAllHobbies {
+    overflow: hidden;
+    background-color: darkslategray;
+    display: block;
+    text-align:center;
+    width: 120px;
+    float: right;
+    height: 100%;
+
+}
+
+/* Style the links inside the navigation bar */
+.navbarAllHobbies a {
+    float: right;
+    display: block;
+    color: lightblue;
+    text-align: center;
+    padding: 14px 16px;
+    background-color: darkslategray;
+    height: 25px;
+    width: 100px;
+}
+
+/* Change the color of links on hover */
+.navbarAllHobbies a:hover {
+    background-color: cadetblue;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.navbarAllHobbies a.active {
+    background-color: var(--main-logoTextColor);
+    color: white;
+}

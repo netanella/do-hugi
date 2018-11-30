@@ -2,7 +2,7 @@
 
 /*CSS SUBMIT PAGE*/
 #submitPage {
-    background-image: url(img/close-up-desk-flatlay-965119.jpg);
+    background-image: url("img/close-up-desk-flatlay-965119.jpg");
     padding-top: 100px;
     background-size: cover;
     height: 100%;
@@ -204,7 +204,7 @@
 #attending .scroll-items a {
     display: inline-block;
     text-align: center;
-    height: 150px;
+    height: 170px;
     width: 120px;
     border: 1px solid lightgray;
     border-radius: 10px;
@@ -240,7 +240,7 @@
 }
 
 .scroll-items p {
-    margin: 10px auto;
+    margin: 5px auto;
 }
 
 #right-nav-arrow, #left-nav-arrow {
@@ -392,19 +392,20 @@
     margin: 10px;
     width: 90%;
     resize: vertical;
+    padding-right: 10px;
 }
 
 #userDetails button[type="submit"] {
-    margin: 5px 5px 5px 5%;
+    margin: 20px 10px 20px 5%;
     font-size: 12px;
-    background-color: var(--main-logoTextColor);
+    background-color: #619c70;
     color: white;
     font-weight: normal;
-    border: 1px solid #6bb17c;
+    border: 1px solid #619c70;
 }
 
 #userDetails button[type="submit"]:hover {
-    background-color: #78c28a;
+    background-color: #5c8b66;
 }
 
 #userOverview .logout {
@@ -418,6 +419,9 @@
     width: 150px;
 }
 
+#myHugim h4 {
+    padding-right: 20px;
+}
 #myHugim li {
     display: inline-block;
     position: relative;
@@ -455,4 +459,14 @@
 
 #myHugim #past {
     opacity: 0.6;
+}
+
+#userDetails h1 {
+    background-color: var(--main-logoTextColor);
+    display: block;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+
 }
