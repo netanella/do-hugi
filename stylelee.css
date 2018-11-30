@@ -6,20 +6,36 @@ input{
 }
 
 main {
-    display: block;
     text-align: center;
-    padding: 30px;
-    margin: 40px;
-    border: 1px solid black;
+}
+
+#signupPage {
+    background-color: var(--main-simpleBackground);
+}
+
+#sign-up-form {
+    display: block;
     border-radius: 20px;
     width: 500px;
+    margin: 40px auto;
+    background-color: white;
 }
+
+#sign-up-form h1 {
+    padding-top: 30px;
+}
+
+#sign-up-form form {
+    padding: 20px;
+}
+
 #registration{
-margin: auto;
+    margin: auto;
     width: 50%;
 
 }
 
+/*
 .myButton {
     text-align-all: center;
     background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #43e0ae), color-stop(1, #b6e3cd));
@@ -60,3 +76,4 @@ margin: auto;
 
 
 }
+*/

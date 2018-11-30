@@ -341,7 +341,7 @@
 }
 
 #userProfilePage {
-    background-color: #e5f0f6;
+    background-color: var(--main-simpleBackground);
 }
 
 #userProfilePage aside {
