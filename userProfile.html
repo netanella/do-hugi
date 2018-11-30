@@ -2,14 +2,14 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>My profile</title>
+    <title>הפרופיל שלי</title>
     <link rel="stylesheet" type="text/css" href="styleNetanella.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body id="userProfilePage">
 <header>
     <nav class="navbar">
-        <a href="" id="logo"><img src="img\logo.jpg"></a>
+        <a href="" id="logo"><img src="img/LOGO.JPG"></a>
         <ul id="navLinks">
             <li><a href="">דף הבית</a></li>
             <li><a href="">קצת עלינו</a></li>
@@ -45,23 +45,43 @@
             <label for="email">דוא"ל</label>
             <input id="email" type="text" value="brkpinch@post.bgu.ac.il">
             <label for="about">על עצמי</label>
-            <textarea id="about">אני מפתח בחברת הייטק מגניבה</textarea>
+            <textarea id="about" rows="4">אני מפתח בחברת הייטק מגניבה</textarea>
             <div class="align-left-cont">
                 <button type="submit">עדכון פרטים</button>
             </div>
         </div>
-        <hr>
+        <hr><br>
         <div id="myHugim">
             <h1>החוגים שלי</h1>
-            <ul> חוגים עתידיים
-                <li>חוג1</li>
-                <li>חוג2</li>
-                <li>חוג3</li>
+            <h4>בקרוב - שריינו יומנים</h4>
+            <ul>
+                <li>
+                    <img class="hugImage" src="img/sculpture.jpg">
+                    <span><strong>3.12.18</strong> <br> פיסול בחימר עם נדיה </span>
+                </li>
+                <li>
+                    <img class="hugImage" src="img/quidditch.jpg">
+                    <span><strong>8.12.18</strong> <br> קווידיץ' למתחילים </span>
+                </li>
             </ul>
-            <ul> חוגים שבהם השתתפתי
-                <li>חוג1</li>
-                <li>חוג2</li>
-                <li>חוג3</li>
+            <h4>חוגים בהם השתתפתי</h4>
+            <ul id="past">
+                <li>
+                    <img class="hugImage" src="img/catfeeding.jpg">
+                    <span><strong>17.11.18</strong> <br> קורס האכלת חתולים בשער סורוקה </span>
+                </li>
+                <li>
+                    <img class="hugImage" src="img/beerpong.jpg">
+                    <span><strong>6.11.18</strong> <br> טורניר ביר פונג בבית הסטודנט </span>
+                </li>
+                <li>
+                    <img class="hugImage" src="img/meditation.jpg">
+                    <span><strong>2.11.18</strong> <br> מדיטציה בספריית ארן </span>
+                </li>
+                <li>
+                    <img class="hugImage" src="img/treasure.jpg">
+                    <span><strong>22.9.18</strong> <br> "חפש את המטמון" בבניין 72 </span>
+                </li>
             </ul>
         </div>
     </section>
