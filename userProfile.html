@@ -1,10 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>user profile</title>
+    <title>My profile</title>
+    <link rel="stylesheet" type="text/css" href="styleNetanella.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-<body>
-
+<body id="userProfilePage">
+<header>
+    <nav class="navbar">
+        <a href="" id="logo"><img src="img\logo.jpg"></a>
+        <ul id="navLinks">
+            <li><a href="">דף הבית</a></li>
+            <li><a href="">קצת עלינו</a></li>
+            <li><a href="">חיפוש חוג</a></li>
+            <li><a href="classSubmit.html">יצירת חוג</a></li>
+            <li><a href="">גלריה</a></li>
+            <li><a href="">צור קשר</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <aside>
+        <div id="userOverview">
+            <img class="profilePhotoIcon" src="img/barak.JPG">
+            <h2>ברק פינצ'ובסקי</h2>
+            <button class="logout">התנתקות</button>
+        </div>
+        <hr>
+        <nav>
+            <input id="myDetailsScroll" type="radio" checked name="scrollProfile">
+            <label for="myDetailsScroll">הפרטים שלי</label>
+            <input id="myHugimScroll" type="radio" name="scrollProfile">
+            <label for="myHugimScroll">החוגים שלי</label>
+        </nav>
+    </aside>
+    <section id="userDetails">
+        <div id="myDetails">
+            <h1>הפרטים שלי</h1>
+            <label for="firstName">שם פרטי</label>
+            <input id="firstName" type="text" value="ברק">
+            <label for="lastName">שם משפחה</label>
+            <input id="lastName" type="text" value="פינצ'ובסקי">
+            <label for="email">דוא"ל</label>
+            <input id="email" type="text" value="brkpinch@post.bgu.ac.il">
+            <label for="about">על עצמי</label>
+            <textarea id="about">אני מפתח בחברת הייטק מגניבה</textarea>
+            <div class="align-left-cont">
+                <button type="submit">עדכון פרטים</button>
+            </div>
+        </div>
+        <hr>
+        <div id="myHugim">
+            <h1>החוגים שלי</h1>
+            <ul> חוגים עתידיים
+                <li>חוג1</li>
+                <li>חוג2</li>
+                <li>חוג3</li>
+            </ul>
+            <ul> חוגים שבהם השתתפתי
+                <li>חוג1</li>
+                <li>חוג2</li>
+                <li>חוג3</li>
+            </ul>
+        </div>
+    </section>
+</main>
 </body>
 </html>

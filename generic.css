@@ -7,6 +7,10 @@
     --main-logoTextColor: #81cd93;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Calibri;
     font-size: 17px;
@@ -19,6 +23,7 @@ button , .like-btn {
     padding: 10px;
     cursor: pointer;
     border-radius: 10px;
+    border: none;
 }
 
 .sectionHeading {
@@ -41,6 +46,11 @@ header {
     overflow: hidden;
 }
 
+/*position page content under the navigation bar*/
+main {
+    padding-top: 60px;
+}
+
 /*NAVIGATION BAR*/
 
 .navbar {
@@ -52,17 +62,17 @@ header {
     min-width: 1000px;
 }
 
-#logo, #navLinks, #navLinks li, #userProfile li{
+.navbar #logo, #navLinks, #navLinks li, #userProfile li{
     float: right;
 }
 
-#userProfile {
+.navbar #userProfile {
     float: left;
     margin-left: 20px;
     display: inline-block;
 }
 
-#logo img {
+.navbar #logo img {
     height: 60px;
 }
 
@@ -166,16 +176,15 @@ header {
 }
 
 
-/*CENTERING*/
-
-.centerBlock {
-    display: block;
-    position: relative;
-}
-
-.hoz-center {
+/*horizontly center an element inside a positioned parent element*/
+.center-inpos {
     position: absolute;
     left: 0;
     right: 0;
     text-align: center;
+}
+
+.align-left-cont {
+    display: block;
+    text-align: left;
 }
