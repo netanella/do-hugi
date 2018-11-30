@@ -18,6 +18,7 @@ body {
 }
 
 button , .like-btn {
+    display: inline-block;
     outline: none;
     font-size: 17px;
     font-weight: bold;
@@ -180,6 +181,28 @@ main {
     display: inline-block;
 }
 
+/*animated submit form button*/
+
+.form-submit-btn {
+    background-image: linear-gradient(white, var(--main-logoSquareColor));
+}
+
+.form-submit-btn:hover {
+    background-image: linear-gradient(white, #ddbb1d);
+}
+
+.form-submit-btn:hover span:after {
+    animation: moveLeft 1s infinite;
+}
+
+.form-submit-btn span:after {
+    content: "\276F";
+}
+
+@keyframes moveLeft {
+    from {margin-right: 0;}
+    to {margin-right: 40px;}
+}
 
 /*horizontly center an element inside a positioned parent element*/
 .center-inpos {

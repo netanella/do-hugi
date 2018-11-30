@@ -32,7 +32,13 @@ main {
 #registration{
     margin: auto;
     width: 50%;
+}
 
+#registration .form-submit-btn {
+    width: 250px;
+    display: block;
+    letter-spacing: 0.3em;
+    margin: 20px;
 }
 
 /*

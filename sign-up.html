@@ -2,7 +2,7 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>הרשמה</title>
+    <title>דו-חוגי | הרשמה</title>
     <link rel="stylesheet" type="text/css" href="stylelee.css">
 </head>
 <body id="signupPage">
@@ -10,28 +10,18 @@
     <nav class="navbar">
         <a href="" id="logo"><img src="img/LOGO.JPG"></a>
         <ul id="navLinks">
+            <li><a href="">דף הבית</a></li>
             <li><a href="">קצת עלינו</a></li>
-            <li><a href="search_page.html">קטלוג חוגים</a></li>
-            <li><a href="classSubmit.html">יצירת חוג</a></li>
             <li><a href="">גלריה</a></li>
             <li><a href="contactus.html">צור קשר</a></li>
-            <li><input id="searchBar" type="text" placeholder="חפש חוג"></li>
         </ul>
-        <div id="userProfile" class="dropdown">
-            <a href="userProfile.html"><span>ברקוש</span><img src="img/barak.JPG" class="profilePhotoIcon"></a>
-            <div class="dropdown-content">
-                <a href="userProfile.html">הפרופיל שלי</a>
-                <a href="userProfile.html">החוגים שלי</a>
-                <a href="">התנתקות</a>
-            </div>
-        </div>
     </nav>
 </header>
 <main>
     <div id="sign-up-form">
         <h1>הצטרפו לקהילה</h1>
-        <form>
-            <table id="registration" >
+        <form id="registration">
+            <table>
                 <tr>
                     <td> <label for="name">שם פרטי: </label></td>
                     <td> <input  id="name" type="text" name="firstname"></td>
@@ -233,12 +223,11 @@
                         <br>
                         <lable for="bday">   מין: </lable>
                     </td>
-                    <td>
-                        <br>
+                    <br>
 
-                        <input type="radio" name="gender" value="male" > זכר
-                        <input type="radio" name="gender" value="female"> נקבה
-                        <input type="radio" name="gender" value="other"> אחר
+                    <input type="radio" name="gender" value="male" > זכר
+                    <input type="radio" name="gender" value="female"> נקבה
+                    <input type="radio" name="gender" value="other"> אחר
                     </td>
                 </tr>
                 <tr>
@@ -253,9 +242,10 @@
                 </tr>
             </table>
 
-            <button type="submit">שלח</button>
-
+            <button type="submit" class="form-submit-btn">סיום והרשמה
+                <span></span></button>
         </form>
+        <a href="index.html">חזרה</a>
     </div>
 </main>
 </body>
