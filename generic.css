@@ -141,7 +141,7 @@ main {
 /*upload file button*/
 .uploadFile input {
     position: relative;
-    left: 80px;
+    left: 81px;
     bottom: 5px;
     opacity: 1;
     outline: none;

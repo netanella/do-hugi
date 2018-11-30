@@ -282,7 +282,7 @@
 #vidBox {
     width: 100%;
     overflow: hidden;
-    max-height: 470px;
+    max-height: 475px;
     display: block;
     position: relative;
 }
@@ -413,8 +413,8 @@
     bottom: 0;
 }
 
-#myHugim #past {
-    opacity: 0.6;
+.disabled {
+    opacity: 0.5;
 }
 
 #userDetails h1 {
