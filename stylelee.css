@@ -6,7 +6,7 @@
 #sign-up-form{
     display: block;
     border-radius: 20px;
-    width: 670px;
+    width: 680px;
     margin: 40px auto;
     background-color: white;
     text-align: center;
@@ -14,18 +14,23 @@
     padding: 20px;
 }
 
-#sign-up-form  h1 {
-    padding-top: 30px;
+#sign-up-form {
+    padding: 30px;
 }
 
 #registration{
+<<<<<<< HEAD
     padding: 40px;
     margin: 20px auto;
     width: 80%;
+=======
+    margin: auto;
+    width: 90%;
+>>>>>>> 93ee984794b63e2f3283916b9ed259ceb5867f70
 }
 
-
 #registration .form-submit-btn {
+<<<<<<< HEAD
     width: 300px;
     display: block;
     letter-spacing: 0.3em;
@@ -44,11 +49,20 @@
     letter-spacing: 0.3em;
     margin: 30px auto;
 }
+=======
+    width: 100%;
+    display: block;
+    letter-spacing: 0.3em;
+    margin: 30px auto;
+}
+>>>>>>> 93ee984794b63e2f3283916b9ed259ceb5867f70
 
 #registration input {
     border-radius: 6px;
-    margin-bottom:15px;
+    padding: 10px;
+    width: 260px;
 }
+
 #registration textarea {
     border: 2px solid lightgray;
     border-radius: 8px;
@@ -56,33 +70,30 @@
     padding-right: 10px;
 }
 
-#registration input[type="text"],  #registration input[type="password"], #registration input[type="email"], #registration input[type="date"] {
-    width: 200px;
-}
-
-#registration #gender input {
-    width: 10px;
-}
-
 #registration #gender label {
-    margin-left: 8px;
+    margin-left: 15px;
+}
+
+#registration #gender li {
+    display: inline-block;
 }
 
 #registration tr {
-    margin: 10px;
+    margin: 20px;
     display: block;
 }
 
 #registration td {
     display: inline-block;
     text-align: right;
-    width: 200px;
+    width: 250px;
     vertical-align: middle;
 }
 
 #profile-photo {
     width: 400px;
 }
+<<<<<<< HEAD
 #part1 {
     border: 2px solid lightgray;
     border-radius: 20px;
@@ -148,3 +159,11 @@
 #log-in #loginbutt:hover {
     background-color:grey ;
 }
+=======
+
+#profile-photo input {
+    padding: 0;
+}
+
+
+>>>>>>> 93ee984794b63e2f3283916b9ed259ceb5867f70

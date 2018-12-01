@@ -500,3 +500,43 @@ main {
         transform: translateX(-66.6666%);
     }
 }
+
+/*radio buttons styling*/
+
+.radio input {
+    display: none;
+}
+
+.radio span {
+    display: inline-block;
+    position: relative;
+    height: 23px;
+    width: 23px;
+    background-color: #e4e4e4;
+    border-radius: 50%;
+    margin-left: 4px;
+}
+
+.radio label {
+    display: inline-block;
+}
+
+.radio input:checked + span {
+    box-shadow: 0 0 4px black;
+}
+
+.radio span:after {
+    display:none;
+    position: relative;
+    margin: auto;
+    top: 25%;
+    height: 50%;
+    width: 50%;
+    content: "";
+    border-radius: 50%;
+    background-color: var(--main-backgroundColor);
+}
+
+.radio input:checked + span:after {
+    display:block;
+}

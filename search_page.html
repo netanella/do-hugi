@@ -3,6 +3,8 @@
 <head>
     <title> דו-חוגי | קטלוג </title>
     <link href="styleShahar.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="calendar/styles/calendar.css">
+    <script src="calendar/scripts/calendar.js"></script>
     <meta charset="UTF-8">
 </head>
 <body>
@@ -28,7 +30,7 @@
     </nav>
 </header>
 <main>
-    <div id="navbarAllHobbies">
+    <aside id="navbarAllHobbies">
         <nav>
             <a class="active" href="" > כל החוגים</a>
             <a href=""> מוזיקה </a>
@@ -43,35 +45,37 @@
             <a href=""> משחק ודרמה </a>
             <a href=""> בעלי חיים </a>
         </nav>
+    </aside>
+    <div id="sliderphotos">
+        <div class="mySlides">
+            <img id="alco" src="img/alco.jpg">
+            <label for="alco">סדנת אלכוהול</label>
+        </div>
+        <div class="mySlides">
+            <img id="keramika" src="img/keramika.jpg">
+            <label for="keramika">חוג קרמיקה</label>
+        </div>
+        <div class="mySlides">
+            <img id="zer" src="img/zer.jpg">
+            <label for="zer">הכנת זרים לראש</label>
+        </div>
+        <div class="mySlides">
+            <img id="zmidim" src="img/zmidim.jpg">
+            <label for="zmidim">הכנת צמידים</label>
+        </div>
+        <div class="mySlides">
+            <img id="pilates" src="img/pilates.jpg">
+            <label for="pilates">פילאטיס</label>
+        </div>
+        <div class="mySlides">
+            <img id="teva" src="img/teva.jpg">
+            <label for="teva">סנאות בטבע</label>
+        </div>
     </div>
-<div id="sliderphotos">
-    <div class="mySlides">
-        <img id="alco" src="img/alco.jpg">
-        <label for="alco">סדנאות אלכוהול</label>
-    </div>
-    <div class="mySlides">
-        <img id="keramika" src="img/keramika.jpg">
-        <label for="keramika">חוג קרמיקה</label>
-    </div>
-    <div class="mySlides">
-        <img id="zer" src="img/zer.jpg">
-        <label for="zer">הכנת זרים לראש</label>
-    </div>
-    <div class="mySlides">
-        <img id="zmidim" src="img/zmidim.jpg">
-        <label for="zmidim">הכנת צמידים</label>
-    </div>
-    <div class="mySlides">
-        <img id="pilates" src="img/pilates.jpg">
-        <label for="pilates">פילאטיס</label>
-    </div>
-    <div class="mySlides">
-        <img id="teva" src="img/teva.jpg">
-        <label for="teva">סנאות בטבע</label>
-    </div>
-</div>
+    <div id="calendar-w"> </div>
 
-    <h1> חוגים בנובמבר 2018</h1>
+
+    <h1> חוגים בנובמבר 2018</h1> <br> <br>
     <div id="allChugim">
         <div>
             <h2> בישול </h2>
@@ -145,6 +149,11 @@
         x[myIndex-1].style.display = "block";
         setTimeout(carousel, 3000);
     }
+
+    let calendar = new Calendar('calendar-w');
+
+
+
 </script>
 
 </body>
