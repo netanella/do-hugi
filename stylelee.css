@@ -24,7 +24,6 @@
     width: 80%;
 }
 
-
 #registration .form-submit-btn {
     width: 250px;
     display: block;
@@ -32,6 +31,7 @@
     margin: 30px auto;
 
 }
+
 #registration input {
     border-radius: 6px;
     margin-bottom:15px;
