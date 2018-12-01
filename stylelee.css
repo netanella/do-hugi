@@ -1,11 +1,10 @@
 @import "generic.css";
 
-#signupPage {
+#signupPage,#contactUsPage {
     background-color: var(--main-simpleBackground);
 }
-
-#sign-up-form {
-    display: block;
+#sign-up-form{
+                       display: block;
     border-radius: 20px;
     width: 670px;
     margin: 40px auto;
@@ -14,7 +13,7 @@
     font-size: 20px;
 }
 
-#sign-up-form h1 {
+#sign-up-form  h1 {
     padding-top: 30px;
 }
 
