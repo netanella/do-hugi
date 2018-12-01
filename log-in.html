@@ -4,13 +4,14 @@
     <title>דו-חוגי | התחברות</title>
 
     <link rel="stylesheet" href="stylelee.css">
-    <link rel="stylesheet" href="log-in.css">
+    <link rel="stylesheet" type="text/css" href="styleNetanella.css">
 
 
-    <link href='https://fonts.googleapis.com/css?family=Heebo' rel='stylesheet'>
+
 </head>
 
 <header>
+    <body id="login">
     <nav class="navbar">
         <a href="" id="logo"><img src="img/LOGO.JPG"></a>
         <ul id="navLinks">
@@ -21,26 +22,32 @@
         </ul>
     </nav>
 </header>
+<main>
 <br><br><br><br><br>
-<body>
+
+<div id="sign-up-form">
 <h1>כניסה לאתר</h1>
 <br>
+    <header id="log-in">
+        <label for="username">  שם משתמש: </label>
+        <br>
+        <input id="username" type="text" name="username">
+        <br><br>
 
-שם משתמש:
-<input type="text" name="username">
+        <label for="password">  ססמא:   </label></td>
+        <br>
+          <input id="password" type="password" name="pwd" />
+
 <br>
+            <a id="loginbutt" class="like-btn" href="search_page.html">התחבר</a>
+        <br>
 
-
-ססמא:    <input type="password" id="pwd" name="pwd" />
-<br>
-
-<a href="#" class="myButton">שלח</a>
-<br>
 <h3 >שכחתי ססמא</h3>
 <h3>עוד לא רשומים לאתר?
     <a href="sign-up.html.html"> לחץ כאן להרשמה</a>
 </h3>
+    </header>
 <a href="index.html">חזרה</a>
-</div>
-</body>
+    </div>
+    <main>
 </html>
