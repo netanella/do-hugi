@@ -54,7 +54,7 @@ h2{
 #sliderphotos{
     position: center;
     width: 800px;
-    height: 200px;
+    height: 400px;
     position: relative;
     padding-top: 10px;
     margin: auto;
@@ -69,9 +69,9 @@ h2{
     position: absolute;
     color: #21b886;
     font-family: Calibri;
-    font-size: 25px;
-    bottom: 8px;
-    left: 16px;
+    font-size: 30px;
+    top: 8px;
+    right: 16px;
 }
 .mySlides{
 
