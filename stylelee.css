@@ -16,7 +16,7 @@ main {
 #sign-up-form {
     display: block;
     border-radius: 20px;
-    width: 500px;
+    width: 670px;
     margin: 40px auto;
     background-color: white;
 }
@@ -26,19 +26,51 @@ main {
 }
 
 #sign-up-form form {
-    padding: 20px;
+    padding: 50px;
+    text-align: center;
+
+
+
 }
 
 #registration{
     margin: auto;
-    width: 50%;
+    width: 80%;
+
+
+
 }
+
 
 #registration .form-submit-btn {
     width: 250px;
     display: block;
     letter-spacing: 0.3em;
-    margin: 20px;
+    margin: 30px auto;
+
+}
+#registration input {
+    height: 1.5em;
+    width:15em;
+    border-radius: 6px;
+    padding-right: 20px;
+}
+#about {
+    height: 6em;
+    width:15em;
+    border-color: grey;
+    border-radius: 6px;
+    margin: 30px auto;
+    padding-right: 20px;
+    border-width: 1.5px;
+
+
+}
+#sex {
+    padding: 40px;
+}
+#sex2 {
+    padding:10px auto;
 }
 
 /*
