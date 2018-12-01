@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>דו-חוגי | הרשמה</title>
     <link rel="stylesheet" type="text/css" href="stylelee.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body id="signupPage">
 <header>
@@ -19,7 +20,8 @@
 </header>
 <main>
     <div id="sign-up-form">
-        <h1>הצטרפו לקהילה</h1>
+        <h1>הצטרפו אלינו</h1>
+        <p>כדאי לכם. כיף פה.</p>
         <form id="registration">
             <table>
                 <tr>
@@ -36,7 +38,7 @@
                 </tr>
                 <tr>
                     <td> <label for="password">  ססמא:   </label></td>
-                    <td>   <input id="password" type="password" name="pwd" /></td>
+                    <td> <input id="password" type="password" name="pwd" /></td>
                 </tr>
 
                 <tr>
@@ -59,26 +61,42 @@
                     </td>
                 </tr>
                 <tr>
-                    <td >
-                        <label for="gender">   מין: </label>
+                    <td>
+                        <label for="gender"> מין: </label>
                     </td>
-
-                    <td id="gender">
-                        <input type="radio" id="male" name="gender" value="male" >
-                        <label for="male">זכר</label>
-                        <input type="radio" name="gender" id="female" value="female">
-                        <label for="female">נקבה</label>
-                        <input id="other" type="radio" name="gender" value="other">
-                        <label for="other">אחר</label>
+                    <td>
+                        <ul id="gender" class="radio">
+                            <li>
+                                <label for="male">
+                                    <input type="radio" id="male" name="gender" value="male" >
+                                    <span></span>
+                                    זכר
+                                </label>
+                            </li>
+                            <li>
+                                <label for="female">
+                                    <input type="radio" name="gender" id="female" value="female">
+                                    <span></span>
+                                    נקבה
+                                </label>
+                            </li>
+                            <li>
+                                <label for="other">
+                                    <input id="other" type="radio" name="gender" value="other">
+                                    <span></span>
+                                    אחר
+                                </label>
+                            </li>
+                        </ul>
                     </td>
                 </tr>
                 <tr>
                     <td> <label for="about"> ספר לנו קצת על עצמך </label></td>
-                    <td> <textarea id="about" rows="7" cols="35" name="textarea1"></textarea></td>
+                    <td> <textarea id="about" rows="7" cols="35" name="about"></textarea></td>
                 </tr>
                 <tr>
                     <td> <label for="hobbies"> תחביבים ותחומי עניין </label></td>
-                    <td> <textarea id="hobbies" rows="7" cols="35" name="textarea1"></textarea></td>
+                    <td> <textarea id="hobbies" rows="7" cols="35" name="hobbies"></textarea></td>
                 </tr>
                 <tr>
                     <td> <label for="profile-photo"> העלאת תמונת פרופיל </label></td>
