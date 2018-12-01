@@ -1,13 +1,5 @@
 @import "generic.css";
-/*
-div{
-    display: inline;
-    font-size: medium;
-    margin: auto;
-    padding: 10px;
 
-}
-*/
 p{
     color: black;
     font-size: 20px;
@@ -25,20 +17,11 @@ h2{
     text-align: center;
 }
 
-body{
-    /* background-image: url("img/back.jpg");*/
-    background-color: white;
-    font-family: Calibri;
-    color: black;
-    background-size: cover;
-    height: 100%;
-}
-
 #allChugim div {
     display: inline-block;
     font-size: medium;
     margin: 20px;
-    padding: 30px;
+    padding: 20px;
     background-image: url("img/check.jpg");
     border: #0f4861 2px solid;
 }
@@ -68,7 +51,31 @@ body{
     position:relative;
     top:1px;
 }
+#sliderphotos{
+    position: center;
+    width: 800px;
+    height: 200px;
+    position: relative;
+    padding-top: 10px;
+    margin: auto;
+    display: inline-block;
 
+}
+#sliderphotos img{
+    position: relative;
+
+}
+#sliderphotos label{
+    position: absolute;
+    color: #21b886;
+    font-family: Calibri;
+    font-size: 25px;
+    bottom: 8px;
+    left: 16px;
+}
+.mySlides{
+
+}
 
 /* Place the navbar at the bottom of the page, and make it stick */
 #navbarAllHobbies {
@@ -76,8 +83,8 @@ body{
     background-color: darkslategray;
     display: block;
     text-align:center;
-    width: 120px;
-    float: left;
+    width: 150px;
+    float: right;
     height: 100%;
 
 }
@@ -93,7 +100,7 @@ body{
     font-size: 17px;
     background-color: darkslategray;
     height: 25px;
-    width: 100px;
+    width: 120px;
 
 }
 
