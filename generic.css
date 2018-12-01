@@ -33,13 +33,13 @@ button , .like-btn {
     box-shadow: 2px 4px 5px gray;
     min-width: 800px;
 }
-input[type=text] {
+#searchChug input[type=text] {
     float: right;
-    padding: 15px 12px ;
+    padding: 20px 12px ;
     border: none;
-    margin: auto;
+    margin: inherit;
     font-size: 17px;
-    height: 10px;
+    height: 100%;
     width: 410px;
     display: inline-block;
 }

@@ -26,16 +26,21 @@ h2{
 }
 
 body{
+   /* background-image: url("img/back.jpg");*/
     background-color: white;
     font-family: Calibri;
     color: black;
+    background-size: cover;
+    height: 100%;
 }
-.allChugim div {
+
+#allChugim div {
     display: inline-block;
     font-size: medium;
-    margin: auto;
+    margin: 20px;
     padding: 30px;
-    background-color: antiquewhite;
+    background-image: url("img/check.jpg");
+    border: #0f4861 2px solid;
 }
 #chosedate{
     display: inline-block;
@@ -66,7 +71,7 @@ body{
 
 
 /* Place the navbar at the bottom of the page, and make it stick */
-.navbarAllHobbies {
+#navbarAllHobbies {
     overflow: hidden;
     background-color: darkslategray;
     display: block;
@@ -78,7 +83,7 @@ body{
 }
 
 /* Style the links inside the navigation bar */
-.navbarAllHobbies a {
+#navbarAllHobbies a {
     float: right;
     display: block;
     color: lightblue;
@@ -93,17 +98,17 @@ body{
 }
 
 /* Change the color of links on hover */
-.navbarAllHobbies a:hover {
+#navbarAllHobbies a:hover {
     background-color: cadetblue;
     color: black;
 }
 
 /* Add a color to the active/current link */
-.navbarAllHobbies a.active {
+#navbarAllHobbies a.active {
     background-color: #4CAF50;
     color: white;
 }
-.navbarAllHobbies input[type=text] {
+/*#navbarAllHobbies input[type=text] {
     float: right;
     padding: 6px;
     border: none;
@@ -113,25 +118,6 @@ body{
     background-color: white;
     text-align: right;
 }
-navbarnet {
-    position: fixed;
-    top: 0px;
-    background-color: #0d3042;
-    color: white;
-    width: 100%;
-    z-index: 10;
-}
-
-navbarnet .logo {
-    padding: 0px;
-}
-
-navbarnet img {
-    height: 60px;
-}
-
-navbarnet ul {
-    display: inline-block;
     position: absolute;
     margin: auto;
     min-width: 400px;
