@@ -1,29 +1,47 @@
 @import "generic.css";
 
-body {
-
-    font-family: 'Heebo';
-    font-size: 22px;
-}
-
-h1{
-    text-align: center;
-    color: #0d3042;
-    font-family: 'Heebo';
-    font-size: 60px;
-}
-
 input{
-    float: end;
     width:100px;
     margin-bottom:15px;
 }
-#registration{
-margin: auto;
-    width: 50%;
 
+main {
+    text-align: center;
 }
 
+#signupPage {
+    background-color: var(--main-simpleBackground);
+}
+
+#sign-up-form {
+    display: block;
+    border-radius: 20px;
+    width: 500px;
+    margin: 40px auto;
+    background-color: white;
+}
+
+#sign-up-form h1 {
+    padding-top: 30px;
+}
+
+#sign-up-form form {
+    padding: 20px;
+}
+
+#registration{
+    margin: auto;
+    width: 50%;
+}
+
+#registration .form-submit-btn {
+    width: 250px;
+    display: block;
+    letter-spacing: 0.3em;
+    margin: 20px;
+}
+
+/*
 .myButton {
     text-align-all: center;
     background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #43e0ae), color-stop(1, #b6e3cd));
@@ -64,3 +82,4 @@ margin: auto;
 
 
 }
+*/

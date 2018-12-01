@@ -1,0 +1,110 @@
+@import "generic.css";
+/*
+div{
+    display: inline;
+    font-size: medium;
+    margin: auto;
+    padding: 10px;
+
+}
+*/
+p{
+    color: black;
+    font-size: 20px;
+    font-family: Calibri;
+    text-align: center;
+}
+h1{
+    color: black;
+    font-size: 30px;
+    font-family: Tahoma;
+    text-align: center;
+
+}
+h2{
+    text-align: center;
+}
+
+body{
+    /* background-image: url("img/back.jpg");*/
+    background-color: white;
+    font-family: Calibri;
+    color: black;
+    background-size: cover;
+    height: 100%;
+}
+
+#allChugim div {
+    display: inline-block;
+    font-size: medium;
+    margin: 20px;
+    padding: 30px;
+    background-image: url("img/check.jpg");
+    border: #0f4861 2px solid;
+}
+#chosedate{
+    display: inline-block;
+}
+.myButton {
+    background-color:#44c767;
+    -moz-border-radius:19px;
+    -webkit-border-radius:19px;
+    border-radius:19px;
+    border:2px solid #21b886;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    padding:16px 31px;
+    text-decoration:none;
+    text-shadow:0px 0px 0px #53d991;
+    float: left;
+}
+.myButton:hover {
+    background-color:#5ee08b;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+
+/* Place the navbar at the bottom of the page, and make it stick */
+#navbarAllHobbies {
+    overflow: hidden;
+    background-color: darkslategray;
+    display: block;
+    text-align:center;
+    width: 120px;
+    float: right;
+    height: 100%;
+
+}
+
+/* Style the links inside the navigation bar */
+#navbarAllHobbies a {
+    float: right;
+    display: block;
+    color: lightblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: darkslategray;
+    height: 25px;
+    width: 100px;
+
+}
+
+/* Change the color of links on hover */
+#navbarAllHobbies a:hover {
+    background-color: cadetblue;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+#navbarAllHobbies a.active {
+    background-color: #4CAF50;
+    color: white;
+}
