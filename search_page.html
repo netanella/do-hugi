@@ -3,7 +3,8 @@
 <head>
     <title> דו-חוגי | קטלוג </title>
     <link href="styleShahar.css" type="text/css" rel="stylesheet">
-    <script src="js/calendar.js"></script>
+    <link rel="stylesheet" href="calendar/styles/calendar.css">
+    <script src="calendar/scripts/calendar.js"></script>
     <meta charset="UTF-8">
 </head>
 <body>
@@ -71,10 +72,8 @@
             <label for="teva">סנאות בטבע</label>
         </div>
     </div>
-    <div id="calender">
+    <div id="calendar-w"> </div>
 
-
-    </div>
 
     <h1> חוגים בנובמבר 2018</h1> <br> <br>
     <div id="allChugim">
@@ -151,25 +150,10 @@
         setTimeout(carousel, 3000);
     }
 
-</script>
+    let calendar = new Calendar('calendar-w');
 
-<script >
-    var settings = {
-        Color: '',
-        LinkColor: '',
-        NavShow: true,
-        NavVertical: false,
-        NavLocation: '',
-        DateTimeShow: true,
-        DateTimeFormat: 'mmm, yyyy',
-        DatetimeLocation: '',
-        EventClick: '',
-        EventTargetWholeDay: false,
-        DisabledDays: [],
-        ModelChange: model
-    };
-    var element = document.getElementById('caleandar');
-    caleandar(element, events, settings);
+
+
 </script>
 
 </body>
