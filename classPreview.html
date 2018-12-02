@@ -5,18 +5,24 @@
     <title>דו חוגי | פרטי חוג</title>
     <link rel="stylesheet" type="text/css" href="styleNetanella.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 </head>
 <body>
 <header>
     <nav class="navbar">
-        <a href="" id="logo"><img src="img/LOGO.JPG"></a>
+        <a href="index.html" id="logo"><img src="img/LOGO.JPG"></a>
         <ul id="navLinks">
-            <li><a href="">קצת עלינו</a></li>
             <li><a href="search_page.html">קטלוג חוגים</a></li>
             <li><a href="classSubmit.html">יצירת חוג</a></li>
             <li><a href="">גלריה</a></li>
+            <li><a href="">קצת עלינו</a></li>
             <li><a href="contactus.html">צור קשר</a></li>
-            <li><input id="searchBar" type="text" placeholder="חפש חוג"></li>
+            <li>
+                <form id="searchBar">
+                    <input type="text" placeholder="חפש חוג" name="search">
+                    <button type="submit"><i class="material-icons">search</i></button>
+                </form>
+            </li>
         </ul>
         <div id="userProfile" class="dropdown">
             <a href="userProfile.html"><span>ברקוש</span><img src="img/barak.JPG" class="profilePhotoIcon"></a>
@@ -119,8 +125,6 @@
         </div>
     </section>
 </main>
-<script>
-
-</script>
+<script src="js-file.js"></script>
 </body>
 </html>
