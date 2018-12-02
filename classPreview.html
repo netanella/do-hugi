@@ -74,14 +74,14 @@
             <br>
             <!--signup and cancel buttons-->
             <div class="switch-txt-btn">
-                <input type="radio" id="signup" name="signup-status">
+                <input type="radio" id="signup" name="signup-status" onchange="signupAlert()">
                 <label for="signup" class="like-btn">
                     <span class="before">רשום אותי!</span>
                     <span class="after"><span>&#10004;</span>אני מגיע</span>
                 </label>
             </div>
             <div class="switch-txt-btn">
-                <input type="radio" id="cancel" name="signup-status">
+                <input type="radio" id="cancel" name="signup-status" checked onchange="cancelAlert()">
                 <label for="cancel" class="like-btn">
                     <span class="before">ביטול הרשמה</span>
                     <span class="after"><span>X</span>לא רשום</span>
@@ -94,9 +94,9 @@
     <section id="attending"><br>
         <h3>מי מגיע?</h3><br>
         <div class="scroll-list">
-            <i class="material-icons"><span id="right-nav-arrow">arrow_right</span></i>
+            <i class="material-icons" onclick="scrollRight()"><span id="right-nav-arrow">arrow_right</span></i>
             <div class="scroll-items">
-                <a href="userProfile.html">
+                <a class="userBox" href="userProfile.html">
                     <img src="img/netanella.jpg"/>
                     <p>נתנאלה ברנד</p>
                 </a>

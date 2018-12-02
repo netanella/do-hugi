@@ -187,6 +187,8 @@
 }
 
 #attending .scroll-items a {
+    position: relative;
+    left: 0;
     height: 150px;
     width: 120px;
     border: 1px solid lightgray;
