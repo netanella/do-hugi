@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48e4a38b-024f-40b6-88e0-2d98f3157755" name="Default Changelist" comment="added search button on navigation bar">
+    <list default="true" id="48e4a38b-024f-40b6-88e0-2d98f3157755" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classPreview.html" beforeDir="false" afterPath="$PROJECT_DIR$/classPreview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classSubmit.html" beforeDir="false" afterPath="$PROJECT_DIR$/classSubmit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generic.css" beforeDir="false" afterPath="$PROJECT_DIR$/generic.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js-file.js" beforeDir="false" afterPath="$PROJECT_DIR$/js-file.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/search_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sign-up.html" beforeDir="false" afterPath="$PROJECT_DIR$/sign-up.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styleNetanella.css" beforeDir="false" afterPath="$PROJECT_DIR$/styleNetanella.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/userProfile.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,31 +91,31 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="1244" />
-          <entry key="html" value="210" />
-          <entry key="js" value="1193" />
-          <entry key="txt" value="37" />
+          <entry key="css" value="1424" />
+          <entry key="html" value="304" />
+          <entry key="js" value="1714" />
+          <entry key="txt" value="84" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="1244" />
-          <entry key="HTML" value="210" />
-          <entry key="JavaScript" value="1193" />
-          <entry key="PLAIN_TEXT" value="37" />
+          <entry key="CSS" value="1424" />
+          <entry key="HTML" value="304" />
+          <entry key="JavaScript" value="1714" />
+          <entry key="PLAIN_TEXT" value="84" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4674603">
+    <splitter split-orientation="horizontal" split-proportion="0.37367916">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/classPreview.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="129">
-                  <caret line="98" column="19" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="34" />
+                <state relative-caret-position="127">
+                  <caret line="123" column="71" lean-forward="true" selection-start-line="123" selection-start-column="71" selection-end-line="123" selection-end-column="71" />
                   <folding>
                     <element signature="e#1376#1382#0" expanded="true" />
                   </folding>
@@ -135,8 +130,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/styleNetanella.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="93">
-                  <caret line="190" column="12" selection-start-line="190" selection-start-column="12" selection-end-line="190" selection-end-column="12" />
+                <state relative-caret-position="158">
+                  <caret line="196" selection-start-line="196" selection-end-line="196" />
                 </state>
               </provider>
             </entry>
@@ -144,8 +139,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js-file.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="296">
-                  <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+                <state relative-caret-position="153">
+                  <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
                 </state>
               </provider>
             </entry>
@@ -153,8 +148,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/generic.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="367">
-                  <caret line="282" selection-start-line="282" selection-end-line="282" />
+                <state relative-caret-position="146">
+                  <caret line="269" column="16" lean-forward="true" selection-start-line="269" selection-start-column="16" selection-end-line="269" selection-end-column="16" />
                 </state>
               </provider>
             </entry>
@@ -197,8 +192,8 @@
         <option value="$PROJECT_DIR$/sign-up.html" />
         <option value="$PROJECT_DIR$/generic.css" />
         <option value="$PROJECT_DIR$/userProfile.html" />
-        <option value="$PROJECT_DIR$/classPreview.html" />
         <option value="$PROJECT_DIR$/styleNetanella.css" />
+        <option value="$PROJECT_DIR$/classPreview.html" />
         <option value="$PROJECT_DIR$/js-file.js" />
       </list>
     </option>
@@ -213,7 +208,7 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="-11" />
     <option name="width" value="698" />
     <option name="height" value="735" />
   </component>
@@ -279,7 +274,7 @@
       <workItem from="1543674960561" duration="2899000" />
       <workItem from="1543678585773" duration="8839000" />
       <workItem from="1543691494313" duration="11141000" />
-      <workItem from="1543774207122" duration="13502000" />
+      <workItem from="1543774207122" duration="21385000" />
     </task>
     <task id="LOCAL-00001" summary="added search button on navigation bar">
       <created>1543780865085</created>
@@ -288,23 +283,30 @@
       <option name="project" value="LOCAL" />
       <updated>1543780865087</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="sign up buttons alert message w. js">
+      <created>1543787959274</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1543787959275</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48411000" />
+    <option name="totallyTimeSpent" value="56294000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15708502" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.15708502" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39679715" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39679715" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -327,7 +329,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added search button on navigation bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="added search button on navigation bar" />
+    <MESSAGE value="sign up buttons alert message w. js" />
+    <option name="LAST_COMMIT_MESSAGE" value="sign up buttons alert message w. js" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/style.shahar.css" />
@@ -401,13 +404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generic.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="282" selection-start-line="282" selection-end-line="282" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/userProfile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -415,27 +411,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styleNetanella.css">
+    <entry file="file://$PROJECT_DIR$/generic.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="190" column="12" selection-start-line="190" selection-start-column="12" selection-end-line="190" selection-end-column="12" />
+        <state relative-caret-position="146">
+          <caret line="269" column="16" lean-forward="true" selection-start-line="269" selection-start-column="16" selection-end-line="269" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js-file.js">
+    <entry file="file://$PROJECT_DIR$/styleNetanella.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+        <state relative-caret-position="158">
+          <caret line="196" selection-start-line="196" selection-end-line="196" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classPreview.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="98" column="19" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="34" />
+        <state relative-caret-position="127">
+          <caret line="123" column="71" lean-forward="true" selection-start-line="123" selection-start-column="71" selection-end-line="123" selection-end-column="71" />
           <folding>
             <element signature="e#1376#1382#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js-file.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
         </state>
       </provider>
     </entry>

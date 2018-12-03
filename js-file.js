@@ -21,13 +21,25 @@ function cancelAlert() {
         }
     }
 }
-
-function scrollRight() {
-    //not working
-    //var scrollItems = document.getElementsByClassName('userBox');
-    //scrollItems.style.transform = "rotate(7deg)";
+/*
+function scrollRight(el) {
+    var scrolling = document.getElementById(el);
+    scrolling.style.left = "50px";
 }
+*/
 
+function scrollItem(el,dir) {
+    var scrollItems = document.getElementsByClassName(el);
+    for (var i=0; i < scrollItems.length ; i++){
+        scrollItems[i].style.transition = "all 2s ease-in-out";
+        if (dir === 'right'){
+            scrollItems[i].style.left =  scrollItems[i].style.left + 40 +"px";
+        }
+        if (dir === 'left') {
+            scrollItems[i].style.left =  scrollItems[i].style.left - 40 +"px";
+        }
+    }
+}
 
 
 

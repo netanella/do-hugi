@@ -196,6 +196,11 @@
     margin: 10px;
 }
 
+#userBox {
+    position: relative;
+    top: 0;
+}
+
 #attending .scroll-items img {
     width: 70px;
     height: 75px;
