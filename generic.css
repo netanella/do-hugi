@@ -25,7 +25,7 @@ button , .like-btn {
     font-weight: bold;
     padding: 10px;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
 }
 
@@ -297,7 +297,7 @@ main {
     display: none;
     position: fixed;
     top: 20%;
-    right: 30%;
+    right: 20%;
     background: 100%;
     width: 30%;
     z-index: 10;
@@ -305,14 +305,10 @@ main {
     border: 1px solid black;
 }
 
-#dialogbox > div {
-    background: white;
-}
-
 #dialogbox #dialogboxhead {
-    background: lightgray;
+    background: #d7e2e8;
     font-size: 19px;
-    padding: 20px;
+    padding: 10px;
     color: black;
     font-weight: bold;
 }
@@ -331,8 +327,9 @@ main {
 
 #dialogbox button {
     margin-left: 10px;
+    border: 2px solid #f5f5f5;
 }
 
 #dialogbox button:hover {
-    background-color: var(--main-logoTextColor);
+    border: 2px solid var(--main-logoTextColor);
 }
