@@ -38,43 +38,34 @@ function hiddenItems(el){
 var signup = document.getElementById('signup');
 var cancel = document.getElementById('cancel');
 
-// if i have more than one method use addEventListener()
-var alert = new customConfirm();
+var confirm = new customConfirm();
 
 function customConfirm(){
     var overlay = document.getElementById('dialogoverlay');
     var box = document.getElementById('dialogbox');
-    this.render = function(display){
+    this.pop = function(message,op){
         overlay.style.display = 'block';
         box.style.display = 'block';
         document.getElementById('dialogboxhead').innerHTML = 'שים לב!';
-        document.getElementById('dialogboxbody').innerHTML = display;
-        document.getElementById('dialogboxfoot').innerHTML = '<button onclick=alert.ok()>כן</button>';
+        document.getElementById('dialogboxbody').innerHTML = message;
+        document.getElementById('dialogboxfoot').innerHTML = '<button onclick="confirm.ok(\''+op+'\')">המשך</button> <button onclick="confirm.cancel(\''+op+'\')">ביטול</button>';
     }
     this.ok = function() {
         overlay.style.display = 'none';
         box.style.display = 'none';
     }
-    this.cancel = function() {
-
+    this.cancel = function(op) {
+        overlay.style.display = 'none';
+        box.style.display = 'none';
+        var cancel = document.getElementById('cancel');
+        var signup = document.getElementById('signup');
+        if (op === 'signup'){
+            cancel.checked = true;
+            signup.checked = false;
+        }
+        if (op === 'cancel'){
+            cancel.checked = false;
+            signup.checked = true;
+        }
     }
 }
-
-function signupHug() {
-    var conf = confirm("אתה עומד להרשם לחוג. האם תרצה להמשיך?");
-    if(conf == false) {
-        signup.checked = false;
-        cancel.checked = true;
-    }
-}
-
-function cancelHug() {
-    var conf = confirm("אתה עומד לבטל את הרשמתך. האם תרצה להמשיך?");
-    if(conf == false) {
-        cancel.checked = false;
-        signup.checked = true;
-    }
-}
-
-
-//'אתה עומד לבטל את הרשמתך. האם תרצה להמשיך?'//

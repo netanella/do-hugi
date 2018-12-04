@@ -13,7 +13,9 @@
 <div id="dialogbox">
     <div id="dialogboxhead"></div>
     <div id="dialogboxbody"></div>
-    <div id="dialogboxfoot"></div>
+    <div id="dialogboxfoot">
+
+    </div>
 </div>
 <header>
     <nav class="navbar">
@@ -81,14 +83,14 @@
             <br>
             <!--signup and cancel buttons-->
             <div class="switch-txt-btn">
-                <input type="radio" id="signup" name="signup-status" onchange="alert.render('אתה עומד להרשם לחוג. האם תרצה להמשיך?')">
+                <input type="radio" id="signup" name="signup-status" onclick="confirm.pop('אתה עומד להרשם לחוג. האם תרצה להמשיך?','signup')">
                 <label for="signup" class="like-btn">
                     <span class="before">רשום אותי!</span>
                     <span class="after"><span>&#10004;</span>אני מגיע</span>
                 </label>
             </div>
             <div class="switch-txt-btn">
-                <input type="radio" id="cancel" name="signup-status" checked onchange="alert.render('אתה עומד לבטל את הרשמתך. האם תרצה להמשיך?')">
+                <input type="radio" id="cancel" name="signup-status" checked onclick="confirm.pop('אתה עומד לבטל את הרשמתך. האם תרצה להמשיך?','cancel')">
                 <label for="cancel" class="like-btn">
                     <span class="before">ביטול הרשמה</span>
                     <span class="after"><span>X</span>לא רשום</span>

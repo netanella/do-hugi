@@ -299,11 +299,10 @@ main {
     top: 20%;
     right: 30%;
     background: 100%;
-    border-radius: 7px;
     width: 30%;
     z-index: 10;
-    box-shadow: 2px 2px 4px black;
-    border: 10px solid white;
+    box-shadow: 2px 2px 5px gray;
+    border: 1px solid black;
 }
 
 #dialogbox > div {
@@ -311,7 +310,7 @@ main {
 }
 
 #dialogbox #dialogboxhead {
-    background: gray;
+    background: lightgray;
     font-size: 19px;
     padding: 20px;
     color: black;
@@ -319,13 +318,21 @@ main {
 }
 
 #dialogbox #dialogboxbody {
-    background: lightgray;
+    background: #f5f5f5;
     padding: 20px;
     color: black;
 }
 
 #dialogbox #dialogboxfoot {
-    background: lightgray;
-    padding: 20px;
+    background: #f5f5f5;
+    padding: 10px;
     text-align: left;
+}
+
+#dialogbox button {
+    margin-left: 10px;
+}
+
+#dialogbox button:hover {
+    background-color: var(--main-logoTextColor);
 }
