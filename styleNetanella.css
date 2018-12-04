@@ -186,6 +186,12 @@
     margin: 20px 0;
 }
 
+#attending li {
+    display: inline;
+    vertical-align: top;
+    overflow: hidden;
+}
+
 #attending .userBox {
     position: relative;
     height: 150px;
@@ -194,12 +200,21 @@
     border-radius: 10px;
     margin: 10px;
     display: inline-block;
+    float: right;
+}
+
+#attending ul {
+    width: 2000px;
 }
 
 #attending .scroll-items {
     height: 170px;
-    width: 850px;
-    overflow: scroll;
+    width: 800px;
+    overflow-x: scroll;
+}
+
+#attending .scroll-items::-webkit-scrollbar {
+    display: none;
 }
 
 #attending .scroll-items img {

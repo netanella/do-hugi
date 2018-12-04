@@ -32,7 +32,7 @@ function scrollItem(cls,dir,pxMove) {
         if (dir === 'right'){
             scrollItems[i].style.left = currentPos + pxMove + "px";
         }
-        if (dir === 'left') {
+        if (dir === 'left' && currentPos!=0) { //don't over scroll
             scrollItems[i].style.left = currentPos - pxMove +"px";
         }
     }
