@@ -8,6 +8,13 @@
 
 </head>
 <body>
+<!--custom dialog box-->
+<div id="dialogoverlay"></div>
+<div id="dialogbox">
+    <div id="dialogboxhead"></div>
+    <div id="dialogboxbody"></div>
+    <div id="dialogboxfoot"></div>
+</div>
 <header>
     <nav class="navbar">
         <a href="index.html" id="logo"><img src="img/LOGO.JPG"></a>
@@ -40,8 +47,8 @@
         <span class="heading">
         <h1>סדנת אילוף כלבים / </h1>
         <h3> נוצר על ידי: &nbsp;
-            <a href=""> <img src="img\img_avatar.png"> </a>
-            <a href=""> איתי הראל </a>
+            <a href="userProfile.html"> <img src="img\img_avatar.png"> </a>
+            <a href="userProfile.html"> איתי הראל </a>
         </h3>
     </span>
     </div>
@@ -74,19 +81,21 @@
             <br>
             <!--signup and cancel buttons-->
             <div class="switch-txt-btn">
-                <input type="radio" id="signup" name="signup-status" onchange="signupAlert()">
+                <input type="radio" id="signup" name="signup-status" onchange="alert.render('אתה עומד להרשם לחוג. האם תרצה להמשיך?')">
                 <label for="signup" class="like-btn">
                     <span class="before">רשום אותי!</span>
                     <span class="after"><span>&#10004;</span>אני מגיע</span>
                 </label>
             </div>
             <div class="switch-txt-btn">
-                <input type="radio" id="cancel" name="signup-status" checked onchange="cancelAlert()">
+                <input type="radio" id="cancel" name="signup-status" checked onchange="alert.render('אתה עומד לבטל את הרשמתך. האם תרצה להמשיך?')">
                 <label for="cancel" class="like-btn">
                     <span class="before">ביטול הרשמה</span>
                     <span class="after"><span>X</span>לא רשום</span>
                 </label>
             </div>
+
+
 
             <hr>
         </div>
@@ -94,9 +103,9 @@
     <section id="attending"><br>
         <h3>מי מגיע?</h3><br>
         <div class="scroll-list">
-            <i class="material-icons"><span onclick="scrollItem('userBox','right',50)" id="right-nav-arrow">arrow_right</span></i>
+            <button class="material-icons"><span onclick="scrollBar('movingList','right',142)" id="right-nav-arrow">arrow_right</span></button>
             <div class="scroll-items">
-                <ul>
+                <ul id="movingList">
                     <li>
                         <a class="userBox" href="userProfile.html">
                             <img src="img/netanella.jpg"/>
@@ -151,9 +160,15 @@
                             <p>יערה "המכרסמת" לורבר</p>
                         </a>
                     </li>
+                    <li>
+                        <a class="userBox" href="userProfile.html">
+                            <img src="img/yaara.jpeg"/>
+                            <p>יערה "המכרסמת" לורבר</p>
+                        </a>
+                    </li>
                 </ul>
             </div>
-            <i class="material-icons"><span onclick="scrollItem('userBox','left',50)" id="left-nav-arrow">arrow_left</span></i>
+            <button class="material-icons"><span onclick="scrollBar('movingList','left',142)" id="left-nav-arrow">arrow_left</span></button>
         </div>
     </section>
 </main>

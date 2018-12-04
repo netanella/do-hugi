@@ -188,8 +188,11 @@
 
 #attending li {
     display: inline;
-    vertical-align: top;
-    overflow: hidden;
+    float: right;
+}
+
+#attending .scroll-list {
+    margin-top: 25px;
 }
 
 #attending .userBox {
@@ -200,16 +203,18 @@
     border-radius: 10px;
     margin: 10px;
     display: inline-block;
-    float: right;
+
 }
 
 #attending ul {
-    width: 2000px;
+    position: absolute;
+    right: 0;
 }
 
 #attending .scroll-items {
+    position: relative;
     height: 170px;
-    width: 800px;
+    width: 750px;
     overflow-x: scroll;
 }
 
@@ -224,8 +229,11 @@
     margin:  10px auto;
 }
 
-#attending .scroll-list i {
-    bottom: 50px;
+#attending .scroll-list button {
+    background-color: white;
+    vertical-align: top;
+    margin-top: 40px;
+    padding: 0;
 }
 
 #attending .scroll-items p {
