@@ -21,34 +21,26 @@ function cancelAlert() {
         }
     }
 }
-/*
-function scrollRight(el) {
-    var scrolling = document.getElementById(el);
-    scrolling.style.left = "50px";
-}
-*/
 
-function scrollItem(el,dir) {
-    var scrollItems = document.getElementsByClassName(el);
+
+//this function moves all relative-positioned items with class 'cls' 40px right or left according to 'dir'
+function scrollItem(cls,dir,pxMove) {
+    var scrollItems = document.getElementsByClassName(cls);
     for (var i=0; i < scrollItems.length ; i++){
-        scrollItems[i].style.transition = "all 2s ease-in-out";
+        scrollItems[i].style.transition = "all 0.5s ease-in-out";
+        var currentPos = getElementLeft(scrollItems[i]);
         if (dir === 'right'){
-            scrollItems[i].style.left =  scrollItems[i].style.left + 40 +"px";
+            scrollItems[i].style.left = currentPos + pxMove + "px";
         }
         if (dir === 'left') {
-            scrollItems[i].style.left =  scrollItems[i].style.left - 40 +"px";
+            scrollItems[i].style.left = currentPos - pxMove +"px";
         }
     }
 }
 
-
-
-/*.scroll-items:hover a{
-    animation: scrollBar-left 5s linear infinite;
-}
-
-@keyframes scrollBar-left {
-    100% {
-        transform: translateX(-66.6666%);
+function getElementLeft(el){
+    if (isNaN(parseInt(el.style.left))){
+        return 0;
     }
-}*/
+    else return parseInt(el.style.left);
+}
