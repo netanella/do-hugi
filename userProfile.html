@@ -9,7 +9,7 @@
 <body id="userProfilePage">
 <header>
     <nav class="navbar">
-        <a href="" id="logo"><img src="img/LOGO.JPG"></a>
+        <a href="index.html" id="logo"><img src="img/LOGO.JPG"></a>
         <ul id="navLinks">
             <li><a href="">קצת עלינו</a></li>
             <li><a href="search_page.html">קטלוג חוגים</a></li>
@@ -33,11 +33,9 @@
             <a class="like-btn" id="logout" href="index.html">התנתקות</a>
         </div>
         <hr>
-        <nav>
-            <input id="myDetailsScroll" type="radio" checked name="scrollProfile">
-            <label for="myDetailsScroll">הפרטים שלי</label>
-            <input id="myHugimScroll" type="radio" name="scrollProfile">
-            <label for="myHugimScroll">החוגים שלי</label>
+        <nav id="sideNav">
+            <a id="section1" href="#myDetails">הפרטים שלי</a>
+            <a id="section2" href="#myHugim">החוגים שלי</a>
         </nav>
     </aside>
     <section id="userDetails">
@@ -112,5 +110,6 @@
         </div>
     </section>
 </main>
+<script src="js-file.js"></script>
 </body>
 </html>

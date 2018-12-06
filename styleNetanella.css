@@ -335,23 +335,19 @@
     text-align: center;
 }
 
-#userProfilePage aside input[type="radio"] {
-    display: none;
-}
-
 #userOverview .profilePhotoIcon {
     width: 150px;
     margin-top: 60px;
     border: 3px solid black;
 }
 
-#userProfilePage aside nav label {
+#userProfilePage #sideNav a {
     display: block;
     padding: 10px;
     cursor: pointer;
 }
 
-#userProfilePage aside nav input:checked + label  {
+#userProfilePage #sideNav a:hover  {
     background-color: #0d3042;
     color: white;
 }

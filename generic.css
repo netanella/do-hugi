@@ -296,8 +296,8 @@ main {
 #dialogbox{
     display: none;
     position: fixed;
-    top: 20%;
-    right: 20%;
+    top: 35%;
+    right: 35%;
     background: 100%;
     width: 30%;
     z-index: 10;
