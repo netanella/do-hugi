@@ -180,11 +180,11 @@
     float: right;
 }
 
-#attending .scroll-list {
+#attending .scroll-section {
     margin-top: 25px;
 }
 
-#attending .userBox {
+#attending .scroll-item a {
     position: relative;
     height: 150px;
     width: 120px;
@@ -192,7 +192,6 @@
     border-radius: 10px;
     margin: 10px;
     display: inline-block;
-
 }
 
 #attending ul {
@@ -200,32 +199,32 @@
     right: 0;
 }
 
-#attending .scroll-items {
+#attending .scroll-wrap {
     position: relative;
     height: 170px;
     width: 750px;
     overflow-x: scroll;
 }
 
-#attending .scroll-items::-webkit-scrollbar {
+#attending .scroll-wrap::-webkit-scrollbar {
     display: none;
 }
 
-#attending .scroll-items img {
+#attending .scroll-wrap img {
     width: 70px;
     height: 75px;
     border-radius: 50%;
     margin:  10px auto;
 }
 
-#attending .scroll-list button {
+#attending .scroll-section button {
     background-color: white;
     vertical-align: top;
     margin-top: 40px;
     padding: 0;
 }
 
-#attending .scroll-items p {
+#attending .scroll-wrap p {
     margin: auto;
 }
 

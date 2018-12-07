@@ -259,22 +259,22 @@ main {
 
 
 /*scrolling bar of items*/
-.scroll-items, .scroll-list {
+.scroll-wrap {
     display: inline-block;
     overflow: hidden;
 }
 
-.scroll-list i {
+.scroll-section button {
     display: inline-block;
     position: relative;
 }
 
-.scroll-items a {
+.scroll-wrap a {
     display: inline-block;
     vertical-align: bottom;
 }
 
-.scroll-items a:hover {
+.scroll-wrap a:hover {
     box-shadow: 5px 5px 5px gray;
 }
 
