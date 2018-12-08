@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="48e4a38b-024f-40b6-88e0-2d98f3157755" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classPreview.html" beforeDir="false" afterPath="$PROJECT_DIR$/classPreview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generic.css" beforeDir="false" afterPath="$PROJECT_DIR$/generic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js-file.js" beforeDir="false" afterPath="$PROJECT_DIR$/js-file.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styleNetanella.css" beforeDir="false" afterPath="$PROJECT_DIR$/styleNetanella.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/userProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/userProfile.html" afterDir="false" />
     </list>
@@ -97,31 +96,31 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="4090" />
-          <entry key="html" value="1502" />
-          <entry key="js" value="7380" />
-          <entry key="txt" value="306" />
+          <entry key="css" value="4270" />
+          <entry key="html" value="1801" />
+          <entry key="js" value="9331" />
+          <entry key="txt" value="345" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="4090" />
-          <entry key="HTML" value="1502" />
-          <entry key="JavaScript" value="7380" />
-          <entry key="PLAIN_TEXT" value="306" />
+          <entry key="CSS" value="4270" />
+          <entry key="HTML" value="1801" />
+          <entry key="JavaScript" value="9331" />
+          <entry key="PLAIN_TEXT" value="345" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.38086644">
+    <splitter split-orientation="vertical" split-proportion="0.54151624">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/userProfile.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="59" column="18" lean-forward="true" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
+                <state relative-caret-position="-908">
+                  <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
                 </state>
               </provider>
             </entry>
@@ -145,26 +144,26 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/generic.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="316">
+                <state relative-caret-position="622">
                   <caret line="273" column="11" lean-forward="true" selection-start-line="273" selection-start-column="11" selection-end-line="273" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/styleNetanella.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="122">
-                  <caret line="391" lean-forward="true" selection-start-line="391" selection-end-line="391" />
+                <state relative-caret-position="124">
+                  <caret line="407" column="21" lean-forward="true" selection-start-line="407" selection-start-column="21" selection-end-line="407" selection-end-column="21" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js-file.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-214">
-                  <caret line="70" column="1" lean-forward="true" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
+                <state relative-caret-position="17">
+                  <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
@@ -185,7 +184,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>key</find>
       <find>navigation bar</find>
       <find>#logo</find>
       <find>main</find>
@@ -212,8 +210,9 @@
       <find>movin</find>
       <find>mov</find>
       <find>scroll-li</find>
-      <find>scroll</find>
       <find>list</find>
+      <find>len</find>
+      <find>scroll</find>
       <find>my</find>
     </findStrings>
   </component>
@@ -231,11 +230,11 @@
         <option value="$PROJECT_DIR$/classSubmit.html" />
         <option value="$PROJECT_DIR$/search_page.html" />
         <option value="$PROJECT_DIR$/sign-up.html" />
-        <option value="$PROJECT_DIR$/js-file.js" />
         <option value="$PROJECT_DIR$/classPreview.html" />
         <option value="$PROJECT_DIR$/generic.css" />
         <option value="$PROJECT_DIR$/styleNetanella.css" />
         <option value="$PROJECT_DIR$/userProfile.html" />
+        <option value="$PROJECT_DIR$/js-file.js" />
       </list>
     </option>
   </component>
@@ -248,9 +247,9 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-11" />
-    <option name="width" value="905" />
+    <option name="width" value="980" />
     <option name="height" value="1031" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -323,7 +322,7 @@
       <workItem from="1543678585773" duration="8839000" />
       <workItem from="1543691494313" duration="11141000" />
       <workItem from="1543774207122" duration="75535000" />
-      <workItem from="1544219026732" duration="8970000" />
+      <workItem from="1544219026732" duration="20861000" />
     </task>
     <task id="LOCAL-00001" summary="added search button on navigation bar">
       <created>1543780865085</created>
@@ -388,14 +387,21 @@
       <option name="project" value="LOCAL" />
       <updated>1544222277785</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="navigation jumps to right place">
+      <created>1544278009747</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1544278009749</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119414000" />
+    <option name="totallyTimeSpent" value="131305000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-7" y="0" width="653" height="687" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25097528" />
@@ -412,7 +418,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32851985" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3291815" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -445,7 +451,8 @@
     <MESSAGE value="confirm box - working version" />
     <MESSAGE value="google map" />
     <MESSAGE value="scroll bar name semantic improve" />
-    <option name="LAST_COMMIT_MESSAGE" value="scroll bar name semantic improve" />
+    <MESSAGE value="navigation jumps to right place" />
+    <option name="LAST_COMMIT_MESSAGE" value="navigation jumps to right place" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/style.shahar.css" />
@@ -522,6 +529,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/generic.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="622">
+          <caret line="273" column="11" lean-forward="true" selection-start-line="273" selection-start-column="11" selection-end-line="273" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/classPreview.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-890">
@@ -532,34 +546,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generic.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="273" column="11" lean-forward="true" selection-start-line="273" selection-start-column="11" selection-end-line="273" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js-file.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-214">
-          <caret line="70" column="1" lean-forward="true" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styleNetanella.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="391" lean-forward="true" selection-start-line="391" selection-end-line="391" />
+        <state relative-caret-position="124">
+          <caret line="407" column="21" lean-forward="true" selection-start-line="407" selection-start-column="21" selection-end-line="407" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/userProfile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="59" column="18" lean-forward="true" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
+        <state relative-caret-position="-908">
+          <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js-file.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
