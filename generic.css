@@ -262,6 +262,8 @@ main {
 .scroll-wrap {
     display: inline-block;
     overflow: hidden;
+    position: relative;
+    overflow-x: scroll;
 }
 
 .scroll-section button {
@@ -269,13 +271,24 @@ main {
     position: relative;
 }
 
-.scroll-wrap a {
+.scroll-item {
+    float: right;
     display: inline-block;
     vertical-align: bottom;
+    position: relative;
 }
 
-.scroll-wrap a:hover {
+.scroll-item:hover {
     box-shadow: 5px 5px 5px gray;
+}
+
+.scroll-list {
+    position: absolute;
+    right: 0;
+}
+
+.scroll-wrap::-webkit-scrollbar {
+    display: none;
 }
 
 

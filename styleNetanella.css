@@ -175,39 +175,21 @@
     margin: 20px 0;
 }
 
-#attending li {
-    display: inline;
-    float: right;
-}
-
 #attending .scroll-section {
     margin-top: 25px;
 }
 
-#attending .scroll-item a {
-    position: relative;
+#attending .scroll-item {
     height: 150px;
     width: 120px;
     border: 1px solid lightgray;
     border-radius: 10px;
     margin: 10px;
-    display: inline-block;
-}
-
-#attending ul {
-    position: absolute;
-    right: 0;
 }
 
 #attending .scroll-wrap {
-    position: relative;
     height: 170px;
     width: 750px;
-    overflow-x: scroll;
-}
-
-#attending .scroll-wrap::-webkit-scrollbar {
-    display: none;
 }
 
 #attending .scroll-wrap img {
@@ -314,11 +296,6 @@
 /****************************************/
 /*USER PROFILE*/
 
-#userProfilePage main {
-    min-width: 800px;
-    overflow: scroll;
-}
-
 #userProfilePage {
     background-color: var(--main-simpleBackground);
 }
@@ -357,9 +334,18 @@
     height: 100%;
     background-color: white;
     margin: 2% 5%;
-    padding: 30px;
+    padding: 0 30px;
     width: 60%;
     right: 200px;
+}
+
+#userDetails h1 {
+    background-color: var(--main-logoTextColor);
+    display: block;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
 }
 
 #userDetails label, #userDetails input, #userDetails textarea {
@@ -367,7 +353,12 @@
     width: 85%;
     resize: vertical;
     padding-right: 10px;
-    margin: 10px;
+    margin: 0 20px;
+    font-size: 14px;
+}
+
+#userDetails label {
+    margin-top: 10px;
 }
 
 #first-name-con, #last-name-con {
@@ -441,12 +432,3 @@
     opacity: 0.5;
 }
 
-#userDetails h1 {
-    background-color: var(--main-logoTextColor);
-    display: block;
-    text-align: center;
-    padding: 5px;
-    margin: 10px;
-    border-radius: 5px;
-
-}
