@@ -25,6 +25,10 @@ h2{
     background-image: url("img/check.jpg");
     border: #0f4861 2px solid;
 }
+#allChugim{
+    display: block;
+
+}
 #chosedate{
     display: inline-block;
 }
@@ -53,15 +57,15 @@ h2{
 }
 #sliderphotos{
     position: relative;
-    width: 1050px;
+    width: 80%;
     height: 400px;
     margin: auto;
     display: inline-block;
-
 }
+
 #sliderphotos img{
     position: relative;
-    width: 750px;
+    width: 100%;
     height: 400px;
     padding-bottom: 30px;
 }
@@ -83,10 +87,10 @@ h2{
 /* Place the navbar at the bottom of the page, and make it stick */
 #navbarAllHobbies {
     overflow: hidden;
-    background-color: darkslategray;
+    background-color: #d7e2e8;
     display: block;
     text-align:center;
-    width: 300px;
+    width:20%;
     float: right;
     height:1500px;
 }
@@ -102,23 +106,23 @@ h2{
 #navbarAllHobbies a {
     float: right;
     display: inline-block;
-    color: lightblue;
+    color: #0C101A ;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
     height: 25px;
-    width: 300px;
+    width: 100%;
 }
 
 /* Change the color of links on hover */
 #navbarAllHobbies a:hover {
-    background-color: cadetblue;
+    background-color: #d0dbe1;
     color: black;
 }
 
 /* Add a color to the active/current link */
 #navbarAllHobbies a.active {
-    background-color: #4CAF50;
+    background-color: var(--main-logoTextColor);
     color: white;
 }
