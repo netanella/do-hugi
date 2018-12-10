@@ -17,11 +17,6 @@
     background: rgba(255, 255, 255, 0.6);
 }
 
-#questions div, #questions fieldset  {
-    display: inline-block;
-    margin: 0 0 25px 70px;
-}
-
 #questions .symbol {
     display: inline-block;
     position: relative;
@@ -39,16 +34,35 @@
     border-radius: 6px;
     padding-right: 5px;
     margin: auto;
-}
-
-
-#questions label:first-of-type, #questions textarea {
-    position: relative;
-    right: 40px;
+    width: 200px;
 }
 
 #questions textarea {
     resize: vertical;
+}
+
+#questions table {
+    margin-bottom: 20px;
+}
+
+#questions table td {
+    padding: 10px;
+}
+
+#questions table td label:first-of-type {
+    position: relative;
+    right: 40px;
+    top: 8px;
+}
+
+#photoUpload {
+    text-align: center;
+}
+
+
+#photoUpload .uploadFile {
+    position: relative;
+    right: 120px;
 }
 
 /*style tag checkboxes*/
@@ -92,6 +106,28 @@
     display: block;
     margin: 20px auto 20px auto;
     letter-spacing: 0.5em;
+}
+
+#prevBtn, #nextBtn {
+    background-color: rgba(250,250,250,0.7);
+    border-radius: 50%;
+    border: 2px solid black;
+    height: 45px;
+    width: 45px;
+    transition: all ease-in-out 1s;
+}
+
+#prevBtn:hover span:hover, #nextBtn span:hover {
+    animation: wobble 0.5s infinite;
+}
+
+#nextBtn {
+    float: left;
+}
+
+@keyframes wobble {
+    50% {transform: translateX(-6px)}
+    50% {transform: translateX(6px)}
 }
 
 /*************************************************************/
@@ -161,22 +197,11 @@
     top: 6px;
 }
 
-#hugDetails .map {
+#map {
     float: left;
-    border: 1px solid gray;
-    transition: transform .2s;
-    margin: 50px 20px 0 0;
-    cursor: all-scroll;
+    height: 250px;
+    width: 400px;
 }
-
-#hugDetails .map img {
-    width: 300px;
-}
-
-#hugDetails .map:active {
-    transform: scale(1.3);
-}
-
 
 /*attending scrolling bar*/
 
@@ -186,7 +211,11 @@
     margin: 20px 0;
 }
 
-#attending .scroll-items a {
+#attending .scroll-section {
+    margin-top: 25px;
+}
+
+#attending .scroll-item {
     height: 150px;
     width: 120px;
     border: 1px solid lightgray;
@@ -194,18 +223,26 @@
     margin: 10px;
 }
 
-#attending .scroll-items img {
+#attending .scroll-wrap {
+    height: 170px;
+    width: 750px;
+}
+
+#attending .scroll-wrap img {
     width: 70px;
     height: 75px;
     border-radius: 50%;
     margin:  10px auto;
 }
 
-#attending .scroll-list i {
-    bottom: 50px;
+#attending .scroll-section button {
+    background-color: white;
+    vertical-align: top;
+    margin-top: 40px;
+    padding: 0;
 }
 
-#attending .scroll-items p {
+#attending .scroll-wrap p {
     margin: auto;
 }
 
@@ -223,10 +260,13 @@
 #description .switch-txt-btn label {
     display: inline-block;
     background-color: lightgray;
-    box-shadow: 1px 1px 3px black;
     width: 100px;
     margin: 8px;
     text-align: center;
+}
+
+#description .switch-txt-btn label:hover {
+    box-shadow: 1px 1px 3px black;
 }
 
 #description .switch-txt-btn label span {
@@ -292,11 +332,6 @@
 /****************************************/
 /*USER PROFILE*/
 
-#userProfilePage main {
-    min-width: 800px;
-    overflow: scroll;
-}
-
 #userProfilePage {
     background-color: var(--main-simpleBackground);
 }
@@ -312,23 +347,19 @@
     text-align: center;
 }
 
-#userProfilePage aside input[type="radio"] {
-    display: none;
-}
-
 #userOverview .profilePhotoIcon {
     width: 150px;
-    margin-top: 25px;
+    margin-top: 60px;
     border: 3px solid black;
 }
 
-#userProfilePage aside nav label {
+#userProfilePage #sideNav a {
     display: block;
     padding: 10px;
     cursor: pointer;
 }
 
-#userProfilePage aside nav input:checked + label  {
+#userProfilePage #sideNav a:hover  {
     background-color: #0d3042;
     color: white;
 }
@@ -338,18 +369,38 @@
     display: inline-block;
     height: 100%;
     background-color: white;
-    margin: 3% 5%;
-    padding: 30px;
+    margin: 2% 5%;
+    padding: 20px 30px;
     width: 60%;
     right: 200px;
 }
 
+#userDetails h1 {
+    background-color: var(--main-logoTextColor);
+    display: block;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+#userDetails h4 span {
+    cursor: pointer;
+    font-style: italic;
+    margin-right: 10px;
+    display: none;
+}
 #userDetails label, #userDetails input, #userDetails textarea {
     display: block;
     width: 85%;
     resize: vertical;
     padding-right: 10px;
-    margin: 10px;
+    margin: 0 20px;
+    font-size: 14px;
+}
+
+#userDetails label {
+    margin-top: 10px;
 }
 
 #first-name-con, #last-name-con {
@@ -391,9 +442,11 @@
     text-align: center;
     border: 1px solid black;
     overflow: hidden;
+    height: 150px;
+    transition: all ease-in-out 1s;
 }
 
-#myHugim span {
+#myHugim li span {
     background-color: rgba(250,250,250,0.8);
     position: absolute;
     bottom: -35px;
@@ -422,13 +475,7 @@
 .disabled {
     opacity: 0.5;
 }
-
-#userDetails h1 {
-    background-color: var(--main-logoTextColor);
-    display: block;
+#forgot {
+    font-size: 15px;
     text-align: center;
-    padding: 5px;
-    margin: 10px;
-    border-radius: 5px;
-
 }

@@ -9,14 +9,19 @@
 <body id="userProfilePage">
 <header>
     <nav class="navbar">
-        <a href="" id="logo"><img src="img/LOGO.JPG"></a>
+        <a href="index.html" id="logo"><img src="img/LOGO.JPG"></a>
         <ul id="navLinks">
             <li><a href="">קצת עלינו</a></li>
             <li><a href="search_page.html">קטלוג חוגים</a></li>
             <li><a href="classSubmit.html">יצירת חוג</a></li>
             <li><a href="">גלריה</a></li>
             <li><a href="contactus.html">צור קשר</a></li>
-            <li><input id="searchBar" type="text" placeholder="חפש חוג"></li>
+            <li>
+                <form id="searchBar">
+                    <input type="text" placeholder="חפש חוג" name="search">
+                    <button type="submit"><i class="material-icons">search</i></button>
+                </form>
+            </li>
         </ul>
     </nav>
 </header>
@@ -28,15 +33,13 @@
             <a class="like-btn" id="logout" href="index.html">התנתקות</a>
         </div>
         <hr>
-        <nav>
-            <input id="myDetailsScroll" type="radio" checked name="scrollProfile">
-            <label for="myDetailsScroll">הפרטים שלי</label>
-            <input id="myHugimScroll" type="radio" name="scrollProfile">
-            <label for="myHugimScroll">החוגים שלי</label>
+        <nav id="sideNav">
+            <a id="section1" href="#userProfilePage">הפרטים שלי</a>
+            <a id="section2" href="#update-btn">החוגים שלי</a>
         </nav>
     </aside>
     <section id="userDetails">
-        <div id="myDetails">
+        <div>
             <h1>הפרטים שלי</h1>
             <div id="first-name-con">
                 <label for="firstName">שם פרטי</label>
@@ -49,10 +52,10 @@
             <label for="email">דוא"ל</label>
             <input id="email" type="text" value="brkpinch@post.bgu.ac.il">
             <label for="about">על עצמי</label>
-            <textarea id="about" rows="4">אני מפתח בחברת הייטק מגניבה להלהלה</textarea>
+            <textarea id="about" rows="4">אני מפתח בחברת הייטק מגניבה</textarea>
             <label for="interests">תחומי עניין</label>
             <textarea id="interests" rows="4">אני אוהב תכנות ווב ופינג פונג</textarea>
-            <div class="align-left-cont">
+            <div class="align-left-cont" id="update-btn">
                 <button type="submit">עדכון פרטים</button>
             </div>
         </div>
@@ -85,8 +88,24 @@
                     <span><strong>11.03.18</strong> <br> CSS היא לא (בהכרח) מילה גסה </span>
                 </li>
             </ul>
-            <h4>חוגים בהם השתתפתי</h4>
-            <ul>
+            <h4>חוגים בהם השתתפתי <span id="showAllAttended"></span></h4>
+            <ul id="attended-list">
+                <li class="disabled">
+                    <img class="hugImage" src="img/catfeeding.jpg">
+                    <span><strong>17.11.18</strong> <br> קורס האכלת חתולים בשער סורוקה </span>
+                </li>
+                <li class="disabled">
+                    <img class="hugImage" src="img/beerpong.jpg">
+                    <span><strong>6.11.18</strong> <br> טורניר ביר פונג בבית הסטודנט </span>
+                </li>
+                <li class="disabled">
+                    <img class="hugImage" src="img/meditation.jpg">
+                    <span><strong>2.11.18</strong> <br> מדיטציה בספריית ארן </span>
+                </li>
+                <li class="disabled">
+                    <img class="hugImage" src="img/treasure.jpg">
+                    <span><strong>22.9.18</strong> <br> "חפש את המטמון" בבניין 72 </span>
+                </li>
                 <li class="disabled">
                     <img class="hugImage" src="img/catfeeding.jpg">
                     <span><strong>17.11.18</strong> <br> קורס האכלת חתולים בשער סורוקה </span>
@@ -107,5 +126,6 @@
         </div>
     </section>
 </main>
+<script src="js-file.js"></script>
 </body>
 </html>
