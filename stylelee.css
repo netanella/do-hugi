@@ -9,7 +9,8 @@ header {
     height: 60px;
 }
 
-#sign-up-form{
+
+.sign-up-form{
     display: block;
     border-radius: 20px;
     width: 680px;
@@ -48,7 +49,7 @@ header {
 #registration input {
     border-radius: 6px;
     padding: 10px;
-    width: 260px;
+    width: 200px;
 }
 
 #registration textarea {
@@ -147,17 +148,19 @@ header {
     margin: 5px;
 }
 
-#loginbutt{
-    width: 25%;
+.loginbutt{
+    width: 30%;
+    height: 15%;
     max-width: 350px;
     background-color: lightgray;
     border: 1px solid black;
+    border-radius: 8px;
     display: block;
     margin: 25px auto;
     font-size: 22px;
 }
 
-#loginbutt:hover {
+.loginbutt:hover {
     background-color:grey ;
 }
 
