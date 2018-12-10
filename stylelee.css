@@ -10,10 +10,11 @@ header {
 }
 
 
+
 .sign-up-form{
     display: block;
     border-radius: 20px;
-    width: 680px;
+    width: 650px;
     margin: 50px auto;
     background-color: white;
     text-align: center;
@@ -23,7 +24,7 @@ header {
 
 #registration{
     margin: auto;
-    width: 90%;
+    width: 100%;
 }
 
 #registration .form-submit-btn {
@@ -50,6 +51,7 @@ header {
     border-radius: 6px;
     padding: 10px;
     width: 200px;
+    height: 10px;
 }
 
 #registration textarea {
@@ -60,7 +62,14 @@ header {
 }
 
 #registration #gender label {
-    margin-left: 15px;
+    margin-left: 1px;
+}
+#registration #gender input{
+    margin-bottom: 1px;
+}
+#registration #gender label {
+    margin-right: 1px;
+
 }
 
 #registration #gender li {
@@ -69,13 +78,13 @@ header {
 
 #registration tr {
     margin: 20px;
-    display: block;
+    display:block;
 }
 
 #registration td {
     display: inline-block;
     text-align: right;
-    width: 250px;
+    width: 300px;
     vertical-align: middle;
 }
 
@@ -124,7 +133,7 @@ header {
     border-radius: 6px;
     margin-bottom:20px;
     width: 70%;
-    height: 25px;
+    height: 15px;
     margin: 5px;
 }
 
