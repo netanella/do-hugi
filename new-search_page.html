@@ -2,9 +2,8 @@
 <html lang="he" dir="rtl">
 <head>
     <title> דו-חוגי | קטלוג </title>
-    <link href="styleShahar.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="calendar/styles/calendar.css">
-    <script src="calendar/scripts/calendar.js"></script>
+    <link href="styleShaharNew.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="calendar/styles/calendar.css">
     <meta charset="UTF-8">
 </head>
 <body>
@@ -17,12 +16,7 @@
             <li><a href="classSubmit.html">יצירת חוג</a></li>
             <li><a href="">גלריה</a></li>
             <li><a href="contactus.html">צור קשר</a></li>
-            <li>
-                <form id="searchBar">
-                    <input type="text" placeholder="חפש חוג" name="search">
-                    <button type="submit"><i class="material-icons">search</i></button>
-                </form>
-            </li>
+            <li><input id="searchBar" type="text" placeholder="חפש חוג"></li>
         </ul>
         <div id="userProfile" class="dropdown">
             <a href=""><span>ברקוש</span><img src="img/barak.JPG" class="profilePhotoIcon"></a>
@@ -77,89 +71,69 @@
             <label for="teva">סנאות בטבע</label>
         </div>
     </div>
+    <h2> בחר יום לחוג</h2>
     <div id="calendar-w"> </div>
-
 
     <h1> חוגים בנובמבר 2018</h1> <br> <br>
     <div id="allChugim">
         <div>
             <h2> בישול </h2>
-            <img src="img/בישול.jpg" width="300" height="200">
+            <img src="img/בישול.jpg" width="150" height="100">
             <p > יום ראשון 11.11.18 </p>
-            <a href="" class="myButton"><strong>הרשמה </strong></a></p>
+            <a href="classPreview.html" class="myButton"><strong>הרשמה </strong></a></p>
         </div>
         <div>
             <h2>זומבה</h2>
-            <img src="img/זומבה.jpg" width="300" height="200">
+            <img src="img/זומבה.jpg" width="150" height="100">
             <p>יום שלישי 13.11.18</p>
-            <a href="" class="myButton"><strong>הרשמה </strong></a>
+            <a href="classPreview.html" class="myButton"><strong>הרשמה </strong></a>
         </div>
         <div>
             <h2>פסנתר</h2>
-            <img src="img/פסנתר.jpg" width="300" height="200">
+            <img src="img/פסנתר.jpg" width="150" height="100">
             <p>  יום חמישי 15.11.18</p>
-            <a href="" class="myButton"><strong>הרשמה </strong></a>
+            <a href="classPreview.html" class="myButton"><strong>הרשמה </strong></a>
         </div>
         <div>
             <h2>אימון כושר</h2>
-            <img src="img/אימון%20כושר.jpg" width="300" height="200">
+            <img src="img/אימון%20כושר.jpg" width="150" height="100">
             <p>יום חמישי 15.11.18</p>
-            <a href="" class="myButton"><strong>הרשמה </strong></a>
+            <a href="classPreview.html" class="myButton"><strong>הרשמה </strong></a>
         </div>
         <div>
             <h2>אמנות</h2>
-            <img src="img/אמנות.jpg" width="300" height="200">
+            <img src="img/אמנות.jpg" width="150" height="100">
             <p>יום חמישי 15.11.18</p>
-            <a href="" class="myButton"><strong>הרשמה </strong></a>
+            <a href="classPreview.html" class="myButton"><strong>הרשמה </strong></a>
         </div>
         <div>
-            <h2>הכנת לוכדי חלומות</h2>
-            <img src="img/הכנת%20לוכדי%20חלומות.jpg" width="300" height="200">
+            <h2> לוכדי חלומות</h2>
+            <img src="img/הכנת%20לוכדי%20חלומות.jpg" width="150" height="100">
             <p>יום שישי 16.11.18</p>
-            <a href="" class="myButton"><strong>הרשמה </strong></a>
+            <a href="classPreview.html" class="myButton"><strong>הרשמה </strong></a>
         </div>
         <div>
             <h2>אפייה</h2>
-            <img src="img/אפייה.jpg" width="300" height="200">
+            <img src="img/אפייה.jpg" width="150" height="100">
             <p>יום חמישי 15.11.18</p>
-            <a href="" class="myButton"><strong>הרשמה </strong></a>
+            <a href="classPreview.html" class="myButton"><strong>הרשמה </strong></a>
         </div>
         <div>
             <h2>סדנת איפור</h2>
-            <img src="img/סדנת%20איפור.jpg" width="300" height="200">
+            <img src="img/סדנת%20איפור.jpg" width="150" height="100">
             <p>יום שבת 17.11.18</p>
-            <a href="" class="myButton"><strong>הרשמה </strong></a>
+            <a href="classPreview.html" class="myButton"><strong>הרשמה </strong></a>
         </div>
         <div>
             <h2>כדורגל</h2>
-            <img src="img/כדורגל.jpg" width="300" height="200">
+            <img src="img/כדורגל.jpg" width="150" height="100">
             <p>יום חמישי 15.11.18</p>
-            <a href="" class="myButton"><strong>הרשמה </strong></a>
+            <a href="classPreview.html" class="myButton"><strong>הרשמה </strong></a>
         </div>
     </div>
 </main>
-
-<script>
-    var myIndex = 0;
-    carousel();
-
-    function carousel() {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        myIndex++;
-        if (myIndex > x.length) {myIndex = 1}
-        x[myIndex-1].style.display = "block";
-        setTimeout(carousel, 3000);
-    }
-
-    let calendar = new Calendar('calendar-w');
-
-
-
-</script>
+<script src="calendar2.js"></script>
+<script src="runningPhotos.js"></script>
 
 </body>
 </html>
