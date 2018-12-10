@@ -1,17 +1,16 @@
 
     var myIndex = 0;
-    carousel();
+    slider();
 
-    function carousel() {
+    function slider() {
         var i;
-        var x = document.getElementsByClassName("mySlides");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
+        var slides = document.getElementsByClassName("hugSlide");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
         }
         myIndex++;
-        if (myIndex > x.length) {myIndex = 1}
-        x[myIndex-1].style.display = "block";
-        setTimeout(carousel, 3000);
+        if (myIndex > slides.length) {myIndex = 1}
+        slides[myIndex-1].style.display = "block";
+        setTimeout(slider, 3000);
     }
 
-    let calendar = new Calendar('calendar-w');

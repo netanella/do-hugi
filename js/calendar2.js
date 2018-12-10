@@ -1,25 +1,26 @@
+
 class Calendar {
     constructor(id) {
-        this.displayed_date = new Date() 					//date which calendar displays now
-        this.current_day = this.displayed_date.getDate() 	//current world time
-        this.selected_date = this.displayed_date 			//date that user's selected
+        this.displayed_date = new Date();					//date which calendar displays now
+        this.current_day = this.displayed_date.getDate();	//current world time
+        this.selected_date = this.displayed_date;			//date that user's selected
 
-        this.drawToDom(this.displayed_date, id)
+        this.drawToDom(this.displayed_date, id);
 
-        this.body_node = document.getElementById('calendar-body')
-        this.year_node = document.getElementById('calendar-year')
-        this.month_node = document.getElementById('calendar-month')
+        this.body_node = document.getElementById('calendar-body');
+        this.year_node = document.getElementById('calendar-year');
+        this.month_node = document.getElementById('calendar-month');
 
-        this.moveLeft = this.moveLeft.bind(this)
-        this.moveRight = this.moveRight.bind(this)
-        this.selectHandler = this.selectHandler.bind(this)
-        this.setDateTo = this.setDateTo.bind(this)
+        this.moveLeft = this.moveLeft.bind(this);
+        this.moveRight = this.moveRight.bind(this);
+        this.selectHandler = this.selectHandler.bind(this);
+        this.setDateTo = this.setDateTo.bind(this);
 
-        this.body_node.addEventListener('click', this.selectHandler)
+        this.body_node.addEventListener('click', this.selectHandler);
 
         document
             .getElementById('calendar-left-btn') //adds listeners for buttons
-            .addEventListener('click', this.moveLeft)
+            .addEventListener('click', this.moveLeft);
         document
             .getElementById('calendar-right-btn')
             .addEventListener('click', this.moveRight)
@@ -27,8 +28,8 @@ class Calendar {
 
     //draws the calendar when the document is loaded
     drawToDom(date, id) {
-        let year = date.getFullYear()
-        let month = this.getMonthName(date)
+        let year = date.getFullYear();
+        let month = this.getMonthName(date);
 
         document.getElementById(id).innerHTML = `
 			<div id='calendar'>

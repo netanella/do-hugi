@@ -69,7 +69,7 @@
     box-shadow:0 2px 0 black,0 -2px 0 black,2px 0 0 black,-2px 0 0 black}
 .calendar-cell-selected {
     border-radius: 9px;
-    background: lightgreen;
+    background: var(--main-logoTextColor);
     border-color: black;
 }
 .calendar-cell-gray{
@@ -81,6 +81,6 @@
     color: #2f6627;
 }
 .calendar-cell-today{
-    background-color: #b6e3cd;
+    background-color: lightgray;
     border-color: black;
 }

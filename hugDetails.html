@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>דו חוגי | פרטי חוג</title>
-    <link rel="stylesheet" type="text/css" href="hugDetails.css">
+    <link rel="stylesheet" type="text/css" href="css/hugDetails.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
@@ -20,11 +20,11 @@
     <nav class="navbar">
         <a href="index.html" id="logo"><img src="img/LOGO.JPG"></a>
         <ul id="navLinks">
-            <li><a href="search_page.html">קטלוג חוגים</a></li>
+            <li><a href="hugSearch.html">קטלוג חוגים</a></li>
             <li><a href="submitNewHug.html">יצירת חוג</a></li>
             <li><a href="">גלריה</a></li>
             <li><a href="">קצת עלינו</a></li>
-            <li><a href="contactus.html">צור קשר</a></li>
+            <li><a href="contact.html">צור קשר</a></li>
             <li>
                 <form id="searchBar">
                     <input type="text" placeholder="חפש חוג" name="search">
@@ -44,16 +44,15 @@
 </header>
 <main>
     <div id="topStrip">
-        <img class="mainPhoto" src="img\HugDog.jpg">
-        <span class="heading">
-        <h1>סדנת אילוף כלבים / </h1>
-        <h3> נוצר על ידי: &nbsp;
-            <a href="userProfile.html"> <img src="img\img_avatar.png"> </a>
-            <a href="userProfile.html"> איתי הראל </a>
-        </h3>
-    </span>
+        <img class="mainPhoto" src="img/hugDog.jpg">
+        <div class="heading">
+            <h1>סדנת אילוף כלבים / </h1>
+            <h3> נוצר על ידי: &nbsp;
+                <a href="userProfile.html"> <img src="img/img_avatar.png"> </a>
+                <a href="userProfile.html"> איתי הראל </a>
+            </h3>
+        </div>
     </div>
-    </header>
     <section id="hugDetails">
         <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3410.5494261259055!2d34.78931890075295!3d31.26089428136519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x58cda349c891b450!2sBar+Giora!5e0!3m2!1sen!2sil!4v1543957417185" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         <ul id="date-time-place">
@@ -169,8 +168,8 @@
         </div>
     </section>
 </main>
-<script src="scrollBar.js"></script>
-<script src="confirmPopup.js"></script>
+<script src="js/scrollBar.js"></script>
+<script src="js/confirmPopup.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG_CFNEjAlR0uOWWvExGf9EoPW5upL7Fc&callback=myMap"></script>
 </body>
 </html>
