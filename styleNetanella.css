@@ -475,3 +475,7 @@
 .disabled {
     opacity: 0.5;
 }
+#forgot {
+    font-size: 15px;
+    text-align: center;
+}
