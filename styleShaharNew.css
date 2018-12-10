@@ -53,7 +53,7 @@ h2{
 }
 #sliderphotos{
     position: relative;
-    width: 1000px;
+    width: 1050px;
     height: 400px;
     margin: auto;
     display: inline-block;
@@ -86,33 +86,29 @@ h2{
     background-color: darkslategray;
     display: block;
     text-align:center;
-    width: 150px;
+    width: 300px;
     float: right;
-    height:1200px;
+    height:1500px;
 }
 
 #calendar{
     border: black 1px solid;
     display: block;
-    position: absolute;
-    width: 400px;
+    width: 500px;
     height: 400px;
-    top: 80px;
-    left: 30px;
 }
 
 /* Style the links inside the navigation bar */
 #navbarAllHobbies a {
     float: right;
-    display: block;
+    display: inline-block;
     color: lightblue;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
     height: 25px;
-    width: 120px;
-
+    width: 300px;
 }
 
 /* Change the color of links on hover */

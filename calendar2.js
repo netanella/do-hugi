@@ -1,6 +1,6 @@
 class Calendar {
     constructor(id) {
-        this.displayed_date = new Date() 					//date wich calendar displays now
+        this.displayed_date = new Date() 					//date which calendar displays now
         this.current_day = this.displayed_date.getDate() 	//current world time
         this.selected_date = this.displayed_date 			//date that user's selected
 
@@ -35,7 +35,7 @@ class Calendar {
 				<header class="calendar__head">
 					<div class="calendar__nav">
 						<div id='calendar-left-btn' class="calendar__arrow">
-							<img class="calendar__arrow-left" src="images/left-arrow.png" alt="">
+							<img class="calendar__arrow-left" src="calendar/images/right-arrow.png" alt="קדימה">
 						</div>
 
 						<div class="calendar__head-text">
@@ -44,63 +44,54 @@ class Calendar {
 						</div>
 
 						<div id='calendar-right-btn' class="calendar__arrow">
-							<img class='calendar__arrow-right' src="images/right-arrow.png" alt="">
+							<img class='calendar__arrow-right' src="calendar/images/left-arrow.png" alt="אחורה">
 						</div>
 					</div>
 
 					<table class="calendar__head-days">
+					    <td class='calendar__head-days-item'>ראשון</td> 
 						<td class='calendar__head-days-item'>שני</td>
 						<td class='calendar__head-days-item'>שלישי</td>
 						<td class='calendar__head-days-item'>רביעי</td>
 						<td class='calendar__head-days-item'>חמישי</td>
 						<td class='calendar__head-days-item'>שישי</td>
 						<td class='calendar__head-days-item'>שבת</td>
-						<td class='calendar__head-days-item'>ראשון</td>
+						
 					</table>
 				</header>
 				<table id="calendar-body" class='calendar__body'></table>
-			</div>`
+			</div>`;
 
         let body = this.createCalendarBody(
             this.displayed_date,
             true
-        )
+        );
 
         document.getElementById('calendar-body').appendChild(body)
     }
 
-    //creates an array of 42 objects corresponding to the given date
-    /*[
-    ...
-        {
-            number: 23,
-            from: 'current month',  //can also be 'prev month', 'next month', used for styling
-            weekend: true 			//says if this day is a day off (for styling)
-        },
-    ...
-    ]*/
     createDaysArray(date) {
         let prev_month_last_day = new Date( //number of the last day of the previous month
             date.getFullYear(),
             date.getMonth(),
             0
-        ).getDate()
-        let first_week_day = new Date( //number of the first day of the current month f.e. monday->1, wednesday->3
+        ).getDate();
+        let first_week_day = new Date( //number of the first day of the current month f.e. sunday->1 etc
             date.getFullYear(),
             date.getMonth(),
-            1
-        ).getDay()
+            2
+        ).getDay();
         let current_month_last_day = new Date(
             date.getFullYear(),
             date.getMonth() + 1,
             0
-        ).getDate()
-        let days_array = new Array(42)
-        let i = 0 // iterator for all three parts of array
+        ).getDate();
+        let days_array = new Array(42);
+        let i = 0; // iterator for all three parts of array
 
-        if (first_week_day == 0) first_week_day = 7 //if it was sunday
+        if (first_week_day == 0) first_week_day = 7 ;//if it was sunday
 
-        let first_array_element = prev_month_last_day - first_week_day + 2
+        let first_array_element = prev_month_last_day - first_week_day + 2;
 
         //adds last days of previous month
         for (i = 0; i < first_week_day - 1; ++i){
