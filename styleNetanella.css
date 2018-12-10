@@ -220,15 +220,15 @@
     width: 120px;
     border: 1px solid lightgray;
     border-radius: 10px;
-    margin: 10px;
+    margin-right: 20px;
 }
 
 #attending .scroll-wrap {
-    height: 170px;
+    height: 155px;
     width: 750px;
 }
 
-#attending .scroll-wrap img {
+#attending .scroll-item img {
     width: 70px;
     height: 75px;
     border-radius: 50%;
