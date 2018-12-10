@@ -3,21 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>דו-חוגי | צור קשר</title>
-    <link rel="stylesheet" href="stylelee.css">
-
-
+    <link rel="stylesheet" type="text/css" href="stylelee.css">
 </head>
-
     <body id="contactUsPage">
-    <!--custom dialog box-->
-    <div id="dialogoverlay"></div>
-    <div id="dialogbox">
-        <div id="dialogboxhead"></div>
-        <div id="dialogboxbody"></div>
-        <div id="dialogboxfoot">
-
-        </div>
-    </div>
     <header>
     <nav class="navbar">
         <a href="" id="logo"><img src="img/LOGO.JPG"></a>
@@ -30,7 +18,7 @@
             <li><a href="contactus.html">צור קשר</a></li>
         </ul>
         <div id="userProfile" class="dropdown">
-            <a href=""><span>ברקוש</span><img src="img/barak.jpg" class="profilePhotoIcon"></a>
+            <a href=""><span>ברקוש</span><img src="img/barak.JPG" class="profilePhotoIcon"></a>
             <div class="dropdown-content">
                 <a href="">הפרופיל שלי</a>
                 <a href="">החוגים שלי</a>
@@ -47,39 +35,31 @@
             <div id="part1">
 
             <h3>
-                  <img id="email" src="img/mail.png" width="30" height="30"> כתבו לנו </h3>
-
-
+                <img id="email" src="img/mail.png" width="30" height="30"> כתבו לנו </h3>
                 <label for="username">  שם מלא: </label>
                 <br>
-            <input id="username" type="text" name="username">
+            <input id="username" type="text" name="username" required/>
             <br>
 
              <label for="e-mail">  אימייל:  </label>
                 <br>
-              <input id="e-mail" type="text" name="email" />
+              <input id="e-mail" type="text" name="email" required/>
             <br>
 
              <label for="message"> פרטי ההודעה: </label>
                 <br>
-             <textarea id="message" rows="6" cols="35" name="textarea1"></textarea>
+             <textarea id="message" rows="6" cols="35" name="textarea1" required></textarea>
 
-                <button type="submit" class="form-submit-btn" onclick="alert('תודה שפנית אלינו. נשוב אליך בהקדם! צוות האתר.')">
+                <button type="submit" class="form-submit-btn" onclick="alert('הודעת התקבלה. תודה שפנית אלינו, נשוב אליך בהקדם! צוות האתר.');">
                     שלח
-
                     <span></span></button>
-
             </div>
 
             <div id="part2">
-
-
                 <h3> <img  id="phone" src="img/phone.png" width="30" height="30">התקשרו אלינו</h3>
                 <p>0542122349</p>
                 <p>                לי אוחיון, מנכ"לית ארגון DO-חוגי
                 </p>
-
-
             </div>
     <br>
 
@@ -87,5 +67,4 @@
     </div>
 </main>
 </body>
-<script src="js-file.js"></script>
 </html>
