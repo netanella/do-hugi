@@ -7,8 +7,18 @@
 
 
 </head>
-<header>
+
     <body id="contactUsPage">
+    <!--custom dialog box-->
+    <div id="dialogoverlay"></div>
+    <div id="dialogbox">
+        <div id="dialogboxhead"></div>
+        <div id="dialogboxbody"></div>
+        <div id="dialogboxfoot">
+
+        </div>
+    </div>
+    <header>
     <nav class="navbar">
         <a href="" id="logo"><img src="img/LOGO.JPG"></a>
         <ul id="navLinks">
@@ -30,7 +40,7 @@
     </nav>
 </header>
 <main>
-    <div id="sign-up-form">
+    <div class="sign-up-form">
     <h1>צרו איתנו קשר</h1>
     <br>
         <form id="contactus">
@@ -54,7 +64,9 @@
                 <br>
              <textarea id="message" rows="6" cols="35" name="textarea1"></textarea>
 
-                <button type="submit" class="form-submit-btn">שלח
+                <button type="submit" class="form-submit-btn" onclick="alert('תודה שפנית אלינו. נשוב אליך בהקדם! צוות האתר.')">
+                    שלח
+
                     <span></span></button>
 
             </div>
@@ -63,15 +75,17 @@
 
 
                 <h3> <img  id="phone" src="img/phone.png" width="30" height="30">התקשרו אלינו</h3>
-                0542122349
-                לי אוחיון, מנכ"לית ארגון DO-חוגי
+                <p>0542122349</p>
+                <p>                לי אוחיון, מנכ"לית ארגון DO-חוגי
+                </p>
 
-            </di>
+
+            </div>
     <br>
 
-
         </form>
-    </div>>
+    </div>
 </main>
 </body>
+<script src="js-file.js"></script>
 </html>
