@@ -278,7 +278,7 @@ main {
 }
 
 .scroll-item:hover {
-    box-shadow: 5px 1px 5px gray;
+    box-shadow: 5px 5px 5px gray;
 }
 
 .scroll-list {
@@ -368,4 +368,3 @@ main {
 .step.active {
     opacity: 1;
 }
-
