@@ -3,21 +3,24 @@ var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
 function showTab(curr) {
-    // This function will display the specified tab of the form ...
+    // This function will display the specified tab of the form
     var allTabs = document.getElementsByClassName("tab");
     allTabs[curr].style.display = "block";
-    // ... and fix the Previous/Next buttons:
-    if (curr == 0) {
-        document.getElementById("prevBtn").style.display = "none";
-    } else {
-        document.getElementById("prevBtn").style.display = "inline";
+    // fix the Previous/Next buttons:
+    if (document.getElementById("prevBtn")!=null){ //if we have the prev/next buttons in the page
+        if (curr == 0) {
+            document.getElementById("prevBtn").style.display = "none";
+        } else {
+            document.getElementById("prevBtn").style.display = "inline";
+        }
+        if (curr == (allTabs.length - 1)) {
+            document.getElementById("nextBtn").style.display = "none";
+        } else {
+            document.getElementById("nextBtn").style.display = "inline";
+        }
     }
-    if (curr == (allTabs.length - 1)) {
-        document.getElementById("nextBtn").style.display = "none";
-    } else {
-        document.getElementById("nextBtn").style.display = "inline";
-    }
-    // ... and run a function that displays the correct step indicator:
+
+    // run a function that displays the correct step indicator:
     fixStepIndicator(curr);
 }
 
@@ -32,11 +35,11 @@ function nextPrev(num) {
 }
 
 function fixStepIndicator(curr) {
-    // This function removes the "active" class of all steps...
+    // remove the "active" class of all steps
     var allSteps = document.getElementsByClassName("step");
     for (var i = 0; i < allSteps.length; i++) {
         allSteps[i].className = allSteps[i].className.replace(" active", "");
     }
-    //... and adds the "active" class to the current step:
+    //adds the "active" class to the current step:
     allSteps[curr].className += " active";
 }
