@@ -12,11 +12,10 @@
 <div id="dialogbox">
     <div id="dialogboxhead"></div>
     <div id="dialogboxbody"></div>
-    <div id="dialogboxfoot">
-
-    </div>
+    <div id="dialogboxfoot"></div>
 </div>
 <header>
+    <!-- navigation bar for all pages -->
     <nav class="navbar">
         <a href="index.html" id="logo"><img src="img/LOGO.JPG"></a>
         <ul id="navLinks">
@@ -44,6 +43,7 @@
     </nav>
 </header>
 <main>
+    <!-- hug preview image and title -->
     <div id="topStrip">
         <img class="mainPhoto" src="img/hugDog.jpg">
         <div class="heading">
@@ -54,7 +54,9 @@
             </h3>
         </div>
     </div>
+    <!-- information about the hug - location, price etc -->
     <section id="hugDetails">
+        <!-- Google map -->
         <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3410.5494261259055!2d34.78931890075295!3d31.26089428136519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x58cda349c891b450!2sBar+Giora!5e0!3m2!1sen!2sil!4v1543957417185" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         <ul id="date-time-place">
             <li><i class="material-icons">location_on</i>
@@ -93,13 +95,14 @@
                     <span class="after"><span>&#10006;</span>לא רשום</span>
                 </label>
             </div>
-
             <hr>
         </div>
     </section>
+    <!-- list of users who are attending this hug -->
     <section id="attending"><br>
         <h3>מי מגיע?</h3><br>
         <div class="scroll-section">
+            <!-- right arrow -->
             <button class="material-icons"><span onclick="scrollBar('userList','right',142)" id="right-nav-arrow">arrow_right</span></button>
             <div class="scroll-wrap">
                 <ul id="userList" class="scroll-list">
@@ -159,6 +162,7 @@
                     </li>
                 </ul>
             </div>
+            <!-- left arrow -->
             <button class="material-icons"><span onclick="scrollBar('userList','left',142)" id="left-nav-arrow">arrow_left</span></button>
         </div>
     </section>
