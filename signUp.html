@@ -29,70 +29,56 @@
         <p id="first">כדאי לכם. כיף פה!</p>
         <form id="registration">
             <table>
-                <tr>
-                    <td> <label for="name">שם פרטי: </label></td>
-                    <td> <input  id="name" type="text" name="firstname"></td>
-                </tr>
-                <tr>
-                    <td><label for="lastname">  שם משפחה:  </label> </td>
-                    <td><input id="lastname" type="text" name="lastname" ></td>
-                </tr>
-                <tr>
-                    <td>  <label for="username">  שם משתמש: </label></td>
-                    <td><input id="username" type="text" name="username"></td>
-                </tr>
-                <tr>
-                    <td> <label for="password">  סיסמא:   </label></td>
-                    <td> <input id="password" type="password" name="pwd" /></td>
-                </tr>
+                <div class="wrapInput">
+                    <tr>
+                        <td> <label for="name">שם פרטי: </label></td>
+                        <td> <input  id="name" type="text" name="firstname"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lastname">  שם משפחה:  </label> </td>
+                        <td><input id="lastname" type="text" name="lastname" ></td>
+                    </tr>
+                    <tr>
+                        <td>  <label for="username">  שם משתמש: </label></td>
+                        <td><input id="username" type="text" name="username"></td>
+                    </tr>
+                    <tr>
+                        <td> <label for="password">  סיסמא:   </label></td>
+                        <td> <input id="password" type="password" name="pwd" /></td>
+                    </tr>
 
+                    <tr>
+                        <td><label for="passwordcon">  אשר את הסיסמא:   </label></td>
+                        <td><input id="passwordcon" type="password"  name="pwd" /></td>
+                    </tr>
+                    <tr>
+                        <td> <label for="email"> E-mail:  </label></td>
+                        <td> <input id="email" type="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td>  <label for="phone"> מספר טלפון:  </label></td>
+                        <td>  <input id="phone" type="text" name="phone"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="bday"> תאריך לידה: </label></td>
+                        <td><input id="bday" type="date" name="bday"></td>
+                    </tr>
+                </div>
                 <tr>
-                    <td><label for="passwordcon">  אשר את הסיסמא:   </label></td>
-                    <td><input id="passwordcon" type="password"  name="pwd" /></td>
-                </tr>
-                <tr>
-                    <td> <label for="email"> E-mail:  </label></td>
-                    <td> <input id="email" type="email" name="email"></td>
-                </tr>
-                <tr>
-                    <td>  <label for="phone"> מספר טלפון:  </label>
-                    </td>
-                    <td>  <input id="phone" type="text" name="phone"></td>
-                </tr>
-                <tr>
-                    <td><label for="bday"> תאריך לידה: </label></td>
-                    <td>
-                        <input id="bday" type="date">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="gender"> מין: </label>
-                    </td>
-                    <td>
-                        <ul id="gender" class="radio">
-                            <li>
-                                <label for="male">
-                                    <input type="radio" id="male" name="gender" value="male" >
-                                    <span></span>
-                                    זכר
-                                </label>
-                            </li>
-                            <li>
-                                <label for="female">
-                                    <input type="radio" name="gender" id="female" value="female">
-                                    <span></span>
-                                    נקבה
-                                </label>
-                            </li>
-                            <li>
-                                <label for="other">
-                                    <input id="other" type="radio" name="gender" value="other">
-                                    <span></span>
-                                    אחר
-                                </label>
-                            </li>
-                        </ul>
+                    <td><label for="gender"> מין: </label></td>
+                    <td id="gender">
+                        <label for="male">
+                            <input type="radio" id="male" name="gender" value="male" >
+                            <span class="gender2">זכר</span>
+                        </label>
+                        <label for="female">
+                            <input type="radio" name="gender" id="female" value="female">
+                            <span>נקבה</span>
+                        </label>
+                        <label for="other">
+                            <input id="other" type="radio" name="gender" value="other">
+                            <span>אחר</span>
+                        </label>
                     </td>
                 </tr>
                 <tr>
