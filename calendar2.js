@@ -1,34 +1,34 @@
 class Calendar {
     constructor(id) {
-        this.displayed_date = new Date() 					//date which calendar displays now
-        this.current_day = this.displayed_date.getDate() 	//current world time
-        this.selected_date = this.displayed_date 			//date that user's selected
+        this.displayed_date = new Date() ;					//date which calendar displays now
+        this.current_day = this.displayed_date.getDate(); 	//current world time
+        this.selected_date = this.displayed_date;			//date that user's selected
 
-        this.drawToDom(this.displayed_date, id)
+        this.drawToDom(this.displayed_date, id);
 
-        this.body_node = document.getElementById('calendar-body')
-        this.year_node = document.getElementById('calendar-year')
-        this.month_node = document.getElementById('calendar-month')
+        this.body_node = document.getElementById('calendar-body');
+        this.year_node = document.getElementById('calendar-year');
+        this.month_node = document.getElementById('calendar-month');
 
-        this.moveLeft = this.moveLeft.bind(this)
-        this.moveRight = this.moveRight.bind(this)
-        this.selectHandler = this.selectHandler.bind(this)
-        this.setDateTo = this.setDateTo.bind(this)
+        this.moveLeft = this.moveLeft.bind(this);
+        this.moveRight = this.moveRight.bind(this);
+        this.selectHandler = this.selectHandler.bind(this);
+        this.setDateTo = this.setDateTo.bind(this);
 
-        this.body_node.addEventListener('click', this.selectHandler)
+        this.body_node.addEventListener('click', this.selectHandler);
 
         document
             .getElementById('calendar-left-btn') //adds listeners for buttons
-            .addEventListener('click', this.moveLeft)
+            .addEventListener('click', this.moveLeft);
         document
             .getElementById('calendar-right-btn')
-            .addEventListener('click', this.moveRight)
+            .addEventListener('click', this.moveRight);
     }
 
     //draws the calendar when the document is loaded
     drawToDom(date, id) {
-        let year = date.getFullYear()
-        let month = this.getMonthName(date)
+        let year = date.getFullYear();
+        let month = this.getMonthName(date);
 
         document.getElementById(id).innerHTML = `
 			<div id='calendar'>
@@ -67,7 +67,7 @@ class Calendar {
             true
         );
 
-        document.getElementById('calendar-body').appendChild(body)
+        document.getElementById('calendar-body').appendChild(body);
     }
 
     createDaysArray(date) {
@@ -128,14 +128,14 @@ class Calendar {
         let days_array = this.createDaysArray(date)
         let table = document.createDocumentFragment()
 
-        let i = 0
+        let i = 0;
 
         for (let j = 0; j < 6; ++j) {
-            let tr = document.createElement('tr')
+            let tr = document.createElement('tr');
 
             for (let k = 0; k < 7; ++k) {
-                let td = document.createElement('td')
-                td.innerHTML = days_array[i].number
+                let td = document.createElement('td');
+                td.innerHTML = days_array[i].number;
                 tr.appendChild(td)
 
                 //add the styles that depend on what month the day belongs to
@@ -250,4 +250,4 @@ class Calendar {
     }
 
 }
-let calendar = new Calendar('calendar-w');/*create the calendar*/
+

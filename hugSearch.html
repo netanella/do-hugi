@@ -9,6 +9,7 @@
 </head>
 <body>
 <header>
+    <!-- navigation bar of all pages -->
     <nav class="navbar">
         <a href="index.html" id="logo"><img src="img/LOGO.JPG"></a>
         <ul id="navLinks">
@@ -24,6 +25,7 @@
                 </form>
             </li>
         </ul>
+        <!-- user profile menu options-->
         <div id="userProfile" class="dropdown">
             <a href="userProfile.html"><span>ברקוש</span><img src="img/barak.JPG" class="profilePhotoIcon"></a>
             <div class="dropdown-content">
@@ -35,7 +37,9 @@
     </nav>
 </header>
 <main>
+    <!-- navigation bar of categories-->
     <aside id="navbarAllHobbies">
+        <!--calendar place-->
         <div id="calendar-w"> </div>
         <br>
         <nav>
@@ -54,6 +58,7 @@
 
         </nav>
     </aside>
+    <!-- running photos of the site options-->
     <div id="sliderphotos">
         <div class="hugSlide">
             <img id="alco" src="img/alco.jpg">
@@ -80,23 +85,23 @@
             <label for="teva">סדנאות בטבע</label>
         </div>
     </div>
-
+    <!--available workshop in November 2018-->
     <h1> חוגים בנובמבר 2018</h1> <br> <br>
     <div id="allHugim">
         <div>
-            <h2> בישול </h2>
+            <h2> מכינים מרק קובה של סבתא שולה </h2>
             <img src="img/בישול.jpg">
             <p > יום ראשון 11.11.18 </p>
             <a href="hugDetails.html" class="signupButton"><strong>הרשמה </strong></a>
         </div>
         <div>
-            <h2>זומבה</h2>
+            <h2>זומבה לכל הגילאים</h2>
             <img src="img/זומבה.jpg">
             <p>יום שלישי 13.11.18</p>
             <a href="hugDetails.html" class="signupButton"><strong>הרשמה </strong></a>
         </div>
         <div>
-            <h2>פסנתר</h2>
+            <h2>פסנתר </h2>
             <img src="img/פסנתר.jpg">
             <p>  יום חמישי 15.11.18</p>
             <a href="hugDetails.html" class="signupButton"><strong>הרשמה </strong></a>
@@ -139,10 +144,12 @@
         </div>
     </div>
 </main>
+<!-- connection to JS file of the calendar-->
 <script src="js/calendar2.js"></script>
+<!-- connection to JS file of the slider photos-->
 <script src="js/slider.js"></script>
 <script>
-    new Calendar('calendar-w');
+    new Calendar('calendar-w'); /*create the calendar*/
 </script>
 </body>
 </html>
