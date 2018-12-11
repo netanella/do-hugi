@@ -16,7 +16,7 @@ h1 {
     position: relative;
     display: inline-block;
     font-size: medium;
-    margin:20px;
+    margin: 20px;
     border: #0f4861 1px solid;
     padding: 50px 5px 0 5px;
     width: 180px;
@@ -26,7 +26,8 @@ h1 {
 
 #allHugim h2{
     position: absolute;
-    top: 0;
+    padding: 5px;
+    top: 3px;
     margin: 0 auto;
     font-size: 18px;
 }
