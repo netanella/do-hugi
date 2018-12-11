@@ -5,16 +5,16 @@
     <title>דו-חוגי | צור קשר</title>
     <link rel="stylesheet" type="text/css" href="css/stylelee.css">
 </head>
-    <body id="contactUsPage">
+    <body id="contactUsPage"  background="img/grass.jpg">
     <header>
+        <!-- navigation bar of all pages -->
     <nav class="navbar">
         <a href="hugSearch.html" id="logo"><img src="img/LOGO.JPG"></a>
         <ul id="navLinks">
-            <li><a href="hugSearch.html">דף הבית</a></li>
-            <li><a href="#">קצת עלינו</a></li>
-            <li><a href="hugSearch.html">חיפוש חוג</a></li>
+            <li><a href="hugSearch.html">קטלוג חוגים</a></li>
             <li><a href="submitNewHug.html">יצירת חוג</a></li>
-            <li><a href="#">גלריה</a></li>
+            <li><a href="">גלריה</a></li>
+            <li><a href="aboutus.html">קצת עלינו</a></li>
             <li><a href="contact.html">צור קשר</a></li>
         </ul>
         <div id="userProfile" class="dropdown">
@@ -32,6 +32,7 @@
     <h1>צרו איתנו קשר</h1>
     <br>
         <form id="contactus">
+            <!-- the inputs of contact -->
             <div id="part1">
 
             <h3>
@@ -49,6 +50,8 @@
              <label for="message"> פרטי ההודעה: </label>
                 <br>
              <textarea id="message" rows="6" cols="35" name="textarea1" required></textarea>
+
+                <!-- Message to user whose request has been received -->
 
                 <button type="submit" class="form-submit-btn" onclick="alert('הודעת התקבלה. תודה שפנית אלינו, נשוב אליך בהקדם! צוות האתר.');">
                     שלח
