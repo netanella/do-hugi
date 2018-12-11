@@ -19,8 +19,7 @@
     </nav>
 </header>
 <main class="centered-form">
-    <!-- sign up forms for new users -->
-
+    <!-- sign up form for new users -->
     <h1>הצטרפו אלינו</h1>
     <p id="first">כדאי לכם. כיף פה!</p>
     <form id="registration" action="form.php">
@@ -31,24 +30,20 @@
             </tr>
             <tr>
                 <td><label for="lastname">  שם משפחה:  </label> </td>
-                <td><input id="lastname" class="textInput" type="text" name="lastname" ></td>
-            </tr>
-            <tr>
-                <td>  <label for="username">  שם משתמש: </label></td>
-                <td><input id="username" class="textInput" type="text" name="username"></td>
+                <td><input id="lastname" class="textInput" type="text" name="lastname"></td>
             </tr>
             <tr>
                 <td> <label for="password">  סיסמא:   </label></td>
-                <td> <input id="password" class="textInput" type="password" name="pwd" /></td>
+                <td> <input id="password" class="textInput" type="password" name="pwd" required></td>
             </tr>
 
             <tr>
                 <td><label for="passwordcon">  אשר את הסיסמא:   </label></td>
-                <td><input id="passwordcon" class="textInput" type="password"  name="pwd" /></td>
+                <td><input id="passwordcon" class="textInput" type="password"  name="pwd" required></td>
             </tr>
             <tr>
                 <td> <label for="email"> E-mail:  </label></td>
-                <td> <input id="email" class="textInput" type="email" name="email"></td>
+                <td> <input id="email" class="textInput" type="email" name="email" required></td>
             </tr>
             <tr>
                 <td>  <label for="phone"> מספר טלפון:  </label></td>
@@ -97,7 +92,6 @@
                 </td>
             </tr>
         </table>
-        <br>
         <a class="form-submit-btn like-btn" type="submit" href="index.html">סיום והרשמה<span></span> </a>
         <a href="index.html" id="back">חזרה</a>
     </form>

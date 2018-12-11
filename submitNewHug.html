@@ -9,6 +9,7 @@
 <body>
 <!--NAV BAR-->
 <header>
+    <!-- navigation bar for all pages -->
     <nav class="navbar">
         <a href="hugSearch.html" id="logo"><img src="img/LOGO.JPG"></a>
         <ul id="navLinks">
@@ -33,6 +34,7 @@
         </div>
     </nav>
 </header>
+<!-- submit form to add new hugim to the site -->
 <main id="submitPage">
     <div id="newHugForm">
         <div>
@@ -40,6 +42,7 @@
             <h2>מלא את הפרטים הבאים ואנחנו נדאג לכל השאר.</h2>
         </div>
         <form action="form.php">
+            <!-- section 1 - add information -->
             <section class="tab">
                 <h3 class="sectionHeading">קצת פרטים טכניים</h3>
                 <div id="questions">
@@ -95,6 +98,7 @@
                     </div>
                 </div>
             </section>
+            <!-- section 2 - upload photo -->
             <section class="tab">
                 <h3 class="sectionHeading">העלאת תמונה</h3>
                 <div id="photoUpload">
@@ -106,6 +110,7 @@
                     </div>
                 </div>
             </section>
+            <!-- section 3 - choose tags -->
             <section class="tab">
                 <h3 class="sectionHeading">בחירת תגיות</h3>
                 <p>מה הנושא של החוג?</p>
@@ -162,8 +167,7 @@
                 <button id="prevBtn" onclick="nextPrev(-1)"><span class="material-icons" style="font-weight: bold;">arrow_forward</span></button>
                 <button id="nextBtn" onclick="nextPrev(1)"><span class="material-icons" style="font-weight: bold;">arrow_back</span></button>
             </div>
-
-            <!-- Circles which indicates the steps of the form: -->
+            <!-- circles which indicates the steps of the form: -->
             <div style="text-align:center;margin-top:40px;">
                 <span class="step"></span>
                 <span class="step"></span>
