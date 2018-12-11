@@ -25,38 +25,34 @@
         </div>
     </nav>
 </header>
-<main>
-    <div class="sign-up-form">
-        <h1>צרו איתנו קשר</h1>
-        <br>
-        <form id="contactus" action="form.php">
-            <div id="part1">
-                <h3><img id="email" src="img/mail.png" width="30" height="30"> כתבו לנו </h3>
-                <label for="username">  שם מלא: </label>
-                <br>
-                <input id="username" type="text" name="username" required/>
-                <br>
-                <label for="e-mail">  אימייל:  </label>
-                <br>
-                <input id="e-mail" type="text" name="email" required/>
-                <br>
-                <label for="message"> פרטי ההודעה: </label>
-                <br>
-                <textarea id="message" rows="6" cols="35" name="textarea1" required></textarea>
-                <button type="submit" class="form-submit-btn" onclick="alert('הודעת התקבלה. תודה שפנית אלינו, נשוב אליך בהקדם! צוות האתר.');">
-                    שלח
-                    <span></span></button>
-            </div>
-            <div id="part2">
-                <h3> <img  id="phone" src="img/phone.png" width="30" height="30">התקשרו אלינו</h3>
-                <p>054-2122349 - לי אוחיון, מנכ"לית</p>
-                <p>053-4228085 - נתנאלה ברנד, CTO</p>
-                <p>054-3387235 - שחר בר מאיר, מנהלת קשרי חוץ</p>
-
-            </div>
+<main class = "centered-form">
+    <h1>צרו איתנו קשר</h1>
+    <br>
+    <form id="contactus" action="form.php">
+        <div id="writeToUs" class="contactUs">
+            <h3><img id="email" src="img/mail.png" width="30" height="30"> כתבו לנו </h3>
+            <label for="username">  שם מלא: </label>
             <br>
-        </form>
-    </div>
+            <input id="username" class="textInput" type="text" name="username" required/>
+            <br>
+            <label for="e-mail">  אימייל:  </label>
+            <br>
+            <input id="e-mail" class="textInput" type="text" name="email" required/>
+            <br>
+            <label for="message"> פרטי ההודעה: </label>
+            <br>
+            <textarea id="message" rows="6" cols="35" name="textarea1" required></textarea>
+            <button type="submit" class="form-submit-btn" onclick="alert('הודעת התקבלה. תודה שפנית אלינו, נשוב אליך בהקדם! צוות האתר.');">
+                שלח
+                <span></span></button>
+        </div>
+        <div id="callUs" class="contactUs">
+            <h3> <img  id="phone" src="img/phone.png" width="30" height="30">התקשרו אלינו</h3>
+            <p>054-2122349 - לי אוחיון, מנכ"לית</p>
+            <p>053-4228085 - נתנאלה ברנד, CTO</p>
+            <p>054-3387235 - שחר בר מאיר, מנהלת קשרי חוץ</p>
+        </div>
+    </form>
 </main>
 </body>
 </html>

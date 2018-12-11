@@ -55,14 +55,13 @@
     top: 8px;
 }
 
-#photoUpload {
-    text-align: center;
+/*upload photo section*/
+#photoUpload .uploadFile {
+    margin: 0 auto;
 }
 
-
-#photoUpload .uploadFile {
-    position: relative;
-    right: 120px;
+#photoUpload {
+    text-align: center;
 }
 
 /*style tag checkboxes*/

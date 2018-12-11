@@ -78,10 +78,10 @@ main {
 }
 
 #navLinks li a {
-    color:white;
+    color: white;
     display: inline-block;
-    padding: 20px 20px;
-    font-size:18px;
+    padding: 20px 30px;
+    font-size: 18px;
     transition: all 1s 0s;
 }
 
@@ -145,7 +145,7 @@ main {
     margin: 1px 10px;
 }
 
-/*hidden content*/
+/*hidden content in navbar profile section*/
 .dropdown {
     position: relative;
     display: block;
@@ -178,11 +178,12 @@ main {
 .uploadFile {
     position: relative;
     display: block;
-    width: 320px;
+    width: 295px;
+    height:50px;
 }
 .uploadFile input {
     position: absolute;
-    top: 0;
+    top: 10px;
     left: 0;
     outline: none;
 }
@@ -194,7 +195,6 @@ main {
     font-weight: bold;
     color: white;
     background-color: var(--main-backgroundColor);
-    display: inline-block;
     padding: 6px 10px;
     border-radius: 10px;
     cursor: pointer;

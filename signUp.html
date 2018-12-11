@@ -13,100 +13,94 @@
     <nav class="navbar">
         <a href="" id="logo"><img src="img/LOGO.JPG"></a>
         <ul id="navLinks">
-            <li><a href="hugSearch.html">קטלוג חוגים</a></li>
-            <li><a href="submitNewHug.html">יצירת חוג</a></li>
             <li><a href="aboutus.html">קצת עלינו</a></li>
             <li><a href="contact.html">צור קשר</a></li>
         </ul>
     </nav>
 </header>
-<main>
+<main class="centered-form">
     <!-- sign up forms for new users -->
 
-    <div class="sign-up-form">
-        <h1>הצטרפו אלינו</h1>
-        <p id="first">כדאי לכם. כיף פה!</p>
-        <form id="registration" action="form.php">
-            <table>
-                <tr>
-                    <td> <label for="name">שם פרטי: </label></td>
-                    <td> <input id="name" class="textInput" type="text" name="firstname"></td>
-                </tr>
-                <tr>
-                    <td><label for="lastname">  שם משפחה:  </label> </td>
-                    <td><input id="lastname" class="textInput" type="text" name="lastname" ></td>
-                </tr>
-                <tr>
-                    <td>  <label for="username">  שם משתמש: </label></td>
-                    <td><input id="username" class="textInput" type="text" name="username"></td>
-                </tr>
-                <tr>
-                    <td> <label for="password">  סיסמא:   </label></td>
-                    <td> <input id="password" class="textInput" type="password" name="pwd" /></td>
-                </tr>
+    <h1>הצטרפו אלינו</h1>
+    <p id="first">כדאי לכם. כיף פה!</p>
+    <form id="registration" action="form.php">
+        <table>
+            <tr>
+                <td> <label for="name">שם פרטי: </label></td>
+                <td> <input id="name" class="textInput" type="text" name="firstname"></td>
+            </tr>
+            <tr>
+                <td><label for="lastname">  שם משפחה:  </label> </td>
+                <td><input id="lastname" class="textInput" type="text" name="lastname" ></td>
+            </tr>
+            <tr>
+                <td>  <label for="username">  שם משתמש: </label></td>
+                <td><input id="username" class="textInput" type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td> <label for="password">  סיסמא:   </label></td>
+                <td> <input id="password" class="textInput" type="password" name="pwd" /></td>
+            </tr>
 
-                <tr>
-                    <td><label for="passwordcon">  אשר את הסיסמא:   </label></td>
-                    <td><input id="passwordcon" class="textInput" type="password"  name="pwd" /></td>
-                </tr>
-                <tr>
-                    <td> <label for="email"> E-mail:  </label></td>
-                    <td> <input id="email" class="textInput" type="email" name="email"></td>
-                </tr>
-                <tr>
-                    <td>  <label for="phone"> מספר טלפון:  </label></td>
-                    <td>  <input id="phone" class="textInput" type="text" name="phone"></td>
-                </tr>
-                <tr>
-                    <td><label for="bday"> תאריך לידה: </label></td>
-                    <td><input id="bday" class="textInput" type="date" name="bday"></td>
-                </tr>
+            <tr>
+                <td><label for="passwordcon">  אשר את הסיסמא:   </label></td>
+                <td><input id="passwordcon" class="textInput" type="password"  name="pwd" /></td>
+            </tr>
+            <tr>
+                <td> <label for="email"> E-mail:  </label></td>
+                <td> <input id="email" class="textInput" type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>  <label for="phone"> מספר טלפון:  </label></td>
+                <td>  <input id="phone" class="textInput" type="text" name="phone"></td>
+            </tr>
+            <tr>
+                <td><label for="bday"> תאריך לידה: </label></td>
+                <td><input id="bday" class="textInput" type="date" name="bday"></td>
+            </tr>
 
-                <tr>
-                    <td><label for="gender"> מין: </label></td>
-                    <td id="gender">
-                        <label for="male">
-                            <input type="radio" id="male" name="gender" value="male" >
-                            <span class="gender2">זכר</span>
-                        </label>
-                        <label for="female">
-                            <input type="radio" name="gender" id="female" value="female">
-                            <span>נקבה</span>
-                        </label>
-                        <label for="other">
-                            <input id="other" type="radio" name="gender" value="other">
-                            <span>אחר</span>
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td> <label for="about"> ספר לנו קצת על עצמך </label></td>
-                    <td> <textarea id="about" rows="7" cols="35" name="about"></textarea></td>
-                </tr>
-                <tr>
-                    <td> <label for="hobbies"> תחביבים ותחומי עניין </label></td>
-                    <td> <textarea id="hobbies" rows="7" cols="35" name="hobbies"></textarea></td>
-                </tr>
-                <tr>
-                    <!-- option to upload image to website -->
+            <tr>
+                <td><label for="gender"> מין: </label></td>
+                <td id="gender">
+                    <label for="male">
+                        <input type="radio" id="male" name="gender" value="male" >
+                        <span>זכר</span>
+                    </label>
+                    <label for="female">
+                        <input type="radio" name="gender" id="female" value="female">
+                        <span>נקבה</span>
+                    </label>
+                    <label for="other">
+                        <input id="other" type="radio" name="gender" value="other">
+                        <span>אחר</span>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td> <label for="about"> ספר לנו קצת על עצמך </label></td>
+                <td> <textarea id="about" rows="7" cols="35" name="about"></textarea></td>
+            </tr>
+            <tr>
+                <td> <label for="hobbies"> תחביבים ותחומי עניין </label></td>
+                <td> <textarea id="hobbies" rows="7" cols="35" name="hobbies"></textarea></td>
+            </tr>
+            <tr>
+                <!-- option to upload image to website -->
 
-                    <td> <label for="profile-photo"> העלאת תמונת פרופיל </label></td>
-                    <td>
-                        <div id="profile-photo" class="uploadFile">
-                            <label for="image"><i class="material-icons">cloud_upload</i>
-                                <span>בחר תמונה</span></label>
-                            <input id="image" type="file" name="image">
-                        </div>
-                    </td>
-                </tr>
-            </table>
-
-            <a class="form-submit-btn like-btn" type="submit" href="index.html"><span></span>  סיום והרשמה </a>
-            <br>
-            <a href="index.html">חזרה</a>
-            <br>
-        </form>
-    </div>
+                <td> <label for="profile-photo"> העלאת תמונת פרופיל </label></td>
+                <td>
+                    <div id="profile-photo" class="uploadFile">
+                        <label for="imageUpload"><i class="material-icons">cloud_upload</i>
+                            <span>בחר תמונה</span></label>
+                        <input id="imageUpload" type="file" name="imageUpload">
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <a class="form-submit-btn like-btn" type="submit" href="index.html">סיום והרשמה<span></span> </a>
+        <a href="index.html" id="back">חזרה</a>
+    </form>
 </main>
 </body>
 </html>

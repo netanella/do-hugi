@@ -7,16 +7,19 @@ window.addEventListener('load', function(){
     hideLongLists(btn,lst,4);
 });
 
+//listener for attended list in hug page
 document.getElementById('showAllAttended').addEventListener('click', function(){
     expandORcollapse('showAllAttended', 'attended-list',4);
 });
 
+//hiding items greater than 'showNum'
 function hideLongLists(btn, lst, showNum) {
     if (showNum < lst.childElementCount) {
         hideElements(btn, lst,showNum);
     }
 }
 
+//expands or collapses the list
 function expandORcollapse(btnID, lstID, showNum){
     var btn = document.getElementById(btnID);
     var lst = document.getElementById(lstID);
