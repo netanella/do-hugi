@@ -174,18 +174,15 @@ main {
     background-color: lightgray;
 }
 
-
-
 /*upload file button*/
 .uploadFile input {
     position: relative;
-    left: 101px;
+    left: 23%;
     padding: 1px;
     bottom: 5px;
     opacity: 1;
     outline: none;
 }
-
 
 .uploadFile label {
     position: relative;
