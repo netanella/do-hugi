@@ -5,13 +5,14 @@
     <title>דו-חוגי | צור קשר</title>
     <link rel="stylesheet" type="text/css" href="css/stylelee.css">
 </head>
-    <body id="contactUsPage"  background="img/grass.jpg">
-    <header>
-        <!-- navigation bar of all pages -->
+<body id="contactUsPage">
+<header>
     <nav class="navbar">
         <a href="hugSearch.html" id="logo"><img src="img/LOGO.JPG"></a>
         <ul id="navLinks">
-            <li><a href="hugSearch.html">קטלוג חוגים</a></li>
+            <li><a href="hugSearch.html">דף הבית</a></li>
+            <li><a href="#">קצת עלינו</a></li>
+            <li><a href="hugSearch.html">חיפוש חוג</a></li>
             <li><a href="submitNewHug.html">יצירת חוג</a></li>
             <li><a href="aboutus.html">קצת עלינו</a></li>
             <li><a href="contact.html">צור קשר</a></li>
@@ -28,35 +29,26 @@
 </header>
 <main>
     <div class="sign-up-form">
-    <h1>צרו איתנו קשר</h1>
-    <br>
-        <form id="contactus">
-            <!-- the inputs of contact -->
+        <h1>צרו איתנו קשר</h1>
+        <br>
+        <form id="contactus" action="form.php">
             <div id="part1">
-
-            <h3>
-                <img id="email" src="img/mail.png" width="30" height="30"> כתבו לנו </h3>
+                <h3><img id="email" src="img/mail.png" width="30" height="30"> כתבו לנו </h3>
                 <label for="username">  שם מלא: </label>
                 <br>
-            <input id="username" type="text" name="username" required/>
-            <br>
-
-             <label for="e-mail">  אימייל:  </label>
+                <input id="username" type="text" name="username" required/>
                 <br>
-              <input id="e-mail" type="text" name="email" required/>
-            <br>
-
-             <label for="message"> פרטי ההודעה: </label>
+                <label for="e-mail">  אימייל:  </label>
                 <br>
-             <textarea id="message" rows="6" cols="35" name="textarea1" required></textarea>
-
-                <!-- Message to user whose request has been received -->
-
+                <input id="e-mail" type="text" name="email" required/>
+                <br>
+                <label for="message"> פרטי ההודעה: </label>
+                <br>
+                <textarea id="message" rows="6" cols="35" name="textarea1" required></textarea>
                 <button type="submit" class="form-submit-btn" onclick="alert('הודעת התקבלה. תודה שפנית אלינו, נשוב אליך בהקדם! צוות האתר.');">
                     שלח
                     <span></span></button>
             </div>
-
             <div id="part2">
                 <h3> <img  id="phone" src="img/phone.png" width="30" height="30">התקשרו אלינו</h3>
                 <p>054-2122349 - לי אוחיון, מנכ"לית</p>
@@ -64,8 +56,7 @@
                 <p>054-3387235 - שחר בר מאיר, מנהלת קשרי חוץ</p>
 
             </div>
-    <br>
-
+            <br>
         </form>
     </div>
 </main>
