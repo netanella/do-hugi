@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89d3c71e-bc78-4d96-9aa4-cd07de69ece9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/generic.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/generic.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/stylelee.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/stylelee.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/signUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/signUp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submitNewHug.html" beforeDir="false" afterPath="$PROJECT_DIR$/submitNewHug.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,32 +55,32 @@
     <session id="-1263604852">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="3" />
-          <entry key="html" value="2" />
+          <entry key="css" value="4" />
+          <entry key="html" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="3" />
-          <entry key="HTML" value="2" />
+          <entry key="CSS" value="4" />
+          <entry key="HTML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="41" />
-          <entry key="html" value="43" />
+          <entry key="css" value="49" />
+          <entry key="html" value="200" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="41" />
-          <entry key="HTML" value="43" />
+          <entry key="CSS" value="49" />
+          <entry key="HTML" value="200" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.60461414">
+    <splitter split-orientation="horizontal" split-proportion="0.548926">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -97,8 +95,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/signUp.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="104" column="46" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="46" />
+                <state relative-caret-position="387">
+                  <caret line="113" column="77" selection-start-line="113" selection-start-column="77" selection-end-line="113" selection-end-column="77" />
                 </state>
               </provider>
             </entry>
@@ -106,8 +104,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/hugSearch.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="93" column="29" lean-forward="true" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
+                <state relative-caret-position="68">
+                  <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
                 </state>
               </provider>
             </entry>
@@ -135,8 +133,30 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/generic.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="290">
-                  <caret line="188" selection-start-line="188" selection-end-line="188" />
+                <state relative-caret-position="-1034">
+                  <caret line="184" column="6" lean-forward="true" selection-start-line="184" selection-start-column="6" selection-end-line="184" selection-end-column="6" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/logIn.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="338">
+                  <caret line="40" column="10" lean-forward="true" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/submitNewHug.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2975">
+                  <caret line="175" selection-start-line="175" selection-end-line="175" selection-end-column="35" />
+                  <folding>
+                    <element signature="n#style#0;n#span#0;n#button#0;n#div#0;n#form#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -144,8 +164,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/stylelee.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="276">
-                  <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
+                <state relative-caret-position="-302">
+                  <caret line="143" column="15" lean-forward="true" selection-start-line="143" selection-start-column="15" selection-end-line="143" selection-end-column="15" />
                 </state>
               </provider>
             </entry>
@@ -178,6 +198,7 @@
       <find>h2</find>
       <find>hug</find>
       <find>profil</find>
+      <find>onc</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -204,7 +225,6 @@
         <option value="$PROJECT_DIR$/log-in.html" />
         <option value="$PROJECT_DIR$/contactus.html" />
         <option value="$PROJECT_DIR$/userProfile.html" />
-        <option value="$PROJECT_DIR$/submitNewHug.html" />
         <option value="$PROJECT_DIR$/contact.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/hugDetails.html" />
@@ -216,9 +236,10 @@
         <option value="$PROJECT_DIR$/calendar/styles/calendar.css" />
         <option value="$PROJECT_DIR$/css/styleShaharNew.css" />
         <option value="$PROJECT_DIR$/js/runningPhotos.js" />
-        <option value="$PROJECT_DIR$/signUp.html" />
-        <option value="$PROJECT_DIR$/css/generic.css" />
         <option value="$PROJECT_DIR$/css/stylelee.css" />
+        <option value="$PROJECT_DIR$/css/generic.css" />
+        <option value="$PROJECT_DIR$/submitNewHug.html" />
+        <option value="$PROJECT_DIR$/signUp.html" />
       </list>
     </option>
   </component>
@@ -312,10 +333,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.Unnamed">
+    <configuration name="Unnamed" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="file://$PROJECT_DIR$/signUp.html">
+      <method v="2" />
+    </configuration>
     <configuration name="classPreview" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="file://$PROJECT_DIR$/signUp.html">
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.classPreview" />
+      <item itemvalue="JavaScript Debug.Unnamed" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -340,7 +368,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27400000" />
+    <option name="totallyTimeSpent" value="29727000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -427,20 +455,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/logIn.css" />
-    <entry file="file://$PROJECT_DIR$/logIn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/submitNewHug.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="158" column="20" lean-forward="true" selection-start-line="158" selection-start-column="20" selection-end-line="158" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/calendar2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1003">
@@ -476,31 +490,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hugSearch.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="93" column="29" lean-forward="true" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/signUp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="104" column="46" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/generic.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="188" selection-start-line="188" selection-end-line="188" />
+        <state relative-caret-position="-1034">
+          <caret line="184" column="6" lean-forward="true" selection-start-line="184" selection-start-column="6" selection-end-line="184" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/submitNewHug.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/submitNewHug.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2975">
+          <caret line="175" selection-start-line="175" selection-end-line="175" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#button#0;n#div#0;n#form#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hugSearch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logIn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="40" column="10" lean-forward="true" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/stylelee.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
+        <state relative-caret-position="-302">
+          <caret line="143" column="15" lean-forward="true" selection-start-line="143" selection-start-column="15" selection-end-line="143" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signUp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="113" column="77" selection-start-line="113" selection-start-column="77" selection-end-line="113" selection-end-column="77" />
         </state>
       </provider>
     </entry>
