@@ -87,10 +87,10 @@ header {
     margin: 30px auto;
 }
 
-#registration input {
+#registration .wrapInput input {
     border-radius: 6px;
     padding: 10px;
-    width: 200px;
+    width: 400px;
     height: 10px;
 }
 
@@ -100,24 +100,11 @@ header {
     margin: 6px 6px auto;
     padding-right: 10px;
 }
+.gender2{
+    display: inline-block
+}
 
 #registration #image {
-    display: inline-block;
-}
-
-#registration #gender label {
-    margin-left: 1px;
-}
-
-#registration #gender input{
-    margin-bottom: 1px;
-}
-
-#registration #gender label {
-    margin-right: 10px;
-}
-
-#registration #gender li {
     display: inline-block;
 }
 
@@ -144,23 +131,23 @@ header {
     text-align: right;
     padding: 8px 20px;
 }
-#part1 #row{
+#part1 #row{/*belong to contact page*/
     display: block;
     height: 50px;
     vertical-align:middle;
 }
-#part2 {
+#part2 {/*belong to contact page*/
     border: 2px solid lightgray;
     border-radius: 20px;
     margin: 20px;
     text-align: right;
     padding: 8px 20px;
 }
-#part1 input {
+#part1 input {/*belong to contact page*/
     border-radius: 6px;
     margin-bottom:15px;
 }
-#part1 textarea {
+#part1 textarea {/*belong to contact page*/
     border: 2px solid lightgray;
     border-radius: 8px;
     margin: 6px auto;
