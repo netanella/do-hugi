@@ -12,7 +12,7 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
+body, textarea {
     font-family: Calibri;
     font-size: 17px;
     overflow-x: hidden;
