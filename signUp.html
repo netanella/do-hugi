@@ -22,7 +22,7 @@
     <!-- sign up form for new users -->
     <h1>הצטרפו אלינו</h1>
     <p id="first">כדאי לכם. כיף פה!</p>
-    <form id="registration" action="form.php">
+    <form id="registration" method="post" action="signUp.php">
         <table>
             <tr>
                 <td> <label for="name">שם פרטי: </label></td>
@@ -34,12 +34,12 @@
             </tr>
             <tr>
                 <td> <label for="password">  סיסמא:   </label></td>
-                <td> <input id="password" class="textInput" type="password" name="pwd" required></td>
+                <td> <input id="password" class="textInput" type="password" name="password" required></td>
             </tr>
 
             <tr>
                 <td><label for="passwordcon">  אשר את הסיסמא:   </label></td>
-                <td><input id="passwordcon" class="textInput" type="password"  name="pwd" required></td>
+                <td><input id="passwordcon" class="textInput" type="password"  name="password-conf" required></td>
             </tr>
             <tr>
                 <td> <label for="email"> E-mail:  </label></td>
@@ -92,7 +92,7 @@
                 </td>
             </tr>
         </table>
-        <a class="form-submit-btn like-btn" type="submit" href="index.html">סיום והרשמה<span></span> </a>
+        <button class="form-submit-btn" type="submit" name="submit">סיום והרשמה<span></span> </button>
         <a href="index.html" id="back">חזרה</a>
     </form>
 </main>
