@@ -11,7 +11,7 @@
     <!-- navigation bar of all pages -->
 
     <nav class="navbar">
-        <a href="" id="logo"><img src="img/LOGO.JPG"></a>
+        <a href="index.html" id="logo"><img src="img/LOGO.JPG"></a>
         <ul id="navLinks">
             <li><a href="aboutus.html">קצת עלינו</a></li>
             <li><a href="contact.html">צור קשר</a></li>
@@ -22,15 +22,15 @@
     <!-- sign up form for new users -->
     <h1>הצטרפו אלינו</h1>
     <p id="first">כדאי לכם. כיף פה!</p>
-    <form id="registration" method="post" action="signUp.php">
+    <form id="registration" method="post" action="signUp.php" enctype="multipart/form-data">
         <table>
             <tr>
                 <td> <label for="name">שם פרטי: </label></td>
-                <td> <input id="name" class="textInput" type="text" name="firstname"></td>
+                <td> <input id="name" class="textInput" type="text" name="firstname" required></td>
             </tr>
             <tr>
                 <td><label for="lastname">  שם משפחה:  </label> </td>
-                <td><input id="lastname" class="textInput" type="text" name="lastname"></td>
+                <td><input id="lastname" class="textInput" type="text" name="lastname" required></td>
             </tr>
             <tr>
                 <td> <label for="password">  סיסמא:   </label></td>
@@ -47,18 +47,18 @@
             </tr>
             <tr>
                 <td>  <label for="phone"> מספר טלפון:  </label></td>
-                <td>  <input id="phone" class="textInput" type="text" name="phone"></td>
+                <td>  <input id="phone" class="textInput" type="text" name="phone" required></td>
             </tr>
             <tr>
                 <td><label for="bday"> תאריך לידה: </label></td>
-                <td><input id="bday" class="textInput" type="date" name="bday"></td>
+                <td><input id="bday" class="textInput" type="date" name="bday" required></td>
             </tr>
 
             <tr>
                 <td><label for="gender"> מין: </label></td>
                 <td id="gender">
                     <label for="male">
-                        <input type="radio" id="male" name="gender" value="male" >
+                        <input type="radio" id="male" name="gender" value="male" checked>
                         <span>זכר</span>
                     </label>
                     <label for="female">
@@ -87,7 +87,7 @@
                     <div id="profile-photo" class="uploadFile">
                         <label for="imageUpload"><i class="material-icons">cloud_upload</i>
                             <span>בחר תמונה</span></label>
-                        <input id="imageUpload" type="file" name="imageUpload">
+                        <input id="imageUpload" type="file" name="profile_pic" accept="image/*">
                     </div>
                 </td>
             </tr>

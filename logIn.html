@@ -8,11 +8,11 @@
 
 </head>
 
-<body id="login"  background="img/grass.jpg">
+<body id="login" background="img/grass.jpg">
 <header>
     <!-- navigation bar of all pages -->
     <nav class="navbar">
-        <a href="" id="logo"><img src="img/LOGO.JPG"></a>
+        <a href="index.html" id="logo"><img src="img/LOGO.JPG"></a>
         <ul id="navLinks">
             <li><a href="aboutus.html">קצת עלינו</a></li>
             <li><a href="contact.html">צור קשר</a></li>
@@ -24,13 +24,13 @@
 <div class="centered-form">
     <h1>התחברות</h1>
     <br>
-    <div id="log-in">
-        <label for="username">  דוא"ל: </label><br>
-        <input id="username" class="textInput" type="text" name="username" required ><br><br>
-        <label for="password">  סיסמא:   </label><br>
+    <form id="log-in" method="post" action="login.php">
+        <label for="email">  דוא"ל: </label><br>
+        <input id="email" class="textInput" type="text" name="email" required ><br><br>
+        <label for="password">  סיסמא:  </label><br>
         <input id="password" class="textInput" type="password" name="pwd" required><br>
-        <a class="loginbutt like-btn" href="hugSearch.html">התחבר</a><br>
-    </div>
+        <button class="loginbutt" type="submit" name="submit2">התחבר</button><br>
+    </form>
 
     <div>
         <a href="restorePassword.html"> שכחתי סיסמא</a>

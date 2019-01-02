@@ -11,26 +11,40 @@
 <header>
     <!-- navigation bar for all pages -->
     <nav class="navbar">
-        <a href="hugSearch.html" id="logo"><img src="img/LOGO.JPG"></a>
+        <a href="hugSearch.php" id="logo"><img src="img/LOGO.JPG"></a>
         <ul id="navLinks">
-            <li><a href="hugSearch.html">קטלוג חוגים</a></li>
-            <li><a href="submitNewHug.html">יצירת חוג</a></li>
+            <li><a href="hugSearch.php">קטלוג חוגים</a></li>
+            <li><a href="submitNewHug.php">יצירת חוג</a></li>
             <li><a href="aboutus.html">קצת עלינו</a></li>
             <li><a href="contact.html">צור קשר</a></li>
             <li>
-                <form id="searchBar" action="form.php">
-                    <input type="text" placeholder="חפש חוג" name="search">
-                    <button type="submit"><i class="material-icons">search</i></button>
+                <form id="searchBar" method="post" action="textSearch.php">
+                    <input type="text" placeholder="חפש חוג" name="textInput">
+                    <button type="submit" name="submit4"><i class="material-icons">search</i></button>
                 </form>
             </li>
         </ul>
         <!-- user profile menu options-->
         <div id="userProfile" class="dropdown">
-            <a href="userProfile.html"><span>ברקוש</span><img src="img/barak.JPG" class="profilePhotoIcon"></a>
+            <?php session_start();
+            if(isset($_SESSION['firstname'])) {
+                echo
+                    '<a href="userProfile.html"><span>'.$_SESSION['firstname'].'</span>';
+                //if the user has no photo display default image
+                if($_SESSION['photo']==NULL){
+                    echo '<img class="profilePhotoIcon" src="img/img_avatar.png"></a>';
+                }
+                //if the user has a profile photo
+                elseif(isset($_SESSION['photo'])){
+                    $imgname = $_SESSION['photo'];
+                    echo '<img class="profilePhotoIcon" src="img/'.$imgname.'"></a>';
+                }
+            }
+            ?>
             <div class="dropdown-content">
                 <a href="userProfile.html">הפרופיל שלי</a>
                 <a href="userProfile.html">החוגים שלי</a>
-                <a href="index.html">התנתקות</a>
+                <a href="logout.php">התנתקות</a>
             </div>
         </div>
     </nav>
@@ -90,73 +104,73 @@
             <h2 class="center-inpos"> מכינים מרק קובה של סבתא חביבה </h2>
             <img src="img/בישול.jpg">
             <p > יום ראשון 11.11.18 </p>
-            <a href="hugDetails.html" class="signupButton"><strong>הרשמה </strong></a>
+            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
         </div>
         <div>
             <h2 class="center-inpos">זומבה לכל הגילאים עם שחר ולי</h2>
             <img src="img/זומבה.jpg">
             <p>יום שלישי 13.11.18</p>
-            <a href="hugDetails.html" class="signupButton"><strong>הרשמה </strong></a>
+            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
         </div>
         <div>
             <h2 class="center-inpos">דו רה מי - כל אחד יכול </h2>
             <img src="img/פסנתר.jpg">
             <p>  יום חמישי 15.11.18</p>
-            <a href="hugDetails.html" class="signupButton"><strong>הרשמה </strong></a>
+            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
         </div>
         <div>
             <h2 class="center-inpos">חיזוק שרירי ידיים בסטודיו גד</h2>
             <img src="img/אימון%20כושר.jpg">
             <p>יום חמישי 15.11.18</p>
-            <a href="hugDetails.html" class="signupButton"><strong>הרשמה </strong></a>
+            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
         </div>
         <div>
             <h2 class="center-inpos">ציור אבסטרקטי באקריליק</h2>
             <img src="img/אמנות.jpg">
             <p>יום חמישי 15.11.18</p>
-            <a href="hugDetails.html" class="signupButton"><strong>הרשמה </strong></a>
+            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
         </div>
         <div>
             <h2 class="center-inpos"> סדנת לוכדי חלומות אצל שושי</h2>
             <img src="img/הכנת%20לוכדי%20חלומות.jpg">
             <p>יום שישי 16.11.18</p>
-            <a href="hugDetails.html" class="signupButton"><strong>הרשמה </strong></a>
+            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
         </div>
         <div>
             <h2 class="center-inpos">קישוט עוגות לימי הולדת ואירועים</h2>
             <img src="img/אפייה.jpg">
             <p>יום חמישי 15.11.18</p>
-            <a href="hugDetails.html" class="signupButton"><strong>הרשמה </strong></a>
+            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
         </div>
         <div>
             <h2 class="center-inpos">סדנת איפור</h2>
             <img src="img/סדנת%20איפור.jpg">
             <p>יום שבת 17.11.18</p>
-            <a href="hugDetails.html" class="signupButton"><strong>הרשמה </strong></a>
+            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
         </div>
         <div>
             <h2 class="center-inpos">משחק כדורגל</h2>
             <img src="img/כדורגל.jpg">
             <p>יום חמישי 15.11.18</p>
-            <a href="hugDetails.html" class="signupButton"><strong>הרשמה </strong></a>
+            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
         </div>
         <div>
             <h2 class="center-inpos">עוד כדורגל</h2>
             <img src="img/כדורגל.jpg">
             <p>יום ראשון 6.11.19</p>
-            <a href="hugDetails.html" class="signupButton"><strong>הרשמה </strong></a>
+            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
         </div>
         <div>
             <h2 class="center-inpos">עוד כדורגל</h2>
             <img src="img/כדורגל.jpg">
             <p>יום שלישי 25.11.18</p>
-            <a href="hugDetails.html" class="signupButton"><strong>הרשמה </strong></a>
+            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
         </div>
         <div>
             <h2 class="center-inpos">ועוד כדורגל</h2>
             <img src="img/כדורגל.jpg">
             <p>יום חמישי 22.11.18</p>
-            <a href="hugDetails.html" class="signupButton"><strong>הרשמה </strong></a>
+            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
         </div>
     </div>
 </main>

@@ -11,25 +11,39 @@
 <header>
     <!-- navigation bar for all pages -->
     <nav class="navbar">
-        <a href="hugSearch.html" id="logo"><img src="img/LOGO.JPG"></a>
+        <a href="hugSearch.php" id="logo"><img src="img/LOGO.JPG"></a>
         <ul id="navLinks">
-            <li><a href="hugSearch.html">קטלוג חוגים</a></li>
-            <li><a href="submitNewHug.html">יצירת חוג</a></li>
+            <li><a href="hugSearch.php">קטלוג חוגים</a></li>
+            <li><a href="submitNewHug.php">יצירת חוג</a></li>
             <li><a href="aboutus.html">קצת עלינו</a></li>
             <li><a href="contact.html">צור קשר</a></li>
             <li>
-                <form id="searchBar" action="form.php">
+                <form id="searchBar" action="textSearch.php">
                     <input type="text" placeholder="חפש חוג" name="search">
                     <button type="submit"><i class="material-icons">search</i></button>
                 </form>
             </li>
         </ul>
         <div id="userProfile" class="dropdown">
-            <a href="userProfile.html"><span>ברקוש</span><img src="img/barak.JPG" class="profilePhotoIcon"></a>
+            <?php session_start();
+            if(isset($_SESSION['firstname'])) {
+                echo
+                    '<a href="userProfile.html"><span>'.$_SESSION['firstname'].'</span>';
+                //if the user has no photo display default image
+                if($_SESSION['photo']==NULL){
+                    echo '<img class="profilePhotoIcon" src="img/img_avatar.png"></a>';
+                }
+                //if the user has a profile photo
+                elseif(isset($_SESSION['photo'])){
+                    $imgname = $_SESSION['photo'];
+                    echo '<img class="profilePhotoIcon" src="img/'.$imgname.'"></a>';
+                }
+            }
+            ?>
             <div class="dropdown-content">
                 <a href="userProfile.html">הפרופיל שלי</a>
                 <a href="userProfile.html">החוגים שלי</a>
-                <a href="index.html">התנתקות</a>
+                <a href="logout.php">התנתקות</a>
             </div>
         </div>
     </nav>
@@ -41,7 +55,7 @@
             <h1>יצירת חוג חדש</h1>
             <h2>מלא את הפרטים הבאים ואנחנו נדאג לכל השאר.</h2>
         </div>
-        <form action="form.php">
+        <form method="post" action="newHug.php">
             <!-- section 1 - add information -->
             <section class="tab">
                 <h3 class="sectionHeading">קצת פרטים טכניים</h3>
@@ -161,7 +175,7 @@
                     <label for="tag18">גיטרה</label>
                 </fieldset>
                 <br>
-                <button class="form-submit-btn" type="submit" onclick="location.href='hugDetails.html';">צור חוג<span></span> </button>
+                <button class="form-submit-btn" type="submit" name="submit3" onclick="location.href='hugDetails.html';">צור חוג<span></span> </button>
             </section>
             <div class="stepNavButtons">
                 <button id="prevBtn" onclick="nextPrev(-1)"><span class="material-icons" style="font-weight: bold;">arrow_forward</span></button>

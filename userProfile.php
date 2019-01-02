@@ -31,7 +31,7 @@
         <div id="userOverview">
             <img class="profilePhotoIcon" src="img/barak.JPG">
             <h2>ברק פינצובסקי</h2>
-            <a class="like-btn" id="logout" href="logout.php">התנתקות</a>
+            <a class="like-btn" id="logout" href="index.html">התנתקות</a>
         </div>
         <hr>
         <nav id="sideNav">
@@ -43,6 +43,15 @@
     <section id="userDetails">
         <form method="post" action="updateAccount.php">
             <h1>הפרטים שלי</h1>
+            <?php
+                session_start();
+                $email=$_SESSION['email'];
+                $first_name= $_SESSION['firstname'];
+                $last_name= $_SESSION['lastname'];
+                $about=$_SESSION['about'];
+                $hobbies=$_SESSION['hobbies'];
+            ?>
+
             <div id="first-name-con">
                 <label for="firstName">שם פרטי</label>
                 <input id="firstName" type="text" value="ברק" name="firstname">

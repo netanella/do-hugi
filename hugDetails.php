@@ -17,14 +17,14 @@
 <header>
     <!-- navigation bar for all pages -->
     <nav class="navbar">
-        <a href="hugSearch.html" id="logo"><img src="img/LOGO.JPG"></a>
+        <a href="hugSearch.php" id="logo"><img src="img/LOGO.JPG"></a>
         <ul id="navLinks">
-            <li><a href="hugSearch.html">קטלוג חוגים</a></li>
-            <li><a href="submitNewHug.html">יצירת חוג</a></li>
+            <li><a href="hugSearch.php">קטלוג חוגים</a></li>
+            <li><a href="submitNewHug.php">יצירת חוג</a></li>
             <li><a href="aboutus.html">קצת עלינו</a></li>
             <li><a href="contact.html">צור קשר</a></li>
             <li>
-                <form id="searchBar" action="form.php">
+                <form id="searchBar" action="textSearch.php">
                     <input type="text" placeholder="חפש חוג" name="search">
                     <button type="submit"><i class="material-icons">search</i></button>
                 </form>
@@ -32,11 +32,25 @@
         </ul>
         <!-- user profile menu options-->
         <div id="userProfile" class="dropdown">
-            <a href="userProfile.html"><span>ברקוש</span><img src="img/barak.JPG" class="profilePhotoIcon"></a>
+            <?php session_start();
+            if(isset($_SESSION['firstname'])) {
+                echo
+                    '<a href="userProfile.html"><span>'.$_SESSION['firstname'].'</span>';
+                //if the user has no photo display default image
+                if($_SESSION['photo']==NULL){
+                    echo '<img class="profilePhotoIcon" src="img/img_avatar.png"></a>';
+                }
+                //if the user has a profile photo
+                elseif(isset($_SESSION['photo'])){
+                    $imgname = $_SESSION['photo'];
+                    echo '<img class="profilePhotoIcon" src="img/'.$imgname.'"></a>';
+                }
+            }
+            ?>
             <div class="dropdown-content">
                 <a href="userProfile.html">הפרופיל שלי</a>
                 <a href="userProfile.html">החוגים שלי</a>
-                <a href="index.html">התנתקות</a>
+                <a href="logout.php">התנתקות</a>
             </div>
         </div>
     </nav>
@@ -80,6 +94,7 @@
 
             <br>
             <!--signup and cancel buttons-->
+            <form method="post" action="">
             <div class="switch-txt-btn">
                 <input type="radio" id="signup" name="signup-status" onchange="confirm.pop('אתה עומד להרשם לחוג. האם תרצה להמשיך?','signup')">
                 <label for="signup" class="like-btn">
@@ -94,6 +109,7 @@
                     <span class="after"><span>&#10006;</span>לא רשום</span>
                 </label>
             </div>
+            </form>
             <hr>
         </div>
     </section>

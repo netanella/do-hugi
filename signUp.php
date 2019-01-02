@@ -1,64 +1,48 @@
 <?php
 
 if (isset($_POST['submit'])) {
-    $con = mysqli_connect($_SERVER['localhost:63342'], 'root', '', 'dohugi');
+
+    var_dump($_FILES);
+
+    // Select your own upload directory on the server
+    $uploadsFolder = "uploads/" ;
+
+    // Create directory if not exists
+    if (!is_dir($uploadsFolder)) {
+        mkdir($uploadsFolder);
+    }
+
+    // Move the file from the temp directory to the new directory
+    foreach($_FILES as $key => $file) {
+        move_uploaded_file($_FILES[$key]["tmp_name"], $uploadsFolder . $_FILES[$key]["name"]);
+        $image=$_FILES[$key]["name"];
+    }
+
+    $con = mysqli_connect('localhost', 'root', '', 'dohugi');
+    mysqli_set_charset($con,'utf8');
 
     if (!$con) {
         die("Connection error: " . mysqli_connect_errno());
     }
 
-    /*
     $firstname=$_POST['firstname'];
     $lastname=$_POST['lastname'];
     $password=$_POST['password'];
     $email=$_POST['email'];
     $phone=$_POST['phone'];
-    $bday=$_POST['bday'];
+    $dob=$_POST['bday'];
     $gender=$_POST['gender'];
     $about=$_POST['about'];
     $hobbies=$_POST['hobbies'];
-    $image=$_POST['imageUpload'];*/
 
-    $query = "INSERT INTO users (Email, First_Name, Last_Name, Password, Phone, DOB, Gender, About, Hobbies, Photo_url) 
-              VALUES ('shaharlevi@gmail.com', 'לוי', 'שחר', 'quu123', '9724441200', '2000-12-12', 'M', 'JGJHG', 'FJGFJH', 'HJH')";
+    $query = "INSERT INTO users (Email, First_Name, Last_Name, Password, Phone, DOB, Gender, About, Hobbies, Photo)
+              VALUES ('$email', '$firstname', '$lastname', '$password', '$phone', '$dob', '$gender', '$about', '$hobbies', '$image')";
+
     mysqli_query($con, $query);
-    mysqli_close($con);
+
+    header("Location:http://localhost:8080/do-hugi/index.html");
 }
 
-
-
-
-/* MOTTI
-if (isset($_POST['submit'])) {
-    $con = mysqli_connect($_SERVER['localhost:63342'],'root', '', 'walkiz');
-
-    if (!$con) {
-        die("Connection error: " . mysqli_connect_errno());
-    }
-
-    $email=$_POST['email'];
-    $pass=$_POST['password'];
-    $check_query=mysqli_query($con,'SELECT* FROM customers where Email=$email and Password=$pass');
-    if(mysqli_num_rows($check_query)>0){
-        header('Location:index.html');
-    }
-    $check_query_walker = mysqli_query($con, 'SELECT* FROM dogwalker where Email= $email and Password=$pass');
-    if (mysqli_num_rows($check_query_walker) > 0) {
-        header('Location:walker-personal-profile.html');
-    }
-    else{
-        //wrong();
-
-    }
-    mysqli_close($con);
-}
-*/
-
-?>
-
-
-
-
-
+mysqli_close($con);
 
 ?>
