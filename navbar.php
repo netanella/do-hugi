@@ -1,4 +1,5 @@
 <?php
+//Navigation bar for logged in users - displayed on all pages
 echo
 '<nav class="navbar">
         <a href="hugSearch.php" id="logo"><img src="img/LOGO.JPG"></a>

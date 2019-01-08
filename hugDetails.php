@@ -164,7 +164,7 @@ if(isset($_GET['details'])){
             <div class="scroll-wrap">
                 <ul id="userList" class="scroll-list">
                     <?php
-
+                    //display list of users registered to the hug
                     while($row = mysqli_fetch_assoc($result)) {
                         $firstname = $row['First_Name'];
                         $lastname = $row['Last_Name'];
@@ -183,13 +183,11 @@ if(isset($_GET['details'])){
                 </ul>
             </div>
             <!-- left arrow -->
-            <?php //show arrows only when needed
+            <?php //show arrows only when needed (over 5 users registered)
             if (mysqli_num_rows($result)>5){
                 echo '<button class="material-icons"><span onclick="scrollBar(\'userList\',\'left\',142)" id="left-nav-arrow">arrow_left</span></button>';
             }
             ?>
-
-        </div>
     </section>
 </main>
 <script src="js/scrollBar.js"></script>

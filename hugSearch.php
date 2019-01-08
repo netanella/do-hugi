@@ -1,8 +1,8 @@
 <?php include "connectDBclass.php";
 if (isset($_POST['textsearch'])) {
-
     $input = $_POST['textInput'];
     $title = "תוצאות חיפוש: ".$input;
+    //SELECT QUERY - text search workshops by tags
     $query = "SELECT * FROM workshops JOIN workshops_tags ON workshops.Workshop_ID = workshops_tags.Workshop_ID
               WHERE workshops_tags.tag LIKE '%$input%'
               ORDER BY Workshop_Date
@@ -14,6 +14,7 @@ if (isset($_POST['textsearch'])) {
 
 else {
     $title = "כל החוגים";
+    //SELECT QUERY - display all hugim in DB
     $query = "SELECT * FROM workshops ORDER BY Workshop_Date LIMIT 40";
     $connectDB = new connectDBclass();
     $result = $connectDB -> applyQuery($query);
@@ -86,21 +87,21 @@ else {
     <?php
     echo '<h1>'.$title.'</h1>';
     echo '<form id="allHugim" method="get" action="hugDetails.php">';
-    //display search results
+    //fetch search results
     if (isset($result)){
         while($row = mysqli_fetch_assoc($result)) {
             $id = $row['Workshop_ID'];
             $name = $row['Workshop_Name'];
             $date = $row['Workshop_Date'];
             $imagePath = 'uploads/' . $row['Photo'];
-            echo '
-            <div>
+            echo '<div>
                 <h2 class="center-inpos">'.$name.'</h2>
                 <img src="'.$imagePath.'">
                 <p>תאריך: '.$date.'</p>
                 <button type="submit" name="details" class="signupButton" value="'.$id.'">להרשמה</button>
             </div>';
         }
+        //if the search has no results show message
         if (mysqli_num_rows($result) == 0){
             echo '<p>אופס! החיפוש המבוקש לא הניב תוצאות</p>';
         }

@@ -1,4 +1,5 @@
-<?php
+<?php include "connectDBclass.php";
+//Sign up to the website
 
 if (isset($_POST['signup'])) {
 
@@ -18,8 +19,7 @@ if (isset($_POST['signup'])) {
         $image=$_FILES[$key]["name"];
     }
 
-    include "connectDBclass.php";
-
+    //post user data tp database
     $firstname=$_POST['firstname'];
     $lastname=$_POST['lastname'];
     $password=$_POST['password'];
@@ -42,6 +42,7 @@ if (isset($_POST['signup'])) {
     //Validate values
     $email=filter_var($email, FILTER_VALIDATE_EMAIL);
 
+    //INSERT QUERY - add new user to DB
     $query = "INSERT INTO users (Email, First_Name, Last_Name, Password, Phone, DOB, Gender, About, Hobbies, Photo)
               VALUES ('$email', '$firstname', '$lastname', '$password', '$phone', '$dob', '$gender', '$about', '$hobbies', '$image')";
 
@@ -64,12 +65,10 @@ if (isset($_POST['signup'])) {
 </head>
 <body id="signupPage" background="img/grass.jpg">
 <header>
-    <!-- navigation bar - not signed in -->
+    <!-- minimal navigation bar - not signed in -->
     <nav class="navbar">
         <a href="index.html" id="logo"><img src="img/LOGO.JPG"></a>
         <ul id="navLinks">
-            <li><a href="aboutus.php">קצת עלינו</a></li>
-            <li><a href="contact.php">צור קשר</a></li>
         </ul>
     </nav>
 </header>
@@ -135,7 +134,7 @@ if (isset($_POST['signup'])) {
                 <td> <textarea id="hobbies" rows="7" cols="35" name="hobbies"></textarea></td>
             </tr>
             <tr>
-                <!-- option to upload image to website -->
+                <!-- upload profile image to website -->
 
                 <td> <label for="profile-photo"> העלאת תמונת פרופיל </label></td>
                 <td>

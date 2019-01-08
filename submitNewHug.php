@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-<!--NAV BAR-->
 <header>
     <!-- navigation bar for all pages -->
     <?php include('navbar.php'); ?>
@@ -139,7 +138,7 @@
                     <label for="tag18">גיטרה</label>
                 </fieldset>
                 <br>
-                <button class="form-submit-btn" type="submit" name="submitNewHug" onclick="location.href='hugDetails.html';">צור חוג<span></span> </button>
+                <button class="form-submit-btn" type="submit" name="submitNewHug" onclick="location.href='hugSearch.php';">צור חוג<span></span> </button>
             </section>
             <div class="stepNavButtons">
                 <button id="prevBtn" onclick="nextPrev(-1)"><span class="material-icons" style="font-weight: bold;">arrow_forward</span></button>

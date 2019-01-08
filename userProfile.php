@@ -16,9 +16,13 @@
     <aside>
         <div id="userOverview">
             <?php
+            //get information from current session
             $photoPath = $_SESSION['PhotoPath'];
             $first_name = $_SESSION['firstname'];
             $last_name= $_SESSION['lastname'];
+            $email=$_SESSION['email'];
+            $about=$_SESSION['about'];
+            $hobbies=$_SESSION['hobbies'];
             echo '
                 <img class="profilePhotoIcon" src="'.$photoPath.'">
                 <h2>'.$first_name.' '.$last_name.'</h2>'
@@ -36,11 +40,6 @@
         <form method="post" action="userProfile.php">
             <h1>הפרטים שלי</h1>
             <?php include "connectDBclass.php";
-            $email=$_SESSION['email'];
-            $first_name= $_SESSION['firstname'];
-            $last_name= $_SESSION['lastname'];
-            $about=$_SESSION['about'];
-            $hobbies=$_SESSION['hobbies'];
             echo '
                 <div id="first-name-con">
                     <label for="firstName">שם פרטי</label>
@@ -55,10 +54,12 @@
             <label for="about">על עצמי</label>
             <textarea id="about" rows="4" name="about">'.$about.'</textarea>
             <label for="interests">תחומי עניין</label>
-            <textarea id="interests" rows="4" name="hobbies">'.$hobbies.'</textarea>
+            <textarea id="interests" rows="4" name="hobbies">'.$hobbies.'</textarea>';
+            ?>
             <div class="align-left-cont" id="update-btn">
-                <button type="submit" name="updateDetails">עדכון פרטים</button>';
-
+                <button type="submit" name="updateDetails">עדכון פרטים</button>
+            <?php
+            //update user details in DB
             if (isset($_POST['updateDetails'])) {
                 $firstname=$_POST['firstname'];
                 $lastname=$_POST['lastname'];
@@ -88,6 +89,7 @@
                 $_SESSION['about'] = $about;
                 $_SESSION['hobbies'] =$hobbies;
 
+                //refresh page
                 header("Location:userProfile.php");
             }
 
@@ -100,6 +102,7 @@
             <h1>החוגים שלי</h1>
             <!--LIST OF UPCOMING HUGIM-->
             <?php
+            //SELECT QUERY - upcoming hugim that the user registered to
             $query = "SELECT registrations.Workshop_ID, Workshop_Name, Workshop_Date, Photo 
                               FROM registrations JOIN workshops ON registrations.Workshop_ID = workshops.Workshop_ID 
                               WHERE registrations.Email = '$email' AND Workshop_Date>=CURRENT_DATE()";
@@ -144,6 +147,7 @@
 
             <!--LIST OF PAST HUGIM-->
             <?php
+            //SELECT QUERY - past hugim that the user attended
             $query = "SELECT registrations.Workshop_ID, Workshop_Name, Workshop_Date, Photo 
                               FROM registrations JOIN workshops ON registrations.Workshop_ID = workshops.Workshop_ID 
                               WHERE registrations.Email = '$email' AND Workshop_Date<CURRENT_DATE()";
@@ -167,7 +171,6 @@
         </form>
     </section>
 </main>
-<script src="js/scrollBar.js"></script>
 <script src="js/expandingElements.js"></script>
 <script src="js/sideNavStyleOnPageScroll.js"></script>
 </body>
