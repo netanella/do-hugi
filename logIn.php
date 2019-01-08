@@ -10,12 +10,10 @@
 
 <body id="login" background="img/grass.jpg">
 <header>
-    <!-- navigation bar of all pages -->
+    <!-- minimal navigation bar for unlogged users -->
     <nav class="navbar">
         <a href="index.html" id="logo"><img src="img/LOGO.JPG"></a>
         <ul id="navLinks">
-            <li><a href="aboutus.php">קצת עלינו</a></li>
-            <li><a href="contact.php">צור קשר</a></li>
         </ul>
     </nav>
 </header>
@@ -24,13 +22,14 @@
 <div class="centered-form">
     <h1>התחברות</h1>
     <br>
-    <form id="log-in" method="post" action="login.php">
+    <form id="log-in" method="post" action="logIn.php">
         <label for="email"> דוא"ל: </label><br>
         <input id="email" class="textInput" type="text" name="email" required><br><br>
         <label for="password"> סיסמא: </label><br>
         <input id="password" class="textInput" type="password" name="pwd" required><br>
         <button class="loginbutt" type="submit" name="login">התחבר</button>
         <br>
+        <!--check login information in database-->
         <?php include "connectDBclass.php";
         if (isset($_POST['login'])) {
             $email = $_POST['email'];
@@ -40,13 +39,16 @@
             $email = filter_var($email, FILTER_SANITIZE_EMAIL);
             $email = filter_var($email, FILTER_VALIDATE_EMAIL);
 
+            //SELECT user that matches log in information
             $query = "SELECT * FROM users where Email='$email' and Password='$password'";
             $connectDB = new connectDBclass();
             $result = $connectDB->applyQuery($query);
 
+            //if no match was found show message
             if (mysqli_num_rows($result) == 0) {
                 echo "הפרטים שהוזנו שגויים. אנא נסה שנית";
             } else {
+                //if match was found - start new session
                 $row = mysqli_fetch_assoc($result);
                 session_start();
                 $_SESSION['email'] = $email;
