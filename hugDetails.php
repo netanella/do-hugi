@@ -1,3 +1,26 @@
+<!--get information about the hug chosen by the user-->
+<?php include "connectDBclass.php";
+
+if(isset($_GET['details'])){
+    $hugID = $_GET['details'];
+    //SELECT QUERY - hug data from DB
+    $query = "SELECT * FROM workshops WHERE Workshop_ID='$hugID'";
+    $connectDB = new connectDBclass();
+    $result = $connectDB -> applyQuery($query);
+    $row = mysqli_fetch_assoc($result);
+    $hugName = $row['Workshop_Name'];
+    $location = $row['Location'];
+    $date = $row['Workshop_Date'];
+    $hour = $row['Start_Time'];
+    $duration = $row['Duration'];
+    $maxParticipants = $row['Max_participants'];
+    $price = $row['Price'];
+    $about = $row['About'];
+    $photoPath = 'uploads/'.$row['Photo'];
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
@@ -16,169 +39,156 @@
 </div>
 <header>
     <!-- navigation bar for all pages -->
-    <nav class="navbar">
-        <a href="hugSearch.php" id="logo"><img src="img/LOGO.JPG"></a>
-        <ul id="navLinks">
-            <li><a href="hugSearch.php">קטלוג חוגים</a></li>
-            <li><a href="submitNewHug.php">יצירת חוג</a></li>
-            <li><a href="aboutus.html">קצת עלינו</a></li>
-            <li><a href="contact.html">צור קשר</a></li>
-            <li>
-                <form id="searchBar" action="textSearch.php">
-                    <input type="text" placeholder="חפש חוג" name="search">
-                    <button type="submit"><i class="material-icons">search</i></button>
-                </form>
-            </li>
-        </ul>
-        <!-- user profile menu options-->
-        <div id="userProfile" class="dropdown">
-            <?php session_start();
-            if(isset($_SESSION['firstname'])) {
-                echo
-                    '<a href="userProfile.html"><span>'.$_SESSION['firstname'].'</span>';
-                //if the user has no photo display default image
-                if($_SESSION['photo']==NULL){
-                    echo '<img class="profilePhotoIcon" src="img/img_avatar.png"></a>';
-                }
-                //if the user has a profile photo
-                elseif(isset($_SESSION['photo'])){
-                    $imgname = $_SESSION['photo'];
-                    echo '<img class="profilePhotoIcon" src="img/'.$imgname.'"></a>';
-                }
-            }
-            ?>
-            <div class="dropdown-content">
-                <a href="userProfile.html">הפרופיל שלי</a>
-                <a href="userProfile.html">החוגים שלי</a>
-                <a href="logout.php">התנתקות</a>
-            </div>
-        </div>
-    </nav>
+    <?php include 'navbar.php'; ?>
 </header>
 <main>
     <!-- hug preview image and title -->
     <div id="topStrip">
-        <img class="mainPhoto" src="img/hugDog.jpg">
+        <img class="mainPhoto" src="<?php echo $photoPath ?>">
         <div class="heading">
-            <h1>סדנת אילוף כלבים / </h1>
+            <h1><?php echo $hugName ?> / </h1>
             <h3> נוצר על ידי: &nbsp;
-                <a href="userProfile.html"> <img src="img/img_avatar.png"> </a>
-                <a href="userProfile.html"> איתי הראל </a>
+                <a href="userProfile.php"> <img src="img/img_avatar.png"> </a>
+                <a href="userProfile.php"> איתי הראל </a>
             </h3>
         </div>
     </div>
+
+
     <!-- information about the hug - location, price etc -->
     <section id="hugDetails">
         <!-- Google map -->
         <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3410.5494261259055!2d34.78931890075295!3d31.26089428136519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x58cda349c891b450!2sBar+Giora!5e0!3m2!1sen!2sil!4v1543957417185" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
         <ul id="date-time-place">
             <li><i class="material-icons">location_on</i>
-                "בר גיורא", שמעון בר גיורא 29, באר שבע
+                מיקום:
+                <?php echo $location ?>
             </li>
             <li><i class="material-icons">event</i>
-                יום ראשון, 16/12/2018
+                תאריך:
+                <?php echo $date ?>
             </li>
             <li><i class="material-icons">access_time</i>
-                20:00 - 22:30
+                שעה:
+                <?php echo $hour ?>
             </li>
         </ul>
-        <div id="description">
-            <p>מתים על כלבים אבל לא מצליחים לגרום לחבר הפרוותי להקשיב לכם?
-                בואו לשמוע איך מתקשרים טוב יותר עם החברים הטובים ביותר שלנו מפי איתי הראל מ-Hugdog, מאמן מוסמך ומטפל בבעיות
-                התנהגות אצל כלבים...
-                מעולה לבעלי הכלבים, לשוקלים לאמץ ולכאלה שפשוט רוצים להעמיק ולהעשיר את הידע שלהם! <br>
-                16.12 בבר גיורא, מתחילים ב-20:00, כניסה חינם!
-                ותזכרו, הכלבים החמודים שלכם תמיד מוזמנים לבר גיורא!</p>
-            <p><strong>מספר משתתפים:</strong> ללא הגבלה</p>
-            <p><strong>מחיר:</strong> כניסה חופשית</p>
 
+        <div id="description">
+            <p><?php echo $about ?></p>
+            <p><strong>מספר משתתפים מקסימלי: </strong><?php echo $maxParticipants ?></p>
+            <p><strong>מחיר: </strong>
+                <?php
+                if($price == 0){
+                    echo 'חינם!';}
+                else echo $price.' ש"ח';
+                ?>
+            </p>
             <br>
             <!--signup and cancel buttons-->
-            <form method="post" action="">
-            <div class="switch-txt-btn">
-                <input type="radio" id="signup" name="signup-status" onchange="confirm.pop('אתה עומד להרשם לחוג. האם תרצה להמשיך?','signup')">
-                <label for="signup" class="like-btn">
-                    <span class="before">רשום אותי!</span>
-                    <span class="after"><span>&#10004;</span>אני מגיע</span>
-                </label>
-            </div>
-            <div class="switch-txt-btn">
-                <input type="radio" id="cancel" name="signup-status" checked onchange="confirm.pop('אתה עומד לבטל את הרשמתך. האם תרצה להמשיך?','cancel')">
-                <label for="cancel" class="like-btn">
-                    <span class="before">ביטול הרשמה</span>
-                    <span class="after"><span>&#10006;</span>לא רשום</span>
-                </label>
-            </div>
+            <?php
+            $email = $_SESSION['email'];
+            $date = date('Y-m-d');
+            if(isset($_POST['signup-status'])){
+                if($_POST['signup-status']=='signme'){
+                    //INSERT QUERY - register a user to the hug
+                    $query = "INSERT INTO registrations (`Workshop_ID`, `Email`, `Date`) VALUES ('$hugID', '$email', '$date');";
+                    $connectDB = new connectDBclass();
+                    $result = $connectDB -> applyQuery($query);
+                }
+                if($_POST['signup-status']=='removeme'){
+                    //DELETE QUERY - delete user registration to hug
+                    $query = "DELETE FROM registrations WHERE Workshop_ID='$hugID' AND Email='$email'";
+                    $connectDB = new connectDBclass();
+                    $result = $connectDB -> applyQuery($query);
+                }
+            }?>
+
+            <form name="signupHug" action="" method="post">
+                <div class="switch-txt-btn">
+                    <input type="radio" id="signup" name="signup-status" value="signme"
+                        <?php
+                        //SELECT QUERY - check if the user is registered to the hug (in order to set signup/cancel button design)
+                        $query = "SELECT * FROM registrations WHERE Workshop_ID='$hugID' AND Email='$email'";
+                        $connectDB= new connectDBclass();
+                        $result = $connectDB -> applyQuery($query);
+                        if (mysqli_num_rows($result)>0){
+                            echo 'checked';
+                        }
+                        ?>
+                           onchange="confirm.pop('אתה עומד להרשם לחוג. האם תרצה להמשיך?','signup');">
+                    <label for="signup" class="like-btn">
+                        <span class="before">רשום אותי!</span>
+                        <span class="after"><span>&#10004;</span>אני מגיע</span>
+                    </label>
+                </div>
+                <div class="switch-txt-btn">
+                    <input type="radio" id="cancel" name="signup-status" value="removeme"
+                        <?php
+                        //If the user is not signed up to hug according to DB - check the 'not registered' button
+                        if (mysqli_num_rows($result)==0){
+                            echo 'checked';
+                        }
+                        ?>
+                           onchange="confirm.pop('אתה עומד לבטל את הרשמתך. האם תרצה להמשיך?','cancel');">
+                    <label for="cancel" class="like-btn">
+                        <span class="before">ביטול הרשמה</span>
+                        <span class="after"><span>&#10006;</span>לא רשום</span>
+                    </label>
+                </div>
             </form>
             <hr>
         </div>
     </section>
+
     <!-- list of users who are attending this hug -->
     <section id="attending"><br>
         <h3>מי מגיע?</h3><br>
-        <div class="scroll-section">
-            <!-- right arrow -->
-            <button class="material-icons"><span onclick="scrollBar('userList','right',142)" id="right-nav-arrow">arrow_right</span></button>
+        <?php
+            //SELECT QUERY -  get data about users who signed up to the hug
+            $query = "SELECT First_Name, Last_Name, Photo FROM users JOIN registrations ON users.Email = registrations.Email 
+                              WHERE Workshop_ID='$hugID'";
+            $connectDB = new connectDBclass();
+            $result = $connectDB -> applyQuery($query);
+            //if no users registered
+            if (mysqli_num_rows($result)==0){
+                echo '<br>אף אחד עוד לא נרשם לחוג. אולי תהיה ראשון?';
+            }
+            echo '<div class="scroll-section">';
+            //show arrows only when needed (more than 5 users registered)
+            if (mysqli_num_rows($result)>5){
+                echo '<button class="material-icons"><span onclick="scrollBar(\'userList\',\'right\',142)" id="right-nav-arrow">arrow_right</span></button>';
+            }
+            ?>
             <div class="scroll-wrap">
                 <ul id="userList" class="scroll-list">
-                    <li class="scroll-item">
-                        <a  href="userProfile.html">
-                            <img src="img/netanella.jpg"/>
-                            <p>נתנאלה ברנד</p>
-                        </a>
-                    </li>
-                    <li class="scroll-item">
-                        <a href="userProfile.html">
-                            <img src="img/lee.jpg"/>
-                            <p>לי אוחיון</p>
-                        </a>
-                    </li>
-                    <li class="scroll-item">
-                        <a href="userProfile.html">
-                            <img src="img/shahar.jpg"/>
-                            <p>שחר בר-מאיר</p>
-                        </a>
-                    </li>
-                    <li class="scroll-item">
-                        <a href="userProfile.html">
-                            <img src="img/yaara.jpeg"/>
-                            <p>יערה "המכרסמת" לורבר</p>
-                        </a>
-                    </li>
-                    <li class="scroll-item">
-                        <a href="userProfile.html">
-                            <img src="img/omer.jpg"/>
-                            <p>עומר קיקו</p>
-                        </a>
-                    </li>
-                    <li class="scroll-item">
-                        <a href="userProfile.html">
-                            <img src="img/tomer.jpg"/>
-                            <p>תומר ביטנק</p>
-                        </a>
-                    </li>
-                    <li class="scroll-item">
-                        <a href="userProfile.html">
-                            <img src="img/asaf.jpg"/>
-                            <p>אספבול ח'וגה</p>
-                        </a>
-                    </li>
-                    <li class="scroll-item">
-                        <a href="userProfile.html">
-                            <img src="img/amit.jpg"/>
-                            <p>עמית דייגו גבע</p>
-                        </a>
-                    </li>
-                    <li class="scroll-item">
-                        <a href="userProfile.html">
-                            <img src="img/orglass.jpg"/>
-                            <p>אור פוקפוק גלס </p>
-                        </a>
-                    </li>
+                    <?php
+
+                    while($row = mysqli_fetch_assoc($result)) {
+                        $firstname = $row['First_Name'];
+                        $lastname = $row['Last_Name'];
+                        if ($row['Photo']==NULL){
+                            $imagePath = 'img/img_avatar.png';
+                        }
+                        else $imagePath = 'uploads/' . $row['Photo'];
+                        echo '<li class="scroll-item">
+                                <a  href="">
+                                    <img src="'.$imagePath.'"/>
+                                    <p>'.$firstname.' '.$lastname.'</p>
+                                </a>
+                              </li>';
+                    }
+                    ?>
                 </ul>
             </div>
             <!-- left arrow -->
-            <button class="material-icons"><span onclick="scrollBar('userList','left',142)" id="left-nav-arrow">arrow_left</span></button>
+            <?php //show arrows only when needed
+            if (mysqli_num_rows($result)>5){
+                echo '<button class="material-icons"><span onclick="scrollBar(\'userList\',\'left\',142)" id="left-nav-arrow">arrow_left</span></button>';
+            }
+            ?>
+
         </div>
     </section>
 </main>

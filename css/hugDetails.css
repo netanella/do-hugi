@@ -15,7 +15,7 @@
     display: block;
     margin: 0 auto;
     height:250px;
-    min-width:70%;
+    min-width:50%;
 }
 
 #topStrip h1, h3 {
@@ -102,7 +102,7 @@
     width: 70px;
     height: 75px;
     border-radius: 50%;
-    margin:  10px auto;
+    margin: 10px auto;
 }
 
 #attending .scroll-section button {

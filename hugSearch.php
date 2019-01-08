@@ -1,3 +1,25 @@
+<?php include "connectDBclass.php";
+if (isset($_POST['textsearch'])) {
+
+    $input = $_POST['textInput'];
+    $title = "תוצאות חיפוש: ".$input;
+    $query = "SELECT * FROM workshops JOIN workshops_tags ON workshops.Workshop_ID = workshops_tags.Workshop_ID
+              WHERE workshops_tags.tag LIKE '%$input%'
+              ORDER BY Workshop_Date
+              LIMIT 40";
+
+    $connectDB = new connectDBclass();
+    $result = $connectDB -> applyQuery($query);
+}
+
+else {
+    $title = "כל החוגים";
+    $query = "SELECT * FROM workshops ORDER BY Workshop_Date LIMIT 40";
+    $connectDB = new connectDBclass();
+    $result = $connectDB -> applyQuery($query);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
@@ -10,44 +32,7 @@
 <body>
 <header>
     <!-- navigation bar for all pages -->
-    <nav class="navbar">
-        <a href="hugSearch.php" id="logo"><img src="img/LOGO.JPG"></a>
-        <ul id="navLinks">
-            <li><a href="hugSearch.php">קטלוג חוגים</a></li>
-            <li><a href="submitNewHug.php">יצירת חוג</a></li>
-            <li><a href="aboutus.html">קצת עלינו</a></li>
-            <li><a href="contact.html">צור קשר</a></li>
-            <li>
-                <form id="searchBar" method="post" action="textSearch.php">
-                    <input type="text" placeholder="חפש חוג" name="textInput">
-                    <button type="submit" name="submit4"><i class="material-icons">search</i></button>
-                </form>
-            </li>
-        </ul>
-        <!-- user profile menu options-->
-        <div id="userProfile" class="dropdown">
-            <?php session_start();
-            if(isset($_SESSION['firstname'])) {
-                echo
-                    '<a href="userProfile.html"><span>'.$_SESSION['firstname'].'</span>';
-                //if the user has no photo display default image
-                if($_SESSION['photo']==NULL){
-                    echo '<img class="profilePhotoIcon" src="img/img_avatar.png"></a>';
-                }
-                //if the user has a profile photo
-                elseif(isset($_SESSION['photo'])){
-                    $imgname = $_SESSION['photo'];
-                    echo '<img class="profilePhotoIcon" src="img/'.$imgname.'"></a>';
-                }
-            }
-            ?>
-            <div class="dropdown-content">
-                <a href="userProfile.html">הפרופיל שלי</a>
-                <a href="userProfile.html">החוגים שלי</a>
-                <a href="logout.php">התנתקות</a>
-            </div>
-        </div>
-    </nav>
+    <?php include('navbar.php'); ?>
 </header>
 <main>
     <!-- navigation bar of categories-->
@@ -56,7 +41,7 @@
         <div id="calendar-w"> </div>
         <br>
         <nav>
-            <a class="active" href="" > כל החוגים</a>
+            <a class="active" href="hugSearch.php"> כל החוגים</a>
             <a href=""> מוזיקה </a>
             <a href=""> אמנות </a>
             <a href=""> ספורט </a>
@@ -97,82 +82,31 @@
             <label for="teva">סדנאות בטבע</label>
         </div>
     </div>
-    <!--available workshop in November 2018-->
-    <h1> חוגים בנובמבר 2018</h1>
-    <div id="allHugim">
-        <div>
-            <h2 class="center-inpos"> מכינים מרק קובה של סבתא חביבה </h2>
-            <img src="img/בישול.jpg">
-            <p > יום ראשון 11.11.18 </p>
-            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
-        </div>
-        <div>
-            <h2 class="center-inpos">זומבה לכל הגילאים עם שחר ולי</h2>
-            <img src="img/זומבה.jpg">
-            <p>יום שלישי 13.11.18</p>
-            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
-        </div>
-        <div>
-            <h2 class="center-inpos">דו רה מי - כל אחד יכול </h2>
-            <img src="img/פסנתר.jpg">
-            <p>  יום חמישי 15.11.18</p>
-            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
-        </div>
-        <div>
-            <h2 class="center-inpos">חיזוק שרירי ידיים בסטודיו גד</h2>
-            <img src="img/אימון%20כושר.jpg">
-            <p>יום חמישי 15.11.18</p>
-            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
-        </div>
-        <div>
-            <h2 class="center-inpos">ציור אבסטרקטי באקריליק</h2>
-            <img src="img/אמנות.jpg">
-            <p>יום חמישי 15.11.18</p>
-            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
-        </div>
-        <div>
-            <h2 class="center-inpos"> סדנת לוכדי חלומות אצל שושי</h2>
-            <img src="img/הכנת%20לוכדי%20חלומות.jpg">
-            <p>יום שישי 16.11.18</p>
-            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
-        </div>
-        <div>
-            <h2 class="center-inpos">קישוט עוגות לימי הולדת ואירועים</h2>
-            <img src="img/אפייה.jpg">
-            <p>יום חמישי 15.11.18</p>
-            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
-        </div>
-        <div>
-            <h2 class="center-inpos">סדנת איפור</h2>
-            <img src="img/סדנת%20איפור.jpg">
-            <p>יום שבת 17.11.18</p>
-            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
-        </div>
-        <div>
-            <h2 class="center-inpos">משחק כדורגל</h2>
-            <img src="img/כדורגל.jpg">
-            <p>יום חמישי 15.11.18</p>
-            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
-        </div>
-        <div>
-            <h2 class="center-inpos">עוד כדורגל</h2>
-            <img src="img/כדורגל.jpg">
-            <p>יום ראשון 6.11.19</p>
-            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
-        </div>
-        <div>
-            <h2 class="center-inpos">עוד כדורגל</h2>
-            <img src="img/כדורגל.jpg">
-            <p>יום שלישי 25.11.18</p>
-            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
-        </div>
-        <div>
-            <h2 class="center-inpos">ועוד כדורגל</h2>
-            <img src="img/כדורגל.jpg">
-            <p>יום חמישי 22.11.18</p>
-            <a href="hugDetails.php" class="signupButton"><strong>הרשמה </strong></a>
-        </div>
-    </div>
+
+    <?php
+    echo '<h1>'.$title.'</h1>';
+    echo '<form id="allHugim" method="get" action="hugDetails.php">';
+    //display search results
+    if (isset($result)){
+        while($row = mysqli_fetch_assoc($result)) {
+            $id = $row['Workshop_ID'];
+            $name = $row['Workshop_Name'];
+            $date = $row['Workshop_Date'];
+            $imagePath = 'uploads/' . $row['Photo'];
+            echo '
+            <div>
+                <h2 class="center-inpos">'.$name.'</h2>
+                <img src="'.$imagePath.'">
+                <p>תאריך: '.$date.'</p>
+                <button type="submit" name="details" class="signupButton" value="'.$id.'">להרשמה</button>
+            </div>';
+        }
+        if (mysqli_num_rows($result) == 0){
+            echo '<p>אופס! החיפוש המבוקש לא הניב תוצאות</p>';
+        }
+        echo '</div>';
+    }
+    ?>
 </main>
 <!-- connection to JS file of the calendar-->
 <script src="js/calendar.js"></script>

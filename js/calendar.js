@@ -4,7 +4,6 @@ class Calendar {
         this.displayed_date = new Date();					//date which calendar displays now
         this.current_day = this.displayed_date.getDate();	//current world time
         this.selected_date = this.displayed_date;			//date that user's selected
-
         this.drawToDom(this.displayed_date, id);
 
         this.body_node = document.getElementById('calendar-body');
@@ -126,27 +125,27 @@ class Calendar {
 
     //returns a  fulfilled and styled table DOM element
     createCalendarBody(date, current_month = false ) {
-        let days_array = this.createDaysArray(date)
-        let table = document.createDocumentFragment()
+        let days_array = this.createDaysArray(date);
+        let table = document.createDocumentFragment();
 
-        let i = 0
+        let i = 0;
 
         for (let j = 0; j < 6; ++j) {
-            let tr = document.createElement('tr')
+            let tr = document.createElement('tr');
 
             for (let k = 0; k < 7; ++k) {
-                let td = document.createElement('td')
-                td.innerHTML = days_array[i].number
-                tr.appendChild(td)
+                let td = document.createElement('td');
+                td.innerHTML = days_array[i].number;
+                tr.appendChild(td);
 
                 //add the styles that depend on what month the day belongs to
-                td.classList.add('calendar-cell')
+                td.classList.add('calendar-cell');
                 if (days_array[i].from !== 'currnet month') {
                     td.classList.add('calendar-cell-gray')
                 } else {
                     if (current_month && this.selected_date.getDate() == days_array[i].number) {
-                        td.classList.add('calendar-cell-selected')
-                        td.id = 'selected_date'
+                        td.classList.add('calendar-cell-selected');
+                        td.id = 'selected_date';
                     }
 
                     if (days_array[i].weekend)
@@ -187,7 +186,7 @@ class Calendar {
 
     //if the received date corresponds to the current month and year returns true
     isThisMonthCurrent(date) {
-        let current = new Date()
+        let current = new Date();
         if (
             current.getFullYear() == date.getFullYear() &&
             current.getMonth() == date.getMonth()
@@ -199,12 +198,12 @@ class Calendar {
 
     //redraws the body according to the received date
     setDateTo(date) {
-        let current_month = this.isThisMonthCurrent(date) //if it is current month, current day will ba highlighted
-        let new_body = this.createCalendarBody(date, current_month)
-        this.year_node.innerHTML = date.getFullYear()
-        this.month_node.innerHTML = this.getMonthName(date)
-        this.body_node.innerHTML = ''
-        this.body_node.appendChild(new_body)
+        let current_month = this.isThisMonthCurrent(date); //if it is current month, current day will ba highlighted
+        let new_body = this.createCalendarBody(date, current_month);
+        this.year_node.innerHTML = date.getFullYear();
+        this.month_node.innerHTML = this.getMonthName(date);
+        this.body_node.innerHTML = '';
+        this.body_node.appendChild(new_body);
     }
 
     //redraws the calendar a month in backward
@@ -213,9 +212,9 @@ class Calendar {
             this.displayed_date.getFullYear(),
             this.displayed_date.getMonth() - 1,
             1
-        )
+        );
 
-        this.setDateTo(this.displayed_date)
+        this.setDateTo(this.displayed_date);
     }
 
     //redraws the calendar a month in forward
@@ -224,9 +223,9 @@ class Calendar {
             this.displayed_date.getFullYear(),
             this.displayed_date.getMonth() + 1,
             1
-        )
+        );
 
-        this.setDateTo(this.displayed_date)
+        this.setDateTo(this.displayed_date);
     }
 
     //handles user clicks on cells
@@ -234,9 +233,9 @@ class Calendar {
         if (e.target.classList.contains('calendar-cell-gray')) return //only days of current month can be selected
         if (!e.target.classList.contains('calendar-cell')) return //if it wawn't a click on a cell
 
-        let prev_selected = document.getElementById('selected_date')
+        let prev_selected = document.getElementById('selected_date');
         if (prev_selected) {
-            prev_selected.classList.remove('calendar-cell-selected')
+            prev_selected.classList.remove('calendar-cell-selected');
             prev_selected.id = ''
         }
 
@@ -244,9 +243,9 @@ class Calendar {
             this.displayed_date.getFullYear(),
             this.displayed_date.getMonth(),
             e.target.innerHTML
-        )
+        );
 
-        e.target.id = 'selected_date'
-        e.target.classList.add('calendar-cell-selected')
+        e.target.id = 'selected_date';
+        e.target.classList.add('calendar-cell-selected');
     }
 }

@@ -99,8 +99,19 @@
     margin: 10px;
 }
 
-#myHugim .hugImage {
+#myHugim .hugContainer {
+    position: relative;
     width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+
+#myHugim .hugImage {
+    margin: auto;
+    position: absolute;
+    height: 150px;
+    top: 0;
+    left: 0;
 }
 
 #myHugim h4 {
@@ -119,6 +130,9 @@
 
 #myHugim li span {
     background-color: rgba(250,250,250,0.8);
+    color: black;
+    font-family: Calibri;
+    font-size: 17px;
     position: absolute;
     bottom: -35px;
     right: 0;

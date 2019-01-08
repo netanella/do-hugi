@@ -47,13 +47,15 @@ h1 {
     right: 0;
     background-color:#44c767;
     width: 100%;
-    height: 30px;
+    height: 40px;
     color: white;
     font-size:17px;
     float: left;
-    text-align: center;
     padding-top: 10px;
+    border-radius: 0;
+    font-weight: bold;
 }
+
 .signupButton:hover {
     background-color:#5ee08b;
 }

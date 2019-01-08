@@ -8,23 +8,7 @@
 <body id="contactUsPage" background="img/grass.jpg">
 <header>
     <!-- navigation bar for all pages -->
-    <nav class="navbar">
-        <a href="hugSearch.php" id="logo"><img src="img/LOGO.JPG"></a>
-        <ul id="navLinks">
-            <li><a href="hugSearch.php">קטלוג חוגים</a></li>
-            <li><a href="submitNewHug.php">יצירת חוג</a></li>
-            <li><a href="aboutus.html">קצת עלינו</a></li>
-            <li><a href="contact.html">צור קשר</a></li>
-        </ul>
-        <div id="userProfile" class="dropdown">
-            <a href="userProfile.html"><span>ברקוש</span><img src="img/barak.JPG" class="profilePhotoIcon"></a>
-            <div class="dropdown-content">
-                <a href="userProfile.html">הפרופיל שלי</a>
-                <a href="userProfile.html">החוגים שלי</a>
-                <a href="logout.php">התנתקות</a>
-            </div>
-        </div>
-    </nav>
+    <?php include('navbar.php'); ?>
 </header>
 <main class = "centered-form">
     <h1>צרו איתנו קשר</h1>
