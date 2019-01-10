@@ -2,14 +2,14 @@
 //this function creates a "show more" button that reveals additional items and collapses
 
 window.addEventListener('load', function(){
-    var btn = document.getElementById('showAllAttended');
-    var lst = document.getElementById('attended-list');
+    var btn = document.getElementById('showAllUpcoming');
+    var lst = document.getElementById('upcoming-list');
     hideLongLists(btn,lst,4);
 });
 
 //listener for attended list in hug page
-document.getElementById('showAllAttended').addEventListener('click', function(){
-    expandORcollapse('showAllAttended', 'attended-list',4);
+document.getElementById('showAllUpcoming').addEventListener('click', function(){
+    expandORcollapse('showAllUpcoming', 'upcoming-list',4);
 });
 
 //hiding items greater than 'showNum'

@@ -56,9 +56,9 @@
                 $_SESSION['lastname'] = $row['Last_Name'];
                 $_SESSION['about'] = $row['About'];
                 $_SESSION['hobbies'] = $row['Hobbies'];
-                if ($row['Photo'] == NULL) {
+                if ($row['profilePhoto'] == NULL) {
                     $_SESSION['PhotoPath'] = "img/img_avatar.png";
-                } else $_SESSION['PhotoPath'] = "uploads/" . $row['Photo'];
+                } else $_SESSION['PhotoPath'] = "uploads/" . $row['profilePhoto'];
                 header('Location:hugSearch.php');
             }
         }

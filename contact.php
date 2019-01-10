@@ -1,9 +1,30 @@
+<?php include "connectDBclass.php";
+if(isset($_POST['contactus'])){
+    $name = $_POST['username'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    //Sanitize values
+    $name=filter_var($name, FILTER_SANITIZE_STRING);
+    $email=filter_var($email, FILTER_SANITIZE_EMAIL);
+    $message=filter_var($message, FILTER_SANITIZE_STRING);
+    //Validate values
+    $email=filter_var($email, FILTER_VALIDATE_EMAIL);
+
+    //INSERT QUERY - add user message to database
+    $query = "INSERT INTO messages(Username, Email, Message) VALUES ('$name','$email','$message');";
+    $connectDB = new connectDBclass();
+    $result = $connectDB -> applyQuery($query);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <title>דו-חוגי | צור קשר</title>
     <link rel="stylesheet" type="text/css" href="css/forms.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body id="contactUsPage" background="img/grass.jpg">
 <header>
@@ -13,7 +34,7 @@
 <main class = "centered-form">
     <h1>צרו איתנו קשר</h1>
     <br>
-    <form id="contactus" action="form.php">
+    <form id="contactus" action="" method="post">
         <div id="writeToUs" class="contactUs">
             <h3><img id="email" src="img/mail.png" width="30" height="30"> כתבו לנו </h3>
             <label for="username">  שם מלא: </label>
@@ -26,8 +47,8 @@
             <br>
             <label for="message"> פרטי ההודעה: </label>
             <br>
-            <textarea id="message" rows="6" cols="35" name="textarea1" required></textarea>
-            <button type="submit" class="form-submit-btn" onclick="alert('הודעת התקבלה. תודה שפנית אלינו, נשוב אליך בהקדם! צוות האתר.');">
+            <textarea id="message" rows="6" cols="35" name="message" required></textarea>
+            <button type="submit" name="contactus" class="form-submit-btn" onclick="alert('הודעת התקבלה. תודה שפנית אלינו, נשוב אליך בהקדם! צוות האתר.');">
                 שלח
                 <span></span></button>
         </div>

@@ -43,7 +43,7 @@ if (isset($_POST['signup'])) {
     $email=filter_var($email, FILTER_VALIDATE_EMAIL);
 
     //INSERT QUERY - add new user to DB
-    $query = "INSERT INTO users (Email, First_Name, Last_Name, Password, Phone, DOB, Gender, About, Hobbies, Photo)
+    $query = "INSERT INTO users (Email, First_Name, Last_Name, Password, Phone, DOB, Gender, About, Hobbies, profilePhoto)
               VALUES ('$email', '$firstname', '$lastname', '$password', '$phone', '$dob', '$gender', '$about', '$hobbies', '$image')";
 
     $connectDB = new connectDBclass();

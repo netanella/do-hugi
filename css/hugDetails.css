@@ -15,7 +15,6 @@
     display: block;
     margin: 0 auto;
     height:250px;
-    min-width:50%;
 }
 
 #topStrip h1, h3 {
@@ -28,11 +27,18 @@
 
 
 #topStrip h3 img {
-    position: relative;
     border-radius: 50%;
     width:40px;
-    top: 10px;
 }
+
+#topStrip button {
+    position: relative;
+    top:10px;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
 
 #topStrip .heading {
     position: absolute;
@@ -105,12 +111,12 @@
     margin: 10px auto;
 }
 
-#attending .scroll-section button {
-    background-color: white;
-    vertical-align: top;
-    margin-top: 40px;
-    padding: 0;
-}
+#attending .scroll-section .scrollarrows {
+     background-color: white;
+     vertical-align: top;
+     margin-top: 40px;
+     padding: 0;
+ }
 
 #attending .scroll-wrap p {
     margin: auto;
@@ -119,6 +125,15 @@
 #right-nav-arrow, #left-nav-arrow {
     font-size: 80px;
     cursor: pointer;
+}
+
+#attending .scroll-section button {
+    font-size: 17px;
+    font-weight: normal;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 0;
+    background-color: white;
 }
 
 /* sign up and cancel buttons*/

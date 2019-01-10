@@ -27,9 +27,8 @@ function getElementRight(el){
 function hiddenItems(el){
     var child = document.getElementById(el).firstElementChild;
     var childHeight = child.offsetHeight;
-    if (document.getElementById(el).offsetHeight > childHeight){
-        return true;
-    }
-    else return false;
+
+    return document.getElementById(el).offsetHeight > childHeight;
+
 }
 

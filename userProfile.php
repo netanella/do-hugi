@@ -12,10 +12,13 @@
     <?php include('navbar.php'); ?>
 </header>
 <main>
+    <?php
+
+    ?>
     <!-- side bar with user photo and navigation menu -->
     <aside>
         <div id="userOverview">
-            <?php
+            <?php include "connectDBclass.php";
             //get information from current session
             $photoPath = $_SESSION['PhotoPath'];
             $first_name = $_SESSION['firstname'];
@@ -23,9 +26,24 @@
             $email=$_SESSION['email'];
             $about=$_SESSION['about'];
             $hobbies=$_SESSION['hobbies'];
-            echo '
-                <img class="profilePhotoIcon" src="'.$photoPath.'">
-                <h2>'.$first_name.' '.$last_name.'</h2>'
+            //if not my profile
+            if(isset($_GET['userprofile']) && $_GET['userprofile']!=$_SESSION['email']) {
+                //get user data
+                $userEmail = $_GET['userprofile'];
+                $query = "SELECT * FROM users WHERE Email='$userEmail'";
+                $connectDB = new connectDBclass();
+                $result = $connectDB -> applyQuery($query);
+                $row = mysqli_fetch_assoc($result);
+                $photoPath = 'uploads/'.$row['profilePhoto'];
+                $first_name = $row['First_Name'];
+                $last_name= $row['Last_Name'];
+                $email=$row['Email'];
+                $about=$row['About'];
+                $hobbies=$row['Hobbies'];
+            }
+
+            echo '<img class="profilePhotoIcon" src="'.$photoPath.'">
+                    <h2>'.$first_name.' '.$last_name.'</h2>';
             ?>
             <a class="like-btn" id="logout" href="logout.php">התנתקות</a>
         </div>
@@ -39,7 +57,7 @@
     <section id="userDetails">
         <form method="post" action="userProfile.php">
             <h1>הפרטים שלי</h1>
-            <?php include "connectDBclass.php";
+            <?php
             echo '
                 <div id="first-name-con">
                     <label for="firstName">שם פרטי</label>
@@ -57,44 +75,50 @@
             <textarea id="interests" rows="4" name="hobbies">'.$hobbies.'</textarea>';
             ?>
             <div class="align-left-cont" id="update-btn">
-                <button type="submit" name="updateDetails">עדכון פרטים</button>
-            <?php
-            //update user details in DB
-            if (isset($_POST['updateDetails'])) {
-                $firstname=$_POST['firstname'];
-                $lastname=$_POST['lastname'];
-                $email=$_POST['email'];
-                $about=$_POST['about'];
-                $hobbies=$_POST['hobbies'];
+                <?php
+                //show update button only when i am viewing my own profile
+                if($_GET['userprofile']==$_SESSION['email']){
+                    echo '
+                <button type="submit" name="updateDetails">עדכון פרטים</button>';
+                }
+                else echo '<br><br>';
 
-                //Sanitize values
-                $firstname=filter_var($firstname, FILTER_SANITIZE_STRING);
-                $lastname=filter_var($lastname, FILTER_SANITIZE_STRING);
-                $email=filter_var($email, FILTER_SANITIZE_EMAIL);
-                $about=filter_var($about, FILTER_SANITIZE_STRING);
-                $hobbies=filter_var($hobbies, FILTER_SANITIZE_STRING);
+                //update user details in DB
+                if (isset($_POST['updateDetails'])) {
+                    $firstname=$_POST['firstname'];
+                    $lastname=$_POST['lastname'];
+                    $email=$_POST['email'];
+                    $about=$_POST['about'];
+                    $hobbies=$_POST['hobbies'];
 
-                //Validate values
-                $email=filter_var($email, FILTER_VALIDATE_EMAIL);
+                    //Sanitize values
+                    $firstname=filter_var($firstname, FILTER_SANITIZE_STRING);
+                    $lastname=filter_var($lastname, FILTER_SANITIZE_STRING);
+                    $email=filter_var($email, FILTER_SANITIZE_EMAIL);
+                    $about=filter_var($about, FILTER_SANITIZE_STRING);
+                    $hobbies=filter_var($hobbies, FILTER_SANITIZE_STRING);
 
-                $query = "UPDATE USERS SET First_Name='$firstname', Last_Name='$lastname', About='$about', Hobbies='$hobbies' 
+                    //Validate values
+                    $email=filter_var($email, FILTER_VALIDATE_EMAIL);
+
+                    $query = "UPDATE USERS SET First_Name='$firstname', Last_Name='$lastname', About='$about', Hobbies='$hobbies' 
                 WHERE Email='$email'";
 
-                $connectDB = new connectDBclass();
-                $result = $connectDB -> applyQuery($query);
+                    $connectDB = new connectDBclass();
+                    $result = $connectDB -> applyQuery($query);
 
-                //update current session
-                $_SESSION['firstname'] = $firstname;
-                $_SESSION['lastname'] = $last_name;
-                $_SESSION['about'] = $about;
-                $_SESSION['hobbies'] =$hobbies;
+                    //update current session
+                    $_SESSION['firstname'] = $firstname;
+                    $_SESSION['lastname'] = $last_name;
+                    $_SESSION['about'] = $about;
+                    $_SESSION['hobbies'] =$hobbies;
 
-                //refresh page
-                header("Location:userProfile.php");
-            }
+                    //refresh page
+                    header("Location:userProfile.php");
+                }
 
-            echo '</div>';
-            ?>
+                echo '</div>';
+                ?>
         </form>
         <hr><br>
         <!-- list of all user's hugim (hugim that past are disabled) -->
@@ -109,44 +133,53 @@
             $connectDB = new connectDBclass();
             $result = $connectDB -> applyQuery($query);
             if (mysqli_num_rows($result)>0){
-                echo '<h4>חוגים אליהם נרשמתי - שריינו יומנים!</h4>
-                       <ul>';
+                echo '<h4>חוגים אליהם נרשמתי - שריינו יומנים! <span id="showAllUpcoming"></span></h4>
+                       <ul id="upcoming-list">';
                 while($row=mysqli_fetch_assoc($result)){
                     $hugID=$row['Workshop_ID'];
                     $hugName=$row['Workshop_Name'];
                     $hugDate=$row['Workshop_Date'];
                     $hugImgPath='uploads/'.$row['Photo'];
-                    echo '
-                            <li class="hugContainer">
+                    echo '<li class="hugContainer">
                                  <button type="submit" name="details" value="'.$hugID.'">
                                       <img class="hugImage" src="'.$hugImgPath.'">
                                       <span><strong>'.$hugDate.'</strong> <br>'.$hugName.'</span>
                                  </button>
-                            </li>
+                           </li>
                         ';
                 }
                 echo '</ul>';
             }
-            ?>
-            <!--LIST OF HUGIM I OFFER-->
-            <h4>חוגים שאני מעביר</h4>
-            <ul>
-                <li class="hugContainer">
-                    <a href=""><img class="hugImage" src="img/mobile-apps.jpg">
-                        <span><strong>18.01.19</strong> <br> פיתוח אפליקציות למובייל </span></a>
-                </li>
-                <li class="disabled hugContainer">
-                    <img class="hugImage" src="img/javascript.jpeg">
-                    <span><strong>2.06.18</strong> <br> Javascript למתחילים </span>
-                </li>
-                <li class="disabled hugContainer">
-                    <img class="hugImage" src="img/CSS.jpg">
-                    <span><strong>11.03.18</strong> <br> CSS היא לא (בהכרח) מילה גסה </span>
-                </li>
-            </ul>
 
-            <!--LIST OF PAST HUGIM-->
-            <?php
+            //LIST OF HUGIM I OFFER
+
+            //SELECT QUERY - hugim that the user created
+            $query = "SELECT Workshop_ID, Workshop_Name, Workshop_Date, Photo FROM workshops
+                              WHERE userCreated = '$email'";
+            $connectDB = new connectDBclass();
+            $result = $connectDB -> applyQuery($query);
+
+            if (mysqli_num_rows($result)>0) {
+                echo '<h4>חוגים שאני מעביר<span id="showAllCreated"></span></h4>
+                         <ul id="created-list">';
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $hugID = $row['Workshop_ID'];
+                    $hugName = $row['Workshop_Name'];
+                    $hugDate = $row['Workshop_Date'];
+                    $hugImgPath = 'uploads/' . $row['Photo'];
+                    echo '<li class="hugContainer">
+                          <button type="submit" name="details" value="' . $hugID . '">
+                                <img class="hugImage" src="' . $hugImgPath . '">
+                                <span><strong>' . $hugDate . '</strong> <br>' . $hugName . '</span>
+                          </button>
+                       </li>';
+                }
+                echo '</ul>';
+            }
+
+
+            //LIST OF PAST HUGIM
+
             //SELECT QUERY - past hugim that the user attended
             $query = "SELECT registrations.Workshop_ID, Workshop_Name, Workshop_Date, Photo 
                               FROM registrations JOIN workshops ON registrations.Workshop_ID = workshops.Workshop_ID 
@@ -157,12 +190,15 @@
                 echo '<h4>חוגים בהם השתתפתי <span id="showAllAttended"></span></h4>
                 <ul id="attended-list">';
                 while($row=mysqli_fetch_assoc($result)){
+                    $hugID=$row['Workshop_ID'];
                     $hugName=$row['Workshop_Name'];
                     $hugDate=$row['Workshop_Date'];
                     $hugImgPath='uploads/'.$row['Photo'];
-                    echo '<li class="disabled">
-                                <a href=""><img class="hugImage" src="'.$hugImgPath.'">
-                                <span><strong>'.$hugDate.'</strong> <br>'.$hugName.'</span></a>
+                    echo '<li class="hugContainer disabled">
+                                <button type="submit" name="details" value="'.$hugID.'">
+                                      <img class="hugImage" src="'.$hugImgPath.'">
+                                      <span><strong>'.$hugDate.'</strong> <br>'.$hugName.'</span>
+                                 </button>
                           </li>';
                 }
                 echo '</ul>';

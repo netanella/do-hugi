@@ -7,7 +7,6 @@ if (isset($_POST['textsearch'])) {
               WHERE workshops_tags.tag LIKE '%$input%'
               ORDER BY Workshop_Date
               LIMIT 40";
-
     $connectDB = new connectDBclass();
     $result = $connectDB -> applyQuery($query);
 }
