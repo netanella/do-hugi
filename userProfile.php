@@ -12,9 +12,6 @@
     <?php include('navbar.php'); ?>
 </header>
 <main>
-    <?php
-
-    ?>
     <!-- side bar with user photo and navigation menu -->
     <aside>
         <div id="userOverview">
@@ -77,7 +74,7 @@
             <div class="align-left-cont" id="update-btn">
                 <?php
                 //show update button only when i am viewing my own profile
-                if($_GET['userprofile']==$_SESSION['email']){
+                if($email==$_SESSION['email']){
                     echo '
                 <button type="submit" name="updateDetails">עדכון פרטים</button>';
                 }
@@ -102,7 +99,7 @@
                     $email=filter_var($email, FILTER_VALIDATE_EMAIL);
 
                     $query = "UPDATE USERS SET First_Name='$firstname', Last_Name='$lastname', About='$about', Hobbies='$hobbies' 
-                WHERE Email='$email'";
+                              WHERE Email='$email'";
 
                     $connectDB = new connectDBclass();
                     $result = $connectDB -> applyQuery($query);

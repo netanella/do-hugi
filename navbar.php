@@ -16,6 +16,7 @@ echo
             </li>
         </ul>
         <!-- user profile menu options-->
+        
         <div id="userProfile" class="dropdown">';
             session_start();
             if(isset($_SESSION["firstname"])) {
